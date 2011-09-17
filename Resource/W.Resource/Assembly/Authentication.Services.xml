@@ -1,0 +1,4079 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Authentication.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Authentication.Weed.User_update">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteAnonymousUserM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteAnonymousUserM.AnonymousUserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteAnonymousUserM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteAnonymousUserM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteAnonymousUserM.LastLogin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteAnonymousUserM.LastAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_carM">
+            <summary>
+            生成:2011/04/22 10:07:45
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.UCID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.BrandName">
+            <summary>
+            车品牌
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.BrandID">
+            <summary>
+            车品牌ID
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.Model">
+            <summary>
+            型车
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.ModelID">
+            <summary>
+            车型ID
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.CarL">
+            <summary>
+            车排量
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.Givenyear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.BelongsProvinces">
+            <summary>
+            所属省份
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.BelongsCity">
+            <summary>
+            所属城市
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.CarColor">
+            <summary>
+            辆车颜色
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.EngineNum">
+            <summary>
+            动机发号
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.CarFrame">
+            <summary>
+            架号车
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.CarLicense">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.OrderID">
+            <summary>
+            序排ID
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_carM.ShowType">
+            <summary>
+            显示方式1=完全公开2=仅好友可见3=完全保密
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.PublishLogBases.GetDefaultValues(Framework.Components.PublishLog@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.PublishLogBases.GetNullValues(Framework.Components.PublishLog@)">
+            <summary>
+            根据字段的类型，替换空值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.PublishLogBases.CheckNullValues(Framework.Components.PublishLog@)">
+            <summary>
+            保存前检查空值情况
+            此处需要完善
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.PublishLogBases.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="T:Authentication.DataProvider.ModuleData">
+            <summary>
+            系统模块业务类
+            其中采用了层级关系，模块之间分为多层，按上下级关系排列
+            模块对应一些公用的信息，如权限验证的程序集等
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.GetDefaultValues(Authentication.DataEntity.ModuleEntity@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.GetNullValues(Authentication.DataEntity.ModuleEntity@)">
+            <summary>
+            根据字段的类型，替换空值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.CheckNullValues(Authentication.DataEntity.ModuleEntity@)">
+            <summary>
+            保存前检查空值情况
+            此处需要完善
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_ModuleBaseDALs.CreateUpdateDeleteSys_Module(Authentication.DataEntity.ModuleEntity,Framework.Enumerations.DataProviderAction)">
+            <summary>
+            
+            </summary>
+            <param name="sys_Module"></param>
+            <param name="action"></param>
+            <returns>-2表求有相关联数据，-1出错，>0成功 0 没有相关数据</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.ModuleData.Exists(System.Int32)">
+            <summary>
+            判断是否存在该记录
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.ModuleData.Exists(System.String)">
+            <summary>
+            判断是否存在该记录
+            </summary>
+            <param name="moduleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.ModuleData.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="moduleID"></param>
+            <returns>-2表求有相关联数据，-1出错，>0成功 0 没有相关数据</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.ModuleData.GetListByParentID(System.Int32)">
+            <summary>
+            获得数据列表（根据父模块编号）
+            </summary>
+            <param name="parentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.ModuleData.GetListByLevel(System.Int32)">
+            <summary>
+            获得数据列表（根据模块级别）
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.ModuleData.GetModuleAssembly(System.Int32)">
+            <summary>
+            查询模块的权限处理类
+            有可能指定的模块并没有显示指明权限处理类，因此可能需要向上回溯。
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.ModuleData.GetModuleIDByCode(System.String)">
+            <summary>
+            读取模块ID
+            </summary>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.CellM">
+            <summary>
+            生成:2010/01/04 04:21:39
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.CellName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.IsStaticPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.IsAutoPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.RelationCategories">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.ScheduleExpression">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.NotSetIsAllow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.NeedRecordHits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.Hits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.CellCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.Memo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.MorePageUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.ParentCellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.DataSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.AutoPublishCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.AutoPublishParentCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.CellM.AutoPublishByParent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Services.Permission">
+            <summary>
+            权限验证模块
+            此处应该只是一个默认的实现规则，可能根据模块不同需要用不同的方法来实现 
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Permission.GetProvider">
+            <summary>
+            获得默认的处理方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Permission.GetDefaultPermissionModule(System.String,System.String)">
+            <summary>
+            获得权限模块列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Permission.GetPermissionProviders(System.String,System.String)">
+            <summary>
+            获得所有的权限验证模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.BirdM">
+            <summary>
+            生成:2010/04/19 10:10:38
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.BirdID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.DataStatus">
+            <summary>
+            1，正常，0，停用
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.DateModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdM.BirdDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteBannedAddressM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteBannedAddressM.BannedID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteBannedAddressM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteBannedAddressM.StartingAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteBannedAddressM.EndingAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteBannedAddressM.BannedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteBannedAddressM.StartingID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteBannedAddressM.EndingID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_addresM">
+            <summary>
+            生成:2010/11/26 11:07:49
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.UserAddressID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Consignee">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Province">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.City">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.County">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Post">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Tel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Phone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.IsDefault">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_addresM.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserBaseDALs.GetDefaultValues(Authentication.DataEntity.UserEntity@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserBaseDALs.GetNullValues(Authentication.DataEntity.UserEntity@)">
+            <summary>
+            根据字段的类型，替换空值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserBaseDALs.CheckNullValues(Authentication.DataEntity.UserEntity@)">
+            <summary>
+            保存前检查空值情况
+            此处需要完善
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.PublishLogM">
+            <summary>
+            生成:2010/01/18 07:37:56
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.PublishLogID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.BeginTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.IP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.RelationCellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.BeginContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.EndContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.EndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.CellDataGetType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.RecordCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.Contents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PublishLogM.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_UserProfileM">
+            <summary>
+            生成:2010/07/09 12:26:32
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.PasswordHash">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.UserName">
+            <summary>
+            登陆用户名
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.PasswordSalt">
+            <summary>
+            加密密钥
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.PasswordFormat">
+            <summary>
+            密加格式
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.PasswordQuestion">
+            <summary>
+            密码问题
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.PasswordAnswer">
+            <summary>
+            密码问题答案
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.LastChangePwdDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Birthday">
+            <summary>
+            出生年月
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.TrueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Phone">
+            <summary>
+            电话号码或者手机号码
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.QQ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.IDNumber">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Address">
+            <summary>
+            用户地址
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.PostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Introduction">
+            <summary>
+            用户介绍
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.MemoPic">
+            <summary>
+            备注图片
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.RegisterIP">
+            <summary>
+            注册IP
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Additions">
+            <summary>
+            扩展属性（Json格式）
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.PayPassword">
+            <summary>
+            支付密码
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Marriage">
+            <summary>
+            婚恋状态
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.BolldType">
+            <summary>
+            血型
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.RegisterAdd">
+            <summary>
+            户籍
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Msn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.Residence">
+            <summary>
+            家乡
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfileM.ApiRemarkJson">
+            <summary>
+            接口数据备注(json格式)
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.ProvinceCityM">
+            <summary>
+            生成:2010/11/26 09:06:27
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.ProvinceCityM.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.ProvinceCityM.A">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.ProvinceCityM.B">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.ProvinceCityM.C">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.ProvinceCityM.C1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.ProvinceCityM.ProvinceID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.ProvinceCityM.CityID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.DataProvider.Sys_RightsResourceDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="T:Authentication.DAL.Base.Sys_RightsResourceBaseDALs">
+            <summary>
+            Summary description for sys_RightsResources $Description$
+            </summary>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.PopulateSys_RightsResourceFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.PopulateSys_RightsResourceFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.GetDefaultValues(Authentication.DataEntity.Sys_RightsResource@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Authentication.DAL.Base.Sys_RightsResourceBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Sys_RightsResourceDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.DataProvider.MysqlPermissionProvider">
+            <summary>
+            MySql   权限服务
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlPermissionProvider.IsRoleHasPermission(System.Int32,System.Int32,System.String)">
+            <summary>
+            判断角色是否拥有权限
+            这里有处理默认的权限，即该模块没有设定权限时，是允许还是拒绝。
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <param name="moduleID">模块ＩＤ</param>
+            <param name="action">动作</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlPermissionProvider.IsRoleHasPermission(System.Int32,System.String,System.String)">
+            <summary>
+            判断角色是否拥有权限
+            这里有处理默认的权限，即该模块没有设定权限时，是允许还是拒绝。
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <param name="moduleID">模块ＩＤ</param>
+            <param name="action">动作</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlPermissionProvider.GetModuleIDByCode(System.String)">
+            <summary>
+            读取模块ID
+            </summary>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.DataProvider.Base.Sys_RightBaseDALs">
+            <summary>
+            Summary description for sys_Rights $Description$
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.PopulateSys_RightFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.PopulateSys_RightFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.GetDefaultValues(Authentication.DataEntity.RightsEntity@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RightBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Authentication.DataProvider.Base.Sys_RightBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Authentication.DataProvider.Base.Sys_RightBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_RightsResourcM">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightsResourcM.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightsResourcM.ResourceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightsResourcM.ResourceName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightsResourcM.ResourceType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Services.Role">
+            <summary>
+            角色管理
+            处理角色的添加删除修改等，对于角色与用户的关系暂是放在另外一个类中处理。
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Role.Exists(System.String,System.String,System.String)">
+            <summary>
+            判断角色是否已经存在 
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.Create(System.String,System.String,System.String)">
+            <summary>
+            创建角色
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Role.Create(Authentication.DataEntity.RoleEntity,System.String,System.String)">
+            <summary>
+            新增一条角色
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.Update(Authentication.DataEntity.RoleEntity,System.String,System.String)">
+            <summary>
+            更新一条角色
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.Delete(System.Int32,System.String,System.String)">
+            <summary>
+            根据ID删除角色
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.Delete(System.String,System.String,System.String)">
+            <summary>
+            根据角色名删除角色
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.Delete(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+             删除角色
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Role.GetRoleEntity(System.Int32,System.String,System.String)">
+            <summary>
+            根据ID得到一条角色实体记录
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.GetRoleByCode(System.String,System.String,System.String)">
+            <summary>
+            得到一条角色实体记录,根据角色编码
+            </summary>
+            <param name="roleCode"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.GetRoleEntity(System.String,System.String,System.String)">
+            <summary>
+            根据RoleName得到一条角色实体记录
+            </summary>
+            <param name="roleName">角色名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.GetList(System.String,System.String)">
+            <summary>
+            获得角色数据列表
+            仅返回类型为Group的角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.GetList(System.Int32,System.String,System.String)">
+            <summary>
+            获得数据列表
+            仅返回类型为Group的角色
+            </summary>
+            <param name="parentRoleID">上级分类ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.GetList(Framework.Enumerations.RoleType,System.String,System.String)">
+            <summary>
+            获得角色数据列表
+            </summary>
+            <param name="roleType"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.GetList(System.Int32,Framework.Enumerations.RoleType,System.Boolean,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获得角色数据列表
+            </summary>
+            <param name="parentRoleID">父角色ID</param>
+            <param name="roleType"></param>
+            <param name="includeChildren">是否包含子项中的子项</param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Role.BuildTree(System.Int32,Authentication.DataEntity.RoleEntity,Framework.Enumerations.RoleType,Authentication.IServices.AuthenticationDataProvider,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="parentID"></param>
+            <param name="parentModule"></param>
+            <param name="mp"></param>
+            <param name="level"></param>
+        </member>
+        <member name="T:Authentication.Weed.User_getUserInfobyUserID">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_user_favoriteM">
+            <summary>
+            生成:2010/07/09 05:03:52
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.FavID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.CreateDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.DataStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.UrlFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.Favtype">
+            <summary>
+            收藏类型或操作类型
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.FavCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.Val">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.ObjectName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_user_favoriteM.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.RegionM">
+            <summary>
+            生成:2010/11/25 03:58:05
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.RegionCode">
+            <summary>
+            指国家标准行政地区编码
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.LevelCode">
+            <summary>
+            国家行政地区编码无法准确表达层级关系，需要有一个编码来表述。
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.CreateUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.DataStatus">
+            <summary>
+            0 表示已经创建            1 表示公开            -1 表示删除
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.DateModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.ModifyUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.IsLock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.CurrentVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.OrgVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.LNG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.LAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.MapLevel">
+            <summary>
+            0-19地图级别，与Google地图保持一致。
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.HotLevel">
+            <summary>
+            记录用户对此景点的关注程度
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.IsRecommend">
+            <summary>
+            系统推荐等级0-19，可能与地图级别匹配。
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.CertLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.ShortName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.RegionDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.ShowLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.BestTravelTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.Path">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.IDpath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.RegionM.Alias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserProfileBaseDALs.GetDefaultValues(Authentication.DataEntity.UserProfileEntity@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserProfileBaseDALs.GetNullValues(Authentication.DataEntity.UserProfileEntity@)">
+            <summary>
+            根据字段的类型，替换空值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserProfileBaseDALs.CheckNullValues(Authentication.DataEntity.UserProfileEntity@)">
+            <summary>
+            保存前检查空值情况
+            此处需要完善
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserProfileBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserProfileBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserProfileBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UserProfileBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SearchCasM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.SearchCaseID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.QueryName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.CaseTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.IsPublic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.UseTimes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.LastModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.LastUseTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.FilterContent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SearchCasM.OrderContent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_ModulM">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.ModuleName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.Remark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.Level">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.OrderID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.ModuleCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.PermissionAssembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.DefaultPermission">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.DataTypeID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.DataID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_ModulM.SmartCode">
+            <summary>
+            简明的编码，如admin.checkuser等，全小写。
+            </summary>
+        </member>
+        <member name="T:Authentication.Services.PassportServices">
+            <summary>
+            关于用户认证及相关数据处理的接口
+            后端与UserProvider等一致，主要为了简便前端使用
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.ToUserShortInfo(Framework.Components.UserInfo)">
+            <summary>
+            将全整的用户信息转成局部信息。
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.SaveUserEncryptCode(System.Int32,System.String)">
+            <summary>
+            往数据库中记录用户登录信息的加密串
+            默认格式为：SHA1（UserID＋DateTime.Now＋PassKEY）
+            </summary>
+            <param name="userId"></param>
+            <param name="transUserPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.GetUserEncryptCode(System.Int32)">
+            <summary>
+            获得数据库中保存的用户登录信息的加密串
+            默认格式为：SHA1（UserID＋DateTime.Now＋PassKEY）
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.GetPassID(System.Int32,System.String)">
+            <summary>
+            获得通行证ID
+            </summary>
+            <param name="sourceId"></param>
+            <param name="userIp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.GetRoleProvinceRights(System.Int32,System.Int32@,System.Int32[]@)">
+            <summary>
+            获得一个角色的分站权限
+            如果只有一个分站，则只接提取相关的下级地区
+            如果有多个设定，则只提取当级的地区
+            </summary>
+            <param name="roleID"></param>
+            <param name="provinceID"></param>
+            <param name="regionIDList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.RemoveCache(System.Int32)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.RemoveCache(System.String)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.PassportServices.ValidPayPassword(System.Int32,System.String,System.String)">
+            <summary>
+            验证支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.Services.PassportServices.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Authentication.Services.PassportServices.VisitNo">
+            <summary>
+            访客号
+            </summary>
+        </member>
+        <member name="P:Authentication.Services.PassportServices.HeadPortrait">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Authentication.Services.PassportServices.IsLogin">
+            <summary>
+            是否已经登录
+            </summary>
+        </member>
+        <member name="P:Authentication.Services.PassportServices.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Authentication.Services.PassportServices.SiteID">
+            <summary>
+            站点ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Services.PassportServices.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UsersInRoleBaseDALs.GetDefaultValues(Authentication.DataEntity.UsersInRolesEntity@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UsersInRoleBaseDALs.GetNullValues(Authentication.DataEntity.UsersInRolesEntity@)">
+            <summary>
+            根据字段的类型，替换空值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UsersInRoleBaseDALs.CheckNullValues(Authentication.DataEntity.UsersInRolesEntity@)">
+            <summary>
+            保存前检查空值情况
+            此处需要完善
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UsersInRoleBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UsersInRoleBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UsersInRoleBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_UsersInRoleBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Sys_UsersInRoleDALs.DeleteByUserID(System.Int32)">
+            <summary>
+            根据用户ID删除用户全部角色
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Sys_UsersInRoleDALs.GetEntities(System.Int32,Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.RightData.GetListByOperator(System.Int32)">
+            <summary>
+            获得操作员所授权的权限列表
+            </summary>
+            <param name="operatorID">操作员ID</param>
+        </member>
+        <member name="T:Authentication.DataProvider.MysqlAuthenticateProvider">
+            <summary>
+            用户管理及认证系统数据提供组件
+            2007-08-03
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.UpdateUser(Framework.Components.UserInfo)">
+            <summary>
+            更新用户的基本信息
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetMembershipUser(Authentication.DataEntity.UserEntity,Authentication.DataEntity.UserProfileEntity)">
+            <summary>
+            将用户转换成ＭｅｍｂｅｒＳｈｉｐ的用户
+            </summary>
+            <param name="user">数据库中用户实例</param>
+            <param name="userProfile">用户扩展信息实例</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetMembershipUser(System.String)">
+            <summary>
+            从数据库中获取MembershipUser对象
+            </summary>
+            <param name="username">用户名</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetMembershipUser(System.Int32)">
+            <summary>
+            根据用户ID获得用户MembershipUser
+            </summary>
+            <param name="userID">用户ＩＤ</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetMembershipUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据EMAIL查MemberShipUser用户信息
+            </summary>
+            <param name="emailToMatch">用于匹配的邮箱，是相似匹配</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetMembershipUsersByName(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据用户名查MembershipUser用户信息
+            </summary>
+            <param name="usernameToMatch">用于相似匹配的用户名</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetMembershipUsers(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得所有满足条件的MembershipUser用户信息
+            </summary>
+            <param name="whereClause">条件，一般格式类似a.userid=10,具体参见分页存储过程条件的设定方法</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,Framework.Securities.EncryptMode)">
+            <summary>
+            创建一个用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="email">Email</param>
+            <param name="passwordQuestion">密码安全问题</param>
+            <param name="passwordAnswer">密码安全答案</param>
+            <param name="isApproved">是否锁定</param>
+            <param name="providerUserKey">主键</param>
+            <param name="status">用户创建状态</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetNumberOfUsersOnline(System.DateTime)">
+            <summary>
+            获取在线用户数 
+            <param name="UserIsOnlineTimeWindow">用户最后活动的起始时间，日期型。即从何时至现在的意思。</param>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetUserID(System.String)">
+            <summary>
+            获得用户的ＩＤ
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetUserNameByEmail(System.String)">
+            <summary>
+            根据Email获取用户名
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetUsers(System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            读取ID大于某个值的用户列表
+            </summary>
+            <param name="minUserID"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="totalRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.ConvertSQL(MySql.Data.MySqlClient.MySqlCommand)">
+            <summary>
+            将带参数的SQL命令语句将其参数转换为对应值
+            <example>select * from t where id=@id -> select * from t where id=1</example>
+            </summary>
+            <param name="cmd"></param>
+            <param name="cmdText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetModuleIDByCode(System.String)">
+            <summary>
+            读取模块ID
+            </summary>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.GetModulesCount(System.Int32,System.Int32,Framework.Enumerations.ObjectType)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.DeleteRole(System.String,System.Boolean)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="throwOnPopulatedRole">当角色已被分配时是否抛出异常</param>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.AddUsersToRoles(System.String[],System.String[],Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            给用户分配角色
+            现在这种写法有一个问题，就是：如果用户名或角色名不存在的情况下，可能导到插入异样。
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.RemoveUserFromRole(System.String[],System.String[],Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.RemoveUserFromRole(System.String[],System.Int32,Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.RemoveUserFromRole(System.Int32[],System.Int32[],Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.FindUsersInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            查找属于某个角色的用户列表
+            此方法在后期需要完善
+            </summary>
+            <param name="roleName"></param>
+            <param name="usernameToMatch"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.FindUsersInRole(System.Int32,System.String,Authentication.DataEntity.RoleOwnType,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            查找属于某个角色的用户列表
+            此方法在后期需要完善
+            </summary>
+            <param name="roleID"></param>
+            <param name="usernameToMatch"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.MysqlAuthenticateProvider.DeleteOperateLog(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            删除指定的日志数据
+            如果不设置任何条件，则不会执行
+            </summary>
+            <param name="userID"></param>
+            <param name="moduleID"></param>
+            <param name="categoryID"></param>
+            <param name="channelID"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+        </member>
+        <member name="M:Authentication.DataProvider.DefaultPermissionProvider.IsRoleHasPermission(System.Int32,System.Int32,System.String)">
+            <summary>
+            判断角色是否拥有权限
+            这里有处理默认的权限，即该模块没有设定权限时，是允许还是拒绝。
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <param name="moduleID">模块ＩＤ</param>
+            <param name="action">动作</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.DefaultPermissionProvider.IsRoleHasPermission(System.Int32,System.String,System.String)">
+            <summary>
+            判断角色是否拥有权限
+            这里有处理默认的权限，即该模块没有设定权限时，是允许还是拒绝。
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <param name="moduleID">模块ＩＤ</param>
+            <param name="action">动作</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.DefaultPermissionProvider.GetModuleIDByCode(System.String)">
+            <summary>
+            读取模块ID
+            </summary>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.DataProvider.Base.HitBaseDALs">
+            <summary>
+            Summary description for Hits $Description$
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.PopulateHitFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.PopulateHitFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.GetDefaultValues(Framework.Components.Hit@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <param name="returnRowCount">是否强制返回总行数，一般情况第一页数据可以不用返回总行数，可以节约资源。当然，如果不是第一页，就必然要返回总行数，此参数将失效。</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.HitBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Authentication.DataProvider.Base.HitBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Authentication.DataProvider.Base.HitBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_UsersInRolM">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UsersInRolM.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UsersInRolM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UsersInRolM.OperatorID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UsersInRolM.LastModifyDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UsersInRolM.OwnType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_scoreChange">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteSettingM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteSettingM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteSettingM.Disabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteSettingM.Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteSettingM.SettingsXML">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteSettingM.SettingsKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteSettingM.ApplicationName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.DbConfig.Source">
+            <summary>
+            外部数据来源，如火车等
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.DbConfig.Mall">
+            <summary>
+            商城数据
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_pointM">
+            <summary>
+            生成:2010/11/27 08:22:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_pointM.PointsRecordID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_pointM.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_pointM.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_pointM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_pointM.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_pointM.Quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_pointM.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.BirdstatM">
+            <summary>
+            生成:2010/07/09 02:33:46
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdstatM.BirdID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdstatM.MemberCount">
+            <summary>
+            成员人数
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdstatM.Hits">
+            <summary>
+            群点击数
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdstatM.MemberTrips">
+            <summary>
+            成员行程数
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.BirdstatM.Topics">
+            <summary>
+            话题数
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteStatisticM">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.TotalUsers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.TotalArticles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.TotalPosts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.TotalTrades">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.DaysPosts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.DaysArticles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.DaysUsers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.DaysTrades">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.DaysViews">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.DaysIPs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteStatisticM.ExtendData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteCensorshipM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteCensorshipM.WordID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteCensorshipM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteCensorshipM.Word">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteCensorshipM.Replacement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteCensorshipM.Level">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_getuserinfobyUsername">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Bird_Get">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.DataProvider.HitDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.HitDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.Sys_RightM">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.RightsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.OperatorID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.GrantOrRevoke">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.LastModifyDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.PermissionCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.DataTypeID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RightM.ResourceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.HitM">
+            <summary>
+            生成:2010/01/04 04:21:39
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.HitM.HitID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.HitM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.HitM.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.HitM.HitTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.HitM.HitUserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.HitM.IP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.HitM.IsIPCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.ProvinceCityProc">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteDisallowedNamM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteDisallowedNamM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.SiteDisallowedNamM.DisallowedName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.PortalM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.ReplacePortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalCreateTIme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalEndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.UploadImgUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalM.PortalMemo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_group_favoriteM">
+            <summary>
+            生成:2010/08/11 10:50:50
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_group_favoriteM.GroupFavID">
+            <summary>
+            组收藏ID
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_group_favoriteM.FavType">
+            <summary>
+            藏收类型
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_group_favoriteM.UserFavID">
+            <summary>
+            用户收藏ID
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_group_favoriteM.DateCreated">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_group_favoriteM.GroupID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_fellowsM">
+            <summary>
+            生成:2010/08/11 12:07:09
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_userid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_fellowvolumeid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_fellowuserid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_fellownickname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.User_fellowsM.Fw_FellowType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_UserM">
+            <summary>
+            生成:2010/07/09 12:31:57
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.UserName">
+            <summary>
+            用户名，登陆用户名
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.UserStatus">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.UserType">
+            <summary>
+            0 未设置任何分类
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.CreateDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.LastLoginDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.LastActivityDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.LastLoginIP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.LoginTimes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.SearchField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.UserLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.RegionID">
+            <summary>
+            用户所在城市
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.NickName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.Sex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.Blog">
+            <summary>
+            博客地址
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.Signature">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.HeadPortrait">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserM.IsPublish">
+            <summary>
+            用户信息是否公开
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.PortalSettingM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalSettingM.SiteID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalSettingM.Application">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalSettingM.Disabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalSettingM.Settings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.PortalSettingM.ForumsVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.OperateLogM">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.LogID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.MenuID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.LogTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.MenuText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.Action">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.URL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.Memo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.OperateLogM.ObjectTypeID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Cms_CMSPermissionM">
+            <summary>
+            生成:2010/01/04 04:21:39
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.View">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Read">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Post">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Reply">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Edit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Sticky">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Announce">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.CreatePoll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Vote">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Moderate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Attachment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Cms_CMSPermissionM.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_SimplyCreate">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.DataProvider.SqlAuthenticateProvider">
+            <summary>
+            用户管理及认证系统数据提供组件
+            2007-08-03
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetMembershipUser(Authentication.DataEntity.UserEntity,Authentication.DataEntity.UserProfileEntity)">
+            <summary>
+            将用户转换成ＭｅｍｂｅｒＳｈｉｐ的用户
+            </summary>
+            <param name="user">数据库中用户实例</param>
+            <param name="userProfile">用户扩展信息实例</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetMembershipUser(System.String)">
+            <summary>
+            从数据库中获取MembershipUser对象
+            </summary>
+            <param name="username">用户名</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetMembershipUser(System.Int32)">
+            <summary>
+            根据用户ID获得用户MembershipUser
+            </summary>
+            <param name="userID">用户ＩＤ</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetMembershipUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据EMAIL查MemberShipUser用户信息
+            </summary>
+            <param name="emailToMatch">用于匹配的邮箱，是相似匹配</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetMembershipUsersByName(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据用户名查MembershipUser用户信息
+            </summary>
+            <param name="usernameToMatch">用于相似匹配的用户名</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetMembershipUsers(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得所有满足条件的MembershipUser用户信息
+            </summary>
+            <param name="whereClause">条件，一般格式类似a.userid=10,具体参见分页存储过程条件的设定方法</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,Framework.Securities.EncryptMode)">
+            <summary>
+            创建一个用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="email">Email</param>
+            <param name="passwordQuestion">密码安全问题</param>
+            <param name="passwordAnswer">密码安全答案</param>
+            <param name="isApproved">是否锁定</param>
+            <param name="providerUserKey">主键</param>
+            <param name="status">用户创建状态</param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetNumberOfUsersOnline(System.DateTime)">
+            <summary>
+            获取在线用户数 
+            <param name="UserIsOnlineTimeWindow">用户最后活动的起始时间，日期型。即从何时至现在的意思。</param>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetUserID(System.String)">
+            <summary>
+            获得用户的ＩＤ
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetUserNameByEmail(System.String)">
+            <summary>
+            根据Email获取用户名
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetUsers(System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            读取ID大于某个值的用户列表
+            </summary>
+            <param name="minUserID"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="totalRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetModuleIDByCode(System.String)">
+            <summary>
+            读取模块ID
+            </summary>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.GetModulesCount(System.Int32,System.Int32,Framework.Enumerations.ObjectType)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.DeleteRole(System.String,System.Boolean)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="throwOnPopulatedRole">当角色已被分配时是否抛出异常</param>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.AddUsersToRoles(System.String[],System.String[],Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            给用户分配角色
+            现在这种写法有一个问题，就是：如果用户名或角色名不存在的情况下，可能导到插入异样。
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.RemoveUserFromRole(System.String[],System.String[],Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.RemoveUserFromRole(System.String[],System.Int32,Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.RemoveUserFromRole(System.Int32[],System.Int32[],Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.FindUsersInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            查找属于某个角色的用户列表
+            此方法在后期需要完善
+            </summary>
+            <param name="roleName"></param>
+            <param name="usernameToMatch"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.FindUsersInRole(System.Int32,System.String,Authentication.DataEntity.RoleOwnType,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            查找属于某个角色的用户列表
+            此方法在后期需要完善
+            </summary>
+            <param name="roleID"></param>
+            <param name="usernameToMatch"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.SqlAuthenticateProvider.DeleteOperateLog(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            删除指定的日志数据
+            如果不设置任何条件，则不会执行
+            </summary>
+            <param name="userID"></param>
+            <param name="moduleID"></param>
+            <param name="categoryID"></param>
+            <param name="channelID"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+        </member>
+        <member name="T:Authentication.Services.UserOfMembership">
+            <summary>
+            MemberShip中的用户管理
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetUserDatabaseString">
+            <summary>
+            读取联接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据EMAIL查用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.FindUsersByName(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据用户名查用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetAllUsers(System.Int32,System.Int32,Framework.Enumerations.UserStatus,System.Int32@,System.String,System.String)">
+            <summary>
+            获得所有用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetUsers(System.String,System.String,System.DateTime,System.DateTime,Framework.Enumerations.UserStatus,Framework.Enumerations.UserType,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获得所有用户
+            </summary>
+            <param name="usernameToMatch"></param>
+            <param name="emailToMatch"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GenerateRandomPWD(System.String)">
+            <summary>
+            生成8位随机密码
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.ApproveUser(System.String,System.String,System.String)">
+            <summary>
+            审核用户
+            </summary>
+            <param name="username"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetUserIDByName(System.String,System.String,System.String)">
+            <summary>
+            读取用户ID
+            </summary>
+            <param name="username"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.RemoveCache(System.String)">
+            <summary>
+            删除用户缓存
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.RemoveCache(System.Int32)">
+            <summary>
+            删除用户缓存
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.AddFav(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            添加收藏
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <param name="from"></param>
+            <returns>0:已经存在，不需再更新，》0新增，-1出错</returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.AddFav(System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <param name="v"></param>
+            <param name="from"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.AddFav(System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <param name="v"></param>
+            <param name="from"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.FavCount(System.Int32,System.Int32)">
+            <summary>
+            计算某个对像收藏的个数
+            </summary>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.FavCount(System.Int32,System.String)">
+            <summary>
+            计算用户收藏的动作数
+            </summary>
+            <param name="userID"></param>
+            <param name="favType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetFavList(System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得收藏列表
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetGroupFavList(System.Int32,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <param name="favType"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.RemoveFav(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            删除收藏信息
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.RemoveFav(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            删除收藏信息
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID">id列表，以逗号分隔</param>
+            <param name="favType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.RemoveFavs(System.Int32)">
+            <summary>
+            删除收藏信息（多个）
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.FavCount(System.Int32,System.Int32,System.String,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            计算收藏的对像个数
+            </summary>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <param name="userID"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.FavCount(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            计算收藏的个数
+            </summary>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetFavListSame(System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            两人相同的收藏操作
+            </summary>
+            <param name="userID"></param>
+            <param name="targetID"></param>
+            <param name="favType"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.AddFav(System.Int32,System.Int32,System.Int32,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="objectName"></param>
+            <param name="favType"></param>
+            <param name="v"></param>
+            <param name="from"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetFavObjectList(System.Int32,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得收藏列表
+            </summary>
+            <param name="userID"></param>
+            <param name="objectType"></param>
+            <param name="objectID"></param>
+            <param name="favType"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GetGroupFavObjectList(System.Int32,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            
+            </summary>
+            <param name="groupID"></param>
+            <param name="favType"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.GenerateRandomNumber(System.Int32)">
+            <summary>
+            生成8位随机密码
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.UpdateUserInfo(Authentication.Weed.Member_Extend)">
+            <summary>
+            操作用户数据，并同步更新最新的扩展属性
+            </summary>
+            <param name="userID"></param>
+            <param name="trueName"></param>
+            <param name="sex"></param>
+            <param name="birthDay"></param>
+            <param name="regionID"></param>
+            <param name="address"></param>
+            <param name="post"></param>
+            <param name="phone"></param>
+            <param name="mobile">为空则不处理</param>
+            <param name="email">为空则不处理</param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.ChangePayPassword(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            更改支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="orgPwd"></param>
+            <param name="newPwd"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.PayPasswordIsEmptyNull(System.Int32)">
+            <summary>
+            验证密码是否为空
+            </summary>
+            <param name="userID">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.CreatePayPassword(System.Int32,System.String,System.String)">
+            <summary>
+            生成支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="validCode"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.UserOfMembership.ValidatePayPassword(System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <param name="payPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.User_checkUsername">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.up_user_GETSAMEFAV">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RoleBaseDALs.GetDefaultValues(Authentication.DataEntity.RoleEntity@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RoleBaseDALs.GetNullValues(Authentication.DataEntity.RoleEntity@)">
+            <summary>
+            根据字段的类型，替换空值
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RoleBaseDALs.CheckNullValues(Authentication.DataEntity.RoleEntity@)">
+            <summary>
+            保存前检查空值情况
+            此处需要完善
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RoleBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RoleBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RoleBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Authentication.DataProvider.Base.Sys_RoleBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="M:Authentication.DataProvider.RoleData.Instance">
+            <summary>
+            获得一个实例的方法
+            数据库联接在配置文件中的mssql_authentication项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.RoleData.GetRoleOwnerIDs(System.Int32)">
+            <summary>
+            读取角色的管理者
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataProvider.RoleData.GetList(System.Int32,Framework.Enumerations.RoleType,System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得角色列表
+            </summary>
+            <param name="pageRoleID"></param>
+            <param name="roleType"></param>
+            <param name="includeChildren"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.Sys_RolM">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RolM.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RolM.RoleName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RolM.RoleCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RolM.RoleType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RolM.ParentRoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_RolM.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Services.RoleOfMembership">
+            <summary>
+            MemberShip对应的角色管理
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.IsUserInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            判断用户是否拥有指定角色
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.FindRolesInUser(System.String,System.String,System.String)">
+            <summary>
+            获取指定用户所分配的角色
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.FindUsersInRole(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获取拥有指定角色的用户
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.FindUsersInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            查找拥有指定角色的用户
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.AddUsersToRoles(System.String[],System.String[],Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            给用户分配角色
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.RoleOfMembership.RemoveUsersFromRoles(System.String[],System.String[],Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+        </member>
+        <member name="T:Authentication.Services.Right">
+            <summary>
+            权限管理的业务处理类
+            用于远程对象调用，继承自IRight接口
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Right.GetRolePermissions(System.Int32,System.String,System.String)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:Authentication.Services.Right.GetRolePermissions(System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.Services.Right.GetRolePermissions(System.Int32,System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.Services.Right.GetUserPermissions(System.Int32,System.String,System.String)">
+            <summary>
+            获得用户所拥有的权限列表
+            </summary>
+            <param name="userID">用户ID</param>
+        </member>
+        <member name="M:Authentication.Services.Right.GetUserPermissions(System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            获得用户所拥有的权限列表
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Add(Authentication.DataEntity.RightsEntity,System.String,System.String)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="entity">权限实体</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Add(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Add(System.Int32,System.Int32[],System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            批量增加权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID数组</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Delete(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="rightsID">权限ID</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Delete(System.Int32[],System.String,System.String,System.Int32)">
+            <summary>
+            批量删除权限
+            </summary>
+            <param name="rightsID">权限ID数组</param>
+        </member>
+        <member name="M:Authentication.Services.Right.DeleteByOperator(System.Int32,System.String,System.String)">
+            <summary>
+            删除指定操作员所赋予的所有权限
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Right.DeleteByRole(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            删除指定角色的所有权限
+            </summary>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Delete(System.Int32,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Delete(System.Int32,System.Int32,Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Delete(System.Int32,System.Int32[],System.String,System.String,System.Int32)">
+            <summary>
+            批量删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID</param>
+        </member>
+        <member name="M:Authentication.Services.Right.Delete(System.Int32,System.Int32[],Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            批量删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.Services.Right.GetEntity(System.Int32,System.String,System.String)">
+            <summary>
+            得到一个权限实体
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Right.GetListByOperator(System.Int32,System.String,System.String)">
+            <summary>
+            获得操作员所授权的权限列表
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_recharge">
+            <summary>
+            生成:08/04/24 10:26:51
+            作者:自动生成
+            
+            备注:请确保与[存储过程].[参数]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="T:Authentication.Services.Module">
+            <summary>
+            模块管理业务对象
+            处理与模块相关的业务，包括添加、删除、修改等。
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Module.Exists(System.Int32,System.String,System.String)">
+            <summary>
+            是否存在该记录
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Module.Add(Authentication.DataEntity.ModuleEntity,System.String,System.String)">
+            <summary>
+             增加一条数据
+            </summary>
+            <param name="moduleEntity"></param>
+        </member>
+        <member name="M:Authentication.Services.Module.Update(Authentication.DataEntity.ModuleEntity,System.String,System.String)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="moduleEntity"></param>
+        </member>
+        <member name="M:Authentication.Services.Module.Delete(System.Int32,System.String,System.String)">
+            <summary>
+            删除一条数据
+            </summary>
+            <param name="moduleID"></param>
+        </member>
+        <member name="M:Authentication.Services.Module.GetEntity(System.Int32,System.String,System.String)">
+            <summary>
+            得到一个对象实体
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Module.GetList(System.String,System.String)">
+            <summary>
+            获得全部数据列表
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Module.GetListByParentID(System.Int32,System.String,System.String)">
+            <summary>
+            获得数据列表（根据父模块编号）
+            </summary>
+            <param name="parentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Module.GetList(System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据分页获得数据列表
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Module.GetListByLevel(System.Int32,System.String,System.String)">
+            <summary>
+            获得数据列表（根据模块级别）
+            </summary>
+        </member>
+        <member name="M:Authentication.Services.Module.GetModuleAssembly(System.Int32,System.String,System.String)">
+            <summary>
+            获得当前模块的权限验证程序集
+            如果没有设定，则返回空值或空字符串，表示使用系统默认的验证程序。
+            </summary>
+            <param name="moduleID">模块ID</param>
+            <returns>程序集名称</returns>
+        </member>
+        <member name="M:Authentication.Services.Module.GetListWithTree(System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="settingsID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Services.Module.BuildTree(System.Int32,Authentication.DataEntity.ModuleEntity,Authentication.Weed.Sys_ModulM,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="parentID"></param>
+            <param name="parentModule"></param>
+            <param name="mp"></param>
+            <param name="level"></param>
+        </member>
+        <member name="M:Authentication.Services.Module.ResetModuleLevel(System.Int32,System.Int32)">
+            <summary>
+            重设模块等级
+            </summary>
+            <param name="portalID"></param>
+            <param name="defaultLevelID"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

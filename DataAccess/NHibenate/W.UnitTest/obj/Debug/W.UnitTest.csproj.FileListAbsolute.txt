@@ -1,0 +1,17 @@
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\W.UnitTest.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\nunit.framework.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\Spring.Core.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\Spring.Testing.NUnit.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\W.IDAL.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\W.Model.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\antlr.runtime.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\Common.Logging.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\Spring.Data.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\Spring.Aop.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\W.IDAL.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\W.Model.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\obj\Debug\W.UnitTest.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\W.UnitTest.exe.config
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\bin\Debug\W.UnitTest.exe
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.UnitTest\obj\Debug\W.UnitTest.exe

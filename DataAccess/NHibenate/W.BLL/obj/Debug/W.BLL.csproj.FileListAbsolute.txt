@@ -1,0 +1,5 @@
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.BLL\bin\Debug\W.BLL.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.BLL\bin\Debug\W.BLL.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.BLL\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.BLL\obj\Debug\W.BLL.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.BLL\obj\Debug\W.BLL.pdb

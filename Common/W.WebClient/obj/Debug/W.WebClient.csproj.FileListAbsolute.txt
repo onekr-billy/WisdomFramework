@@ -1,0 +1,10 @@
+E:\Work\Project\Web\asp.net\Wisdom\W.WebClient\bin\Debug\W.WebClient.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.WebClient\bin\Debug\W.WebClient.pdb
+E:\Work\Project\Web\asp.net\Wisdom\W.WebClient\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\Wisdom\W.WebClient\obj\Debug\W.WebClient.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.WebClient\obj\Debug\W.WebClient.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.WebClient\bin\Debug\W.WebClient.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.WebClient\bin\Debug\W.WebClient.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.WebClient\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.WebClient\obj\Debug\W.WebClient.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.WebClient\obj\Debug\W.WebClient.pdb

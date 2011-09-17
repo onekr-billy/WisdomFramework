@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B0C4813-6F08-4E8F-BF55-40B800AF7FC9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>W.Service</RootNamespace>
+    <AssemblyName>W.Service</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\W.Resource\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB">
+      <HintPath>..\W.Resource\DLL\DB\MongoDB\MongoDB.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MongoDB.GridFS">
+      <HintPath>..\W.Resource\DLL\DB\MongoDB\MongoDB.GridFS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\W.Resource\DLL\DB\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Weed, Version=2.9.10.26, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\W.Resource\DLL\DB\Weed.dll</HintPath>
+    </Reference>
+    <Reference Include="Weed.BCF, Version=4.0.3369.26559, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\W.Resource\DLL\DB\Weed.BCF.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mall\B2cproduct.cs" />
+    <Compile Include="Mall\Mall.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\W.DataBase\W.DataBase.csproj">
+      <Project>{EAB1FB7E-D03E-42A6-AA1C-249E089AD82A}</Project>
+      <Name>W.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\W.Entity\W.Entity.csproj">
+      <Project>{760126A0-74C7-4DC0-88F5-822FAB1C5914}</Project>
+      <Name>W.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\W.IService\W.IService.csproj">
+      <Project>{E62897EC-FACC-4FEF-AEE2-47DFE6987EA9}</Project>
+      <Name>W.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\W.Model\W.Model.csproj">
+      <Project>{49116E07-A16B-4D83-911A-DD5D6E87CEDA}</Project>
+      <Name>W.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)Resource\W.Resource\Assembly\BuildDLL\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

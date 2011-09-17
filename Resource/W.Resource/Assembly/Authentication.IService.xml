@@ -1,0 +1,5209 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Authentication.IService</name>
+    </assembly>
+    <members>
+        <member name="T:Authentication.Weed.Sys_RightsResourc">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_RightsResourc.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_RightsResourc.ResourceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_RightsResourc.ResourceName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_RightsResourc.ResourceType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_Modul">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.ModuleName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.Remark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.Level">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.OrderID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.ModuleCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.PermissionAssembly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.DefaultPermission">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.DataTypeID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.DataID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Modul.SmartCode">
+            <summary>
+            简明的编码，如admin.checkuser等，全小写。
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.RoleSet">
+            <summary>
+            Summary description for UserSet.
+            </summary>
+        </member>
+        <member name="T:Authentication.Client.ModuleProvider">
+            <summary>
+            模块权限操作
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.IModule">
+            <summary>
+            系统模块接口
+            此处应包含用户权限的部分功能
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IModule.Exists(System.Int32,System.String,System.String)">
+            <summary>
+            是否存在该记录
+            </summary>
+            <param name="moduleID"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.Exists(System.String,System.String,System.String)">
+            <summary>
+            检查是否存在该名称的模块
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns>Ｔｒｕｅ存在，Ｆａｌｓｅ不存在</returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.Add(Authentication.DataEntity.ModuleEntity,System.String,System.String)">
+            <summary>
+            增加一条数据
+            </summary>
+            <param name="entity"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.Update(Authentication.DataEntity.ModuleEntity,System.String,System.String)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="entity"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.Delete(System.Int32,System.String,System.String)">
+            <summary>
+            删除一条数据
+            </summary>
+            <param name="moduleID"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetEntity(System.Int32,System.String,System.String)">
+            <summary>
+            得到一个对象实体
+            </summary>
+            <param name="moduleID"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetEntity(System.String,System.String,System.String)">
+            <summary>
+            获得一个模块的实例
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetEntityByCode(System.String)">
+            <summary>
+            根据编码获得实例
+            </summary>
+            <param name="moduleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetList(System.String,System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetListByParentID(System.Int32,System.String,System.String)">
+            <summary>
+            获得数据列表（根据父模块编号）
+            </summary>
+            <param name="parentID"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetListWithTree(System.Int32,System.String,System.String)">
+            <summary>
+            读取关于模块的树状结构
+            </summary>
+            <param name="settingsID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetList(System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据分页获得数据列表
+            </summary>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalRecords"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetListByLevel(System.Int32,System.String,System.String)">
+            <summary>
+            获得数据列表（根据模块级别）
+            </summary>
+            <param name="level"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetModuleAssembly(System.Int32,System.String,System.String)">
+            <summary>
+            获得当前模块的权限验证程序集
+            如果没有设定，则返回空值或空字符串，表示使用系统默认的验证程序。
+            </summary>
+            <param name="moduleID">模块ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            /// <returns>程序集名称</returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.GetModuleAssemblies(System.String,System.String)">
+            <summary>
+            获得现在可用的权限验证模块Assembly
+            </summary>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IModule.ResetModuleLevel(System.Int32,System.Int32)">
+            <summary>
+            重设模块等级
+            </summary>
+            <param name="portalID"></param>
+            <param name="defaultLevelID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.Sys_Rol">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Rol.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Rol.RoleName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Rol.RoleCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Rol.RoleType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Rol.ParentRoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Rol.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteCensorship">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteCensorship.WordID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteCensorship.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteCensorship.Word">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteCensorship.Replacement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteCensorship.Level">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.PortalSetting">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PortalSetting.SiteID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PortalSetting.Application">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PortalSetting.Disabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PortalSetting.Settings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PortalSetting.ForumsVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.UserSet">
+            <summary>
+            Summary description for UserSet.
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.UserProfileEntity">
+            <summary>
+            表《sys_UserProfiles》对应的实体类
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_UserProfile">
+            <summary>
+            生成:2010/07/09 12:26:33
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.Sys_UserProfile._MemoPic">
+            <summary>
+            备注图片
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.PasswordHash">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Username">
+            <summary>
+            登陆用户名
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.PasswordSalt">
+            <summary>
+            加密密钥
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.PasswordFormat">
+            <summary>
+            密加格式
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.PasswordQuestion">
+            <summary>
+            密码问题
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.PasswordAnswer">
+            <summary>
+            密码问题答案
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.LastChangePwdDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Birthday">
+            <summary>
+            出生年月
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.TrueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Phone">
+            <summary>
+            电话号码或者手机号码
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.QQ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.IDNumber">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Address">
+            <summary>
+            用户地址
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.PostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Introduction">
+            <summary>
+            用户介绍
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.RegisterIP">
+            <summary>
+            注册IP
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Additions">
+            <summary>
+            扩展属性（Json格式）
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.PayPassword">
+            <summary>
+            支付密码
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Marriage">
+            <summary>
+            婚恋状态
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.BolldType">
+            <summary>
+            血型
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.RegisterAdd">
+            <summary>
+            户籍
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Msn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.Residence">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UserProfile.CityID">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.UserProfileEntity.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.UserProfileEntity.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.UserProfileEntity.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.DataEntity.UserEntity">
+            <summary>
+            表《sys_Users》对应的基类
+            </summary>
+        </member>
+        <!-- 对于成员“T:Authentication.Weed.Sys_User”忽略有格式错误的 XML 注释 -->
+        <member name="P:Authentication.Weed.Sys_User.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.UserName">
+            <summary>
+            用户名，登陆用户名
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.UserStatus">
+            <summary>
+            -1  æœªæ¿€æ´»
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.UserType">
+            <summary>
+            0 未设置任何分类
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.CreateDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.LastLoginDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.LastActivityDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.LastLoginIP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.LoginTimes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.SearchField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.UserLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.RegionID">
+            <summary>
+            用户所在城市
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.NickName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.Sex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.Blog">
+            <summary>
+            åšå®¢åœ°å€
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.Signature">
+            <summary>
+            ç­¾åæ¡£
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.HeadPortrait">
+            <summary>
+            å¤´åƒ
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_User.IsPublish">
+            <summary>
+            用户信息是否公开
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_point">
+            <summary>
+            生成:2010/11/27 08:22:52
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_point.PointsRecordID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_point.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_point.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_point.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_point.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_point.Quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_point.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_addres">
+            <summary>
+            生成:2010/11/26 11:07:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.UserAddressID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Consignee">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Province">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.City">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.County">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Post">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Tel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Phone">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.IsDefault">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_addres.Comment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_user_favorite">
+            <summary>
+            生成:2010/07/09 05:03:53
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.FavID">
+            <summary>
+            FavID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.CreateDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.DataStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.UrlFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.Favtype">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.FavCount">
+            <summary>
+            FavCount
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.Val">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.ObjectName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_user_favorite.Comment">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_Right">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.RightsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.OperatorID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.GrantOrRevoke">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.LastModifyDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.PermissionCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.DataTypeID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_Right.ResourceCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sys_Modul_Extend.HasRights">
+            <summary>
+            是否已经设置了权限，与数据库不相交
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteBannedAddress">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteBannedAddress.BannedID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteBannedAddress.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteBannedAddress.StartingAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteBannedAddress.EndingAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteBannedAddress.BannedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteBannedAddress.StartingID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteBannedAddress.EndingID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.CMSPermissionSet">
+            <summary>
+            用户操作记录集合。
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.CMSPermissionSet.ToArrayList">
+            <summary>
+            转换成为一个数组类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Client.PermissionProvider">
+            <summary>
+            权限验证代码
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.IPermission">
+            <summary>
+            角色权限及用户权限管理
+            可以读取用户拥有的所有权限
+            可以验证用户的权限
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsAdministrator(System.String,System.String,System.String)">
+            <summary>
+            是否为管理员
+            </summary>
+            <param name="userName"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsAdministrator(System.Int32,System.String,System.String)">
+            <summary>
+            是否为管理员
+            </summary>
+            <param name="userID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserInRole(System.String,System.String,System.String,System.String)">
+            <summary>
+            用户是否为某个角色
+            </summary>
+            <param name="userName"></param>
+            <param name="roleName"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserInRole(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            用户是否为某个角色
+            </summary>
+            <param name="userName"></param>
+            <param name="roleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserInRole(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            用户是否为某个角色
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserHasPermission(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            判断用户是否有指定模块的权限
+            </summary>
+            <param name="userName"></param>
+            <param name="moduleCode">模块编码</param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserHasPermission(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            判断用户是否有指定模块的权限
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="moduleCode">模块编码</param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns>True 有权限，False 无权限</returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserHasPermission(System.String,System.String,System.String,System.String,System.String,System.Object[])">
+            <summary>
+            判断用户是否拥有指定权限
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="moduleCode">模块编码</param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="parameters">扩展参数，用于将来可能的数据权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns>True 有权限，False 无权限</returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserHasPermission(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            判断用户是否有指定模块的权限
+            </summary>
+            <param name="userName"></param>
+            <param name="moduleID"></param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserHasPermission(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            判断用户是否有指定模块的权限
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="moduleID">模块ID，如果为0，则不指定模块</param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns>True 有权限，False 无权限</returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsUserHasPermission(System.String,System.Int32,System.String,System.String,System.String,System.Object[])">
+            <summary>
+            判断用户是否拥有指定权限
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="moduleID">模块ID，如果为0，则不指定模块</param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="parameters">扩展参数，用于将来可能的数据权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns>True 有权限，False 无权限</returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsRoleHasPermission(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            角色是否拥有指定模块的权限
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <param name="moduleID">模块ＩＤ</param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.IsRoleHasPermission(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            角色是否拥有指定模块的权限
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <param name="moduleCode">模块Code</param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.GetDefaultPermissionModule(System.String,System.String)">
+            <summary>
+            获得所有的权限验证模块名称
+            </summary>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IPermission.GetPermissionProviders(System.String,System.String)">
+            <summary>
+            获得所有的权限验证模块
+            </summary>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.PermissionProvider.IsUserHasPermission(System.String,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userName"></param>
+            <param name="moduleID"></param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.PermissionProvider.IsUserHasPermission(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <param name="moduleID"></param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.PermissionProvider.IsUserHasPermission(System.String,System.Int32,System.String,System.String,System.String,System.Object[])">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <param name="moduleID"></param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.PermissionProvider.IsRoleHasPermission(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+            <param name="moduleID"></param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.PermissionProvider.IsRoleHasPermission(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="roleID"></param>
+            <param name="moduleID"></param>
+            <param name="action">操作动作，此处传入的值为在模块中定义的动作名称，为空或没有匹配的动作名称时表示查看权限</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.Bird">
+            <summary>
+            生成:2010/04/19 10:10:41
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.BirdID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.DataStatus">
+            <summary>
+            1，正常，0，停用
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.DateModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Bird.BirdDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.UsersInRolesEntity">
+            <summary>
+            用户角色关系实体类
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_UsersInRol">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UsersInRol.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UsersInRol.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UsersInRol.OperatorID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UsersInRol.LastModifyDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_UsersInRol.OwnType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.UsersInRolesEntity.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.UsersInRolesEntity.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.UsersInRolesEntity.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.DataEntity.UsersInRolesEntity.OwnType">
+            <summary>
+            描述角色与用户关系：从属还是拥有
+            如果是从属，则用户仅有本层角色的权限
+            如果是拥有，则用户拥有角色及下层角色的权限
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.UserProfileSet">
+            <summary>
+            Summary description for UserSet.
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.RightsSet">
+            <summary>
+            Summary description for UserSet.
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.CMSRightsObjectType">
+            <summary>
+            CMS权限对象ID
+            styker add 2006-04-20
+            </summary>
+        </member>
+        <member name="F:Authentication.IServices.CMSRightsObjectType.All">
+            <summary>
+            全部或未设
+            </summary>
+        </member>
+        <member name="F:Authentication.IServices.CMSRightsObjectType.Module">
+            <summary>
+            模块
+            </summary>
+        </member>
+        <member name="F:Authentication.IServices.CMSRightsObjectType.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="F:Authentication.IServices.CMSRightsObjectType.Cell">
+            <summary>
+            栏位
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.RoleOwnType">
+            <summary>
+            描述角色与用户关系：从属还是拥有
+            如果是从属，则用户仅有本层角色的权限
+            如果是拥有，则用户拥有角色及下层角色的权限
+            </summary>
+        </member>
+        <member name="F:Authentication.DataEntity.RoleOwnType.Member">
+            <summary>
+            从属
+            </summary>
+        </member>
+        <member name="F:Authentication.DataEntity.RoleOwnType.Owner">
+            <summary>
+            拥有
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.User_car">
+            <summary>
+            生成:2011/04/22 10:07:46
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.UCID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.NickName">
+            <summary>
+            用户昵称
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.BrandName">
+            <summary>
+            车品牌
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.BrandID">
+            <summary>
+            车品牌ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.Model">
+            <summary>
+            型车
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.ModelID">
+            <summary>
+            车型ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.CarL">
+            <summary>
+            车排量
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.Givenyear">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.BelongsProvinces">
+            <summary>
+            所属省份
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.BelongsCity">
+            <summary>
+            所属城市
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.CarColor">
+            <summary>
+            辆车颜色
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.EngineNum">
+            <summary>
+            动机发号
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.CarFrame">
+            <summary>
+            架号车
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.CarLicense">
+            <summary>
+            车牌号
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.OrderID">
+            <summary>
+            序排ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_car.ShowType">
+            <summary>
+            显示方式1=完全公开2=仅好友可见3=完全保密
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteStatistic">
+            <summary>
+            生成:2010/01/04 04:21:41
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.TotalUsers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.TotalArticles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.TotalPosts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.TotalTrades">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.DaysPosts">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.DaysArticles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.DaysUsers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.DaysTrades">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.DaysViews">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.DaysIPs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteStatistic.ExtendData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteSetting">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteSetting.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteSetting.Disabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteSetting.Version">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteSetting.SettingsXML">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteSetting.SettingsKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteSetting.ApplicationName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.ProvinceCity">
+            <summary>
+            生成:2010/11/26 09:06:28
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.ProvinceCity.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.ProvinceCity.A">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.ProvinceCity.B">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.ProvinceCity.C">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.ProvinceCity.C1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.ProvinceCity.ProvinceID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.ProvinceCity.CityID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Cms_CMSPermission">
+            <summary>
+            生成:2010/01/04 04:21:39
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.RoleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.View">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Read">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Post">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Reply">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Edit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Delete">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Sticky">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Announce">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.CreatePoll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Vote">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Moderate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Attachment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cms_CMSPermission.Type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.Fav_Extend2">
+            <summary>
+            用户收藏夹扩展
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.Fav_Extend2.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.IServices.Fav_Extend2.Goodspic">
+            <summary>
+            商品图片
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.Fav_Extend2.GoodsStore">
+            <summary>
+            商品库存
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.Fav_Extend2.GoodsPrice">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.Fav_Extend2.TypeCount">
+            <summary>
+            分类数量
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.Fav_Extend2.TypeName">
+            <summary>
+            分类名
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.IRight">
+            <summary>
+            权限模块接口
+            权限表操作
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Add(Authentication.DataEntity.RightsEntity,System.String,System.String)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="entity">权限实体</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Add(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            增加权限,
+            
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Add(System.Int32,System.Int32,System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Add(System.Int32,System.Int32[],System.Int32,System.String,System.String)">
+            <summary>
+            批量增加权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID数组</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Add(System.Int32,System.Int32[],System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            批量增加权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID数组</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.AddRolePermissions(System.String,System.Collections.Generic.IList{Authentication.DataEntity.ModuleEntity},System.String,System.String,System.Int32)">
+            <summary>
+            批量增加权限
+            </summary>
+            <param name="roleName">角色名称</param>
+            <param name="modules">模块清单</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.AddRolePermission(System.String,System.Int32,System.String,Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="roleName"></param>
+            <param name="moduleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="actions">动作列表，默认为空</param>
+            <param name="grantOrRevoke">允许或拒绝</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.UpdateRolePermission(System.String,System.Int32,System.String,Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            修改权限
+            实值上为先删除后添加
+            </summary>
+            <param name="roleName"></param>
+            <param name="moduleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="actions">动作列表，默认为空</param>
+            <param name="grantOrRevoke">允许或拒绝</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="rightsID">权限ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.Int32[],System.String,System.String,System.Int32)">
+            <summary>
+            批量删除权限
+            </summary>
+            <param name="rightsIDs">权限ID数组</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.DeleteByOperator(System.Int32,System.String,System.String)">
+            <summary>
+            删除指定操作员所赋予的所有权限
+            </summary>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <param name="operatorID"></param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.DeleteByRoleName(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            删除角色所拥有的全部权限
+            </summary>
+            <param name="roleName"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.DeleteByRole(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            删除指定角色的所有权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.Int32,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.Int32,System.Int32,Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.String,System.Collections.Generic.IList{Authentication.DataEntity.ModuleEntity},System.String,System.String,System.Int32)">
+            <summary>
+            批量删除角色对指定模块的权限
+            </summary>
+            <param name="roleName">角色名称</param>
+            <param name="modules">模块清单</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.String,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            删除角色权限
+            </summary>
+            <param name="roleName"></param>
+            <param name="moduleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.Int32,System.Int32[],System.String,System.String,System.Int32)">
+            <summary>
+            批量删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.Delete(System.Int32,System.Int32[],Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            批量删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetEntity(System.Int32,System.String,System.String)">
+            <summary>
+            得到一个权限实体
+            </summary>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <param name="rightsID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetRolePermissions(System.String,System.String,System.String)">
+            <summary>
+            获取角色所拥有的权限
+            </summary>
+            <param name="roleName">角色名称</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetRolePermissions(System.Int32,System.String,System.String)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetRolePermissions(System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许，0：两者都有）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetRolePermissions(System.Int32,System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            获得角色所拥有的权限
+            在某个主模块下的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许，0：两者都有）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetUserPermissions(System.String,System.String,System.String)">
+            <summary>
+            获取用户所拥有的全部权限
+            </summary>
+            <param name="userName"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetUserPermissions(System.Int32,System.String,System.String)">
+            <summary>
+            获取用户所拥有的全部权限
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetUserPermissions(System.Int32,Framework.Securities.RightGrantType,System.String,System.String)">
+            <summary>
+            获得用户所拥有的权限列表
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetUserPermissions(System.Int32,System.Int32,Framework.Securities.RightGrantType,System.String,System.String,System.Object[])">
+            <summary>
+            获得用户在指定模块下的所有权限
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="moduleID">模块ID，如果为0，则不指定模块</param>
+            <param name="parameters">扩展参数，用于将来可能的数据权限</param>
+            <param name="flag">允许或拒绝标志（1：拒绝，2：允许，0：两者都有）</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns>True 有权限，False 无权限</returns>
+        </member>
+        <member name="M:Authentication.IServices.IRight.GetListByOperator(System.Int32,System.String,System.String)">
+            <summary>
+            获得操作员所授权的权限列表
+            <param name="operatorID">操作人员ＩＤ</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            </summary>
+        </member>
+        <member name="M:Authentication.Client.RightsProvider.AddRolePermission(System.String,System.Int32,System.String,Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="roleName"></param>
+            <param name="moduleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="actions">动作列表，默认为空</param>
+            <param name="grantOrRevoke">允许或拒绝</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RightsProvider.UpdateRolePermission(System.String,System.Int32,System.String,Framework.Securities.RightGrantType,System.String,System.String,System.Int32)">
+            <summary>
+            修改权限
+            实值上为先删除后添加
+            </summary>
+            <param name="roleName"></param>
+            <param name="moduleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="actions">动作列表，默认为空</param>
+            <param name="grantOrRevoke">允许或拒绝</param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.OperateLog">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.LogID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.MenuID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.ModuleID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.LogTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.MenuText">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.Action">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.URL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.Memo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.OperateLog.ObjectTypeID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.User_Extend">
+            <summary>
+            用户的扩展信息
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.User_Extend.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            
+            </summary>
+            <param name="get"></param>
+            <param name="src"></param>
+        </member>
+        <member name="M:Authentication.IServices.User_Extend.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.User_Extend.ToUserInfo">
+            <summary>
+            转换类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.User_Extend.FromUserInfo(Framework.Components.UserInfo)">
+            <summary>
+            转换类型
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.PasswordHash">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.PasswordSalt">
+            <summary>
+            加密密钥
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.PasswordFormat">
+            <summary>
+            密加格式
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.PasswordQuestion">
+            <summary>
+            密码问题
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.PasswordAnswer">
+            <summary>
+            密码问题答案
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.LastChangePwdDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.Birthday">
+            <summary>
+            出生年月
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.TrueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.Phone">
+            <summary>
+            电话号码或者手机号码
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.QQ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.IDNumber">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.Address">
+            <summary>
+            用户地址
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.PostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.Introduction">
+            <summary>
+            用户介绍
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Extend.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.RightsEntity">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.RightsEntity.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.RightsEntity.RoleName">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.RightsEntity.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.RightsEntity.Description">
+            <summary>
+            描述，即用于ListBox显示用
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.ModuleEntity">
+            <summary>
+            系统模块实体类
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.ModuleEntity.GetModuleLevel">
+            <summary>
+            计算级别
+            级别（根据模块编码计算，比如编码为AA01的级别为2级）
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.ModuleEntity.Equals(System.Object)">
+            <summary>
+            比较是否相同
+            ID、Name和Code需都相同则认为相同
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.ModuleEntity.CopyTo(Authentication.DataEntity.ModuleEntity)">
+            <summary>
+            拷贝数据
+            </summary>
+            <param name="tempModule"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.DataEntity.ModuleEntity.Children">
+            <summary>
+            下级模块
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.ModuleEntity.ChildrenArray">
+            <summary>
+            子模块数组
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.ModuleEntity.Actions">
+            <summary>
+            动作
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.CMSPermissionBase">
+            <summary>
+            CMS权限检查是一个符合IPermission大原则下的一个特例。
+            在后期将需要融合到相应的IPermission中。
+            这个请要是为了在CMS的后台设置管理中前置型地对用户权限管理，即对用户可以看到的数据部分先行
+            进行筛选，相当于数据权限的一部分。
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.CMSPermissionBase.ToPermissionCode">
+            <summary>
+            将Permission转成代码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.CMSPermissionBase.FromPermissionCode(System.String)">
+            <summary>
+            从代码中取得Permission
+            </summary>
+            <param name="pCode"></param>
+        </member>
+        <member name="P:Authentication.IServices.CMSPermissionBase.DataID">
+            <summary>
+            不同类型对应的数据ID
+            如分类ID或模块ID等
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.User_Ext">
+            <summary>
+            生成:2010/07/09 12:26:33
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="F:Authentication.IServices.User_Ext._MemoPic">
+            <summary>
+            备注图片
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.User_Ext.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.PasswordHash">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Username">
+            <summary>
+            登陆用户名
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.PasswordSalt">
+            <summary>
+            加密密钥
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.PasswordFormat">
+            <summary>
+            密加格式
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.PasswordQuestion">
+            <summary>
+            密码问题
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.PasswordAnswer">
+            <summary>
+            密码问题答案
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.LastChangePwdDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Birthday">
+            <summary>
+            出生年月
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.TrueName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Phone">
+            <summary>
+            电话号码或者手机号码
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.QQ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.IDNumber">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Address">
+            <summary>
+            用户地址
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.PostalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Introduction">
+            <summary>
+            用户介绍
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.RegisterIP">
+            <summary>
+            注册IP
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Additions">
+            <summary>
+            扩展属性（Json格式）
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.PayPassword">
+            <summary>
+            支付密码
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Marriage">
+            <summary>
+            婚恋状态
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.BolldType">
+            <summary>
+            血型
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.RegisterAdd">
+            <summary>
+            户籍
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Msn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.Residence">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.User_Ext.CityID">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Sys_group_favorite">
+            <summary>
+            生成:2010/08/11 10:50:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_group_favorite.GroupFavID">
+            <summary>
+            组收藏ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_group_favorite.FavType">
+            <summary>
+            藏收类型
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_group_favorite.UserFavID">
+            <summary>
+            用户收藏ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_group_favorite.DateCreated">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Sys_group_favorite.GroupID">
+            <summary>
+            用户组ID
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteDisallowedNam">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteDisallowedNam.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteDisallowedNam.DisallowedName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SiteAnonymousUser">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteAnonymousUser.AnonymousUserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteAnonymousUser.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteAnonymousUser.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteAnonymousUser.LastLogin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SiteAnonymousUser.LastAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.PublishLog">
+            <summary>
+            生成:2010/01/18 07:37:57
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.PublishLogID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.BeginTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.IP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.RelationCellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.BeginContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.EndContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.EndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.CellDataGetType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.RecordCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.Contents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.PublishLog.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Hit">
+            <summary>
+            生成:2010/01/04 04:21:39
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Hit.HitID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Hit.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Hit.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Hit.HitTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Hit.HitUserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Hit.IP">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Hit.IsIPCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.FellowType">
+            <summary>
+            关系类型
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.FellowType.NaN">
+            <summary>
+            未定义
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.FellowType.Friends">
+            <summary>
+            好友(A与B为好友)
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.FellowType.Concern">
+            <summary>
+            关注(A关注了B)
+            </summary>
+        </member>
+        <member name="F:Authentication.Weed.FellowType.ConcernMe">
+            <summary>
+            关注我的
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Birdstat">
+            <summary>
+            生成:2010/07/09 02:33:47
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Birdstat.BirdID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Birdstat.MemberCount">
+            <summary>
+            成员人数
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Birdstat.Hits">
+            <summary>
+            群点击数
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Birdstat.MemberTrips">
+            <summary>
+            成员行程数
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Birdstat.Topics">
+            <summary>
+            话题数
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.Sys_RightsResource">
+            <summary>
+            表《sys_RightsResources》对应的类
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResource.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResource.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResource.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.Cell">
+            <summary>
+            生成:2010/01/04 04:21:39
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.CellName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.IsStaticPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.IsAutoPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.RelationCategories">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.ScheduleExpression">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.NotSetIsAllow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.NeedRecordHits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.Hits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.CellCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.Memo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.MorePageUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.ParentCellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.DataSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.AutoPublishCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.AutoPublishParentCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Cell.AutoPublishByParent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.IRole">
+            <summary>
+            角色模块接口类
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IRole.Exists(System.String,System.String,System.String)">
+            <summary>
+            判断指定角色是否存在
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.Create(Authentication.DataEntity.RoleEntity,System.String,System.String)">
+            <summary>
+            增加一条数据
+            </summary>
+            <param name="entity"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.Create(System.String,System.String,System.String)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+        </member>
+        <member name="M:Authentication.IServices.IRole.Update(Authentication.DataEntity.RoleEntity,System.String,System.String)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="entity">系统模块实体</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.Delete(System.Int32,System.String,System.String)">
+            <summary>
+            根据角色ID删除
+            </summary>
+            <param name="roleID"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.Delete(System.String,System.String,System.String)">
+            <summary>
+            根据角色名称删除
+            </summary>
+            <param name="roleName"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.Delete(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="throwOnPopulatedRole">当角色已被分配时是否抛出异常</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetRoleEntity(System.Int32,System.String,System.String)">
+            <summary>
+            得到一个角色实体
+            </summary>
+            <param name="roleID"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetRoleEntity(System.String,System.String,System.String)">
+            <summary>
+            得到一个角色实体
+            </summary>
+            <param name="roleName"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetRoleByCode(System.String,System.String,System.String)">
+            <summary>
+            根据角色Code搜索角色实体
+            </summary>
+            <param name="roleCode"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetList(System.String,System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetList(System.Int32,System.String,System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+            <param name="parentRoleID">上级分类ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetList(Framework.Enumerations.RoleType,System.String,System.String)">
+            <summary>
+            获得角色数据列表
+            </summary>
+            <param name="roleType"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetList(System.Int32,Framework.Enumerations.RoleType,System.Boolean,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获得角色数据列表
+            </summary>
+            <param name="parentRoleID"></param>
+            <param name="roleType"></param>
+            <param name="includeChildren">是否包含子项中的子项</param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRole.GetListWithTree(System.Int32,Framework.Enumerations.RoleType,System.String,System.String)">
+            <summary>
+            得到角色的树状结构
+            </summary>
+            <param name="parentRoleID">父角色ID</param>
+            <param name="roleType">角色类型：Group或组织</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.User_fellows">
+            <summary>
+            生成:2010/08/11 12:07:11
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_userid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_fellowvolumeid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_fellowuserid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_fellownickname">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.User_fellows.Fw_FellowType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.Sys_RightsResourceSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResourceSet.Add(Authentication.DataEntity.Sys_RightsResource)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResourceSet.Contains(Authentication.DataEntity.Sys_RightsResource)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResourceSet.IndexOf(Authentication.DataEntity.Sys_RightsResource)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResourceSet.Insert(System.Int32,Authentication.DataEntity.Sys_RightsResource)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.DataEntity.Sys_RightsResourceSet.Remove(Authentication.DataEntity.Sys_RightsResource)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.DataEntity.Sys_RightsResourceSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.Sys_RightsResourceSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.Sys_RightsResourceSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.ModuleEntitySet">
+            <summary>
+            Summary description for UserSet.
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.IUserOfMembership">
+            <summary>
+            Membership用户模块数据访问接口
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,Framework.Securities.EncryptMode,System.String,System.String)">
+            <summary>
+            创建一个用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="passwordHash">密码Hash值</param>
+            <param name="email">Email</param>
+            <param name="passwordQuestion">密码安全问题</param>
+            <param name="passwordAnswer">密码安全答案</param>
+            <param name="isApproved">是否锁定</param>
+            <param name="EncryptMode">加密方式</param>
+            <param name="passwordSalt">密码Salt</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUser(System.String,System.String,System.String)">
+            <summary>
+            获取MembershipUser对象
+            </summary>
+            <param name="username">用户名</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUserbyID(System.Int32,System.String,System.String)">
+            <summary>
+            根据用户ID获得用户MembershipUser
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUserIDByName(System.String,System.String,System.String)">
+            <summary>
+            读取用户ID
+            </summary>
+            <param name="username"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUserNameByEmail(System.String,System.String,System.String)">
+            <summary>
+            根据Email获取用户名
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ValidateUser(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            验证用户
+            如果用户认证通过，系统记录一次用户登录数据
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetPasswordAnswerByUserName(System.String,Framework.Securities.EncryptMode@,System.String@,System.String,System.String)">
+            <summary>
+            取出用户密码和答案
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UnlockUser(System.String,System.String,System.String)">
+            <summary>
+            解除用户锁定
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.DeleteUser(System.String,System.String,System.String)">
+            <summary>
+            根据用户名删除用户
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.LockUser(System.String,System.String,System.String)">
+            <summary>
+            锁定用户
+            </summary>
+            <param name="username"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ApproveUser(System.String,System.String,System.String)">
+            <summary>
+            审核通过用户
+            </summary>
+            <param name="username"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.FindMembershipUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据EMAIL查Membership用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.FindMembershipUsersByName(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据用户名查Membership用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetAllMembershipUsers(System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得所有Membership用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetNumberOfUsersOnline(System.DateTime,System.String,System.String)">
+            <summary>
+            获取在线用户数 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateUser(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+             <summary>
+            更新用户信息
+             </summary>
+             <param name="Email"></param>
+             <param name="Comment"></param>
+             <param name="IsApproved"></param>
+             <param name="UserName"></param>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.CheckUserExists(System.String,System.String,System.String)">
+            <summary>
+            检查用户是否存在
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetPasswordFormat(System.String,System.String,System.String)">
+            <summary>
+            取出用户的密码格式 
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdatePassword(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新用户密码
+            </summary>
+            <param name="username"></param>
+            <param name="passwordHash"></param>
+            <param name="passwordSalt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateLastActivityDate(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新用户最后活动日期
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateLastLoginDate(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新用户最后登录日期
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateLastLoginDate(System.String,System.String,System.String)">
+            <summary>
+            更新用户最后登录日期
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ChangePassword(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            修改用户密码
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="newPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ChangePasswordQuestionAndAnswer(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更改用户问题及答案
+            </summary>
+            <param name="username"></param>
+            <param name="passwordHash"></param>
+            <param name="newPasswordQuestion"></param>
+            <param name="newPasswordAnswer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetPassword(System.String,System.String,System.String,System.String)">
+            <summary>
+            得到用户密码
+            </summary>
+            <param name="username"></param>
+            <param name="answer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ResetPassword(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            重设密码
+            </summary>
+            <param name="username"></param>
+            <param name="answer"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="newPassword"></param>
+            <returns>0设置不成功，－1新密码不对 －2答案不对</returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GenerateRandomPWD(System.String)">
+            <summary>
+            生成随机密码
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.CreateUser(Framework.Components.UserInfo,System.String,System.String)">
+            <summary>
+            新增用户信息
+            </summary>
+            <param name="u">用户实体</param>
+            <returns>用户ID</returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateUser(Framework.Components.UserInfo,System.String,System.String)">
+            <summary>
+            更新用户所有信息
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateUser(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            更新用户头像
+            </summary>
+            <param name="headportrait">头像地址</param>
+            <param name="ipAddress">当前用户IP</param>
+            <param name="userid">用户ID</param>
+            <param name="guid"></param>
+            <returns>返回成功与否</returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateUser(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            更新用户鸟类名称
+            </summary>
+            <param name="usertype">用户鸟类分类ID</param>
+            <param name="ipAddress">IP地址</param>
+            <param name="userid">用户ID</param>
+            <param name="guid"></param>
+            <returns>返回成功与否</returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetFullUserInformation(System.String,System.String,System.String)">
+            <summary>
+            获得用户完整信息
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetSimpleUserInformation(System.Int32,System.String,System.String)">
+            <summary>
+            获得用户基本信息
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetAnonymousUser(System.Int32,System.String,System.String)">
+            <summary>
+            获得匿名用户
+            </summary>
+            <param name="siteSettingsID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUser(System.Int32,System.String,System.Boolean,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            获得用户信息
+            </summary>
+            <param name="userID">用户ＩＤ</param>
+            <param name="username">用户名称</param>
+            <param name="isOnline">是否在线</param>
+            <param name="isEditable">是否可编辑</param>
+            <param name="lastAction">最后活动</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据EMAIL查用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.FindUsersByName(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据用户名查用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetAllUsers(System.Int32,System.Int32,Framework.Enumerations.UserStatus,System.Int32@,System.String,System.String)">
+            <summary>
+            获得所有用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUsers(System.String,System.String,System.DateTime,System.DateTime,Framework.Enumerations.UserStatus,Framework.Enumerations.UserType,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获得所有用户
+            </summary>
+            <param name="usernameToMatch"></param>
+            <param name="emailToMatch"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUserPasswordFormat(System.String,System.String,System.String)">
+            <summary>
+            获得用户密文格式
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUsers(System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            读取ID大于某个值的用户列表
+            </summary>
+            <param name="minUserID"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="totalRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetUserDatabaseString">
+            <summary>
+            读取用户认证数据库的联接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.RemoveCache(System.Int32)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.RemoveCache(System.String)">
+            <summary>
+            移除缓存
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetFavListSame(System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            两个人相同的操作
+            </summary>
+            <param name="userID"></param>
+            <param name="targetID"></param>
+            <param name="favType"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ValidUserEmail(System.Int32,System.String,System.String)">
+            <summary>
+            验证用户Ｅｍａｉｌ，发送一封邮件到用户邮箱，等待用户验证
+            </summary>
+            <param name="userID"></param>
+            <param name="Email"></param>
+            <param name="IpAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ValidUserSMS(System.Int32,System.String,System.String)">
+            <summary>
+            验证用户短信
+            </summary>
+            <param name="userID"></param>
+            <param name="SMS"></param>
+            <param name="IpAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GetValidSMSCode(System.Int32,System.String,System.String)">
+            <summary>
+            获得验证短信文字
+            </summary>
+            <param name="userID"></param>
+            <param name="mobile"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.GenerateRandomNumber(System.Int32)">
+            <summary>
+            生成随机数
+            </summary>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateUserInfo(Authentication.Weed.Member_Extend)">
+            <summary>
+            更新用户信息，局部字段通过设定特定值可以不更新
+            </summary>
+            <param name="userID"></param>
+            <param name="trueName"></param>
+            <param name="nickname">昵称</param>
+            <param name="sex"></param>
+            <param name="birthDay"></param>
+            <param name="regionID"></param>
+            <param name="address"></param>
+            <param name="post"></param>
+            <param name="phone"></param>
+            <param name="mobile"></param>
+            <param name="email"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.UpdateUserEmail(System.Int32,System.String)">
+            <summary>
+            更新用户Ｅｍａｉｌ
+            </summary>
+            <param name="userID"></param>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ChangePayPassword(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            更改支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="orgPwd"></param>
+            <param name="newPwd"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.CreatePayPassword(System.Int32,System.String,System.String)">
+            <summary>
+            更改支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="validCode"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.PayPasswordIsEmptyNull(System.Int32)">
+            <summary>
+            验证密码是否为空
+            </summary>
+            <param name="userID">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IUserOfMembership.ValidatePayPassword(System.Int32,System.String)">
+            <summary>
+            验证支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="payPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.UserProvider.ChangePayPassword(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            更改支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="orgPwd"></param>
+            <param name="newPwd"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.UserProvider.PayPasswordIsEmptyNull(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.UserProvider.CreatePayPassword(System.Int32,System.String,System.String)">
+            <summary>
+            生成支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="newPwd"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.UserProvider.ValidatePayPassword(System.Int32,System.String)">
+            <summary>
+            验证支付密码
+            </summary>
+            <param name="userID"></param>
+            <param name="payPassword"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.IServices.IRoleOfMembership">
+            <summary>
+            Membership角色数据访问接口
+            1、用户与角色关系的新增、删除
+            2、用户是否隶属于角色的判断
+            3、用户所属角色列表
+            4、角色拥有的用户列表
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.GetOwnedUsersByRole(System.Int32)">
+            <summary>
+            读取用户下属列表
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.IsUserInRole(System.Int32,System.Int32,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            判断用户是否拥有指定角色
+            </summary>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="ownType"></param>
+            <param name="roleID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.IsUserInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            判断用户是否拥有指定角色
+            </summary>
+            <param name="username">用户名</param>
+            <param name="rolename">角色名称</param>
+            <param name="ipAddress"></param>
+            <param name="ownType"></param>
+            <param name="guid"></param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.GetUserInRoleEntity(System.Int32,System.Int32,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            判断用户是否拥有指定角色
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="ownTYpe"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.GetUserInRoleEntities(System.Int32,System.String,System.String)">
+            <summary>
+            获得指定用户的用户角色列表
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.FindRolesInUser(System.String,System.String,System.String)">
+            <summary>
+            获取指定用户所分配的角色
+            </summary>
+            <param name="username">用户名</param>
+            <returns>角色列表数组</returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.FindRolesInUser(System.Int32,System.String,System.String)">
+            <summary>
+            获得用户所拥有的角色集合　
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.FindUsersInRole(System.String,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获取拥有指定角色的用户
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="pageSize"></param>
+            <param name="PageIndex"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalCount"></param>
+            <returns>用户列表数组</returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.FindUsersInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            查找拥有指定角色的用户
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="usernameToMatch">用户名匹配</param>
+            <param name="ownTye">用户是角色的成员还是角色的管理者</param>
+            <param name="pageSize"></param>
+            <param name="PageIndex"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUserToRole(Authentication.DataEntity.UsersInRolesEntity,System.String,System.String)">
+            <summary>
+            添加用户角色
+            </summary>
+            <param name="entity">用户角色实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUserToRole(System.Int32,System.Int32,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            给指定用户添加指定角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUserToRole(System.Int32,System.Int32,Authentication.DataEntity.RoleOwnType,System.Int32,System.String,System.String)">
+            <summary>
+            给指定用户添加指定角色
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="OperatorID">操作人员ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUserToRoles(System.Int32,System.Int32[],Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            给指定用户分配多角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUserToRoles(System.Int32,System.Int32[],Authentication.DataEntity.RoleOwnType,System.Int32,System.String,System.String)">
+            <summary>
+            给指定用户分配多角色
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="OperatorID">操作人员ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUsersToRole(System.Int32[],System.Int32,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            给多用户分配指定角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUsersToRole(System.String[],System.Int32,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            给多用户分配指定角色
+            </summary>
+            <param name="userNames"></param>
+            <param name="roleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUsersToRole(System.Int32[],System.Int32,Authentication.DataEntity.RoleOwnType,System.Int32,System.String,System.String)">
+            <summary>
+            给多用户分配指定角色
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="roleID">角色ID</param>
+            <param name="OperatorID">操作人员ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUsersToRoles(System.String[],System.String[],Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            给用户分配角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUsersToRoles(System.Int32[],System.Int32[],Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            给多用户分配多角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUsersToRoles(System.Int32[],System.Int32[],Authentication.DataEntity.RoleOwnType,System.Int32,System.String,System.String)">
+            <summary>
+            给多用户分配多角色
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="OperatorID">操作人员ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.RemoveUsersFromRoles(System.String[],System.String[],Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.RemoveUsersFromRole(System.String[],System.Int32,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            删除用户所拥有的角色
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.RemoveByUser(System.Int32,System.String,System.String)">
+            <summary>
+            根据用户删除用户的　所有用户角色关系
+            </summary>
+            <param name="userID">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.RemoveByRole(System.Int32,System.String,System.String)">
+            <summary>
+            根据角色删除用户与角色关系
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.RemoveUserFromRole(System.Int32,System.Int32,Authentication.DataEntity.RoleOwnType,System.String,System.String)">
+            <summary>
+            删除指定的用户角色关系
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.AddUserToRoleManager(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            将用户添加到角色的管理者中
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="operatorID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.RemoveUserFromRoleManager(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            将用户从角色的管理者中移除
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="operatorID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.GetRoleManager(System.Int32,System.String,System.String)">
+            <summary>
+            获得角色的所有管理者实体
+            </summary>
+            <param name="roleID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.IRoleOfMembership.GetRolesUserOwned(System.Int32,System.String,System.String)">
+            <summary>
+            获得用户拥有的角色
+            </summary>
+            <param name="userID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.IsAdministrator(System.String)">
+            <summary>
+            检查用户是否管理员
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetRoleEntity(System.Int32,System.String,System.String)">
+            <summary>
+            得到一个角色实体
+            </summary>
+            <param name="roleID"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetRoleByCode(System.String,System.String,System.String)">
+            <summary>
+            根据角色Code得到角色实体
+            </summary>
+            <param name="roleCode"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetRoleEntity(System.String,System.String,System.String)">
+            <summary>
+            得到一个角色实体
+            </summary>
+            <param name="roleName"></param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetList(System.String,System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetList(System.Int32,System.String,System.String)">
+            <summary>
+            获得数据列表
+            </summary>
+            <param name="parentRoleID">上级分类ID</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetList(Framework.Enumerations.RoleType,System.String,System.String)">
+            <summary>
+            获得角色数据列表
+            </summary>
+            <param name="roleType"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetList(System.Int32,Framework.Enumerations.RoleType,System.Boolean,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获得角色数据列表
+            </summary>
+            <param name="parentRoleID"></param>
+            <param name="roleType"></param>
+            <param name="includeChildren">是否包含子项中的子项</param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Client.RoleProvider.GetListWithTree(System.Int32,Framework.Enumerations.RoleType,System.String,System.String)">
+            <summary>
+            得到角色的树状结构
+            </summary>
+            <param name="parentRoleID">父角色ID</param>
+            <param name="roleType">角色类型：Group或组织</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Weed.Member_Extend">
+            <summary>
+            用户的扩展信息
+            </summary>
+        </member>
+        <member name="M:Authentication.Weed.Member_Extend.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            
+            </summary>
+            <param name="get"></param>
+            <param name="src"></param>
+        </member>
+        <member name="M:Authentication.Weed.Member_Extend.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.TrueName">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Address">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Phone">
+            <summary>
+            固定电话
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.ValidIntegral">
+            <summary>
+            积分
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Comment">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.PostalCode">
+            <summary>
+            邮编
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Birthday">
+            <summary>
+            生日
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Money">
+            <summary>
+            余额
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.PasswordQuestion">
+             <summary>
+            安全问题
+             </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.PasswordAnswer">
+             <summary>
+            回答
+             </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Path">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Mobile">
+            <summary>
+            手机
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.RegisterIP">
+            <summary>
+            注册IP
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Memo">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.MemoPic">
+            <summary>
+            备注图片
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Additions">
+            <summary>
+            扩展属性
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Marriage">
+            <summary>
+            婚恋状态
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.BolldType">
+            <summary>
+            血型
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.RegisterAdd">
+            <summary>
+            户籍
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Msn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.QQ">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.Residence">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.CityID">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.CqaClassID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Member_Extend.CqaClassName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Region">
+            <summary>
+            生成:2010/11/25 03:58:06
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.RegionCode">
+            <summary>
+            指国家标准行政地区编码
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.LevelCode">
+            <summary>
+            国家行政地区编码无法准确表达层级关系，需要有一个编码来表述。
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.CreateUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.DataStatus">
+            <summary>
+            0 表示已经创建            1 表示公开            -1 表示删除
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.DateModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.ModifyUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.IsLock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.CurrentVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.OrgVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.LNG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.LAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.MapLevel">
+            <summary>
+            0-19地图级别，与Google地图保持一致。
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.HotLevel">
+            <summary>
+            记录用户对此景点的关注程度
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.IsRecommend">
+            <summary>
+            系统推荐等级0-19，可能与地图级别匹配。
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.CertLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.ShortName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.RegionDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.ShowLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.BestTravelTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.Path">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.IDpath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Region.Alias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.UsersInRolesSet">
+            <summary>
+            Summary description for UsersInRolesEntitySet.
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.SFMembershipUser">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="T:Authentication.DataEntity.RoleEntity">
+            <summary>
+            角色信息实体类
+            </summary>
+        </member>
+        <member name="M:Authentication.DataEntity.RoleEntity.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.DataEntity.RoleEntity.OwnersID">
+            <summary>
+            在角色为组织结构时，角色的拥有者也就是这一层组织的管理者。
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.RoleEntity.Children">
+            <summary>
+            下级角色
+            </summary>
+        </member>
+        <member name="P:Authentication.DataEntity.RoleEntity.ChildrenArray">
+            <summary>
+            子角色数组
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.CMSEntity">
+            <summary>
+            CMSEntity 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.SearchCas">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.SearchCaseID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.QueryName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.CaseTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.IsPublic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.UseTimes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.LastModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.LastUseTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.FilterContent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.SearchCas.OrderContent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Weed.Portal">
+            <summary>
+            生成:2010/01/04 04:21:40
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.ReplacePortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalCreateTIme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalEndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.UploadImgUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Weed.Portal.PortalMemo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.Fav_Extend">
+            <summary>
+            Fav
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.Fav_Extend.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Authentication.IServices.Fav_Extend.NickName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Authentication.IServices.Fav_Extend.Logo">
+            <summary>
+            景点图标
+            </summary>
+        </member>
+        <member name="T:Authentication.IServices.AuthenticationDataProvider">
+            <summary>
+            用户验证数据提供器
+            此提供器提供用户验证方面的功能，包括用户与角色管理等。
+            The DataProvider class contains a single method, Instance(), which returns an instance of the
+            user-specified data provider class.
+            </summary>
+            <remarks>  The data provider class must inherit the CommonDataProvider
+            interface.</remarks>
+        </member>
+        <!-- 对于成员“F:Authentication.IServices.AuthenticationDataProvider.AuthenticationDataProviderName”忽略有格式错误的 XML 注释 -->
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetConnectionString">
+            <summary>
+            获得当前适配器的数据库联接串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.Instance">
+            <summary>
+            Returns an instance of the user-specified data provider class.
+            </summary>
+            <returns>An instance of the user-specified data provider class.  This class must inherit the
+            CommonDataProvider interface.</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.Instance(Framework.Components.Provider)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dataProvider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.CreateDefaultAuthenticationProvider">
+            <summary>
+            Creates the Default CommonDataProvider
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetMembershipUser(Authentication.DataEntity.UserEntity,Authentication.DataEntity.UserProfileEntity)">
+            <summary>
+            将用户转换成ＭｅｍｂｅｒＳｈｉｐ的用户
+            </summary>
+            <param name="user">数据库中用户实例</param>
+            <param name="userProfile">用户扩展信息实例</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetMembershipUser(System.String)">
+            <summary>
+            从数据库中获取MembershipUser对象
+            </summary>
+            <param name="username">用户名</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetMembershipUser(System.Int32)">
+            <summary>
+            根据用户ID获得用户MembershipUser
+            </summary>
+            <param name="userID">用户ＩＤ</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetMembershipUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据EMAIL查MemberShipUser用户信息
+            </summary>
+            <param name="emailToMatch">用于匹配的邮箱，是相似匹配</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetMembershipUsersByName(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据用户名查MembershipUser用户信息
+            </summary>
+            <param name="usernameToMatch">用于相似匹配的用户名</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetMembershipUsers(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得所有满足条件的MembershipUser用户信息
+            </summary>
+            <param name="whereClause">条件，一般格式类似a.userid=10,具体参见分页存储过程条件的设定方法</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.CreateUser(Framework.Components.UserInfo)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="u"></param>
+            <returns>用户ID，0表示失败</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateUser(Framework.Components.UserInfo)">
+            <summary>
+            更新用户所有信息
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,Framework.Securities.EncryptMode)">
+            <summary>
+            创建一个新用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="passwordHash">加密后的密码</param>
+            <param name="email">邮箱</param>
+            <param name="passwordQuestion">密码问题</param>
+            <param name="passwordAnswer">密码答案</param>
+            <param name="isApproved">是否通过审核，此项影响用户状态</param>
+            <param name="passwordSalt">密码中的混淆码</param>
+            <param name="encryptMode">加密方式</param>
+            <returns>用户ＩＤ</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateUser(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            更新用户信息
+            <param name="UserName">用户名</param>
+            <param name="IsApproved">是否审核通过</param>
+            <param name="Email">邮件地址</param>
+            <param name="Comment">扩展字段</param>
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ValidateUser(System.String,System.String,System.String)">
+            <summary>
+            验证用户
+            系统将自动更新最后登录时间和ＩＰ地址及登录次数
+            </summary>
+            <param name="username">用户名称</param>
+            <param name="password">密码明文</param>
+            <param name="ip">ＩＰ地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ValidateUser(System.String,System.String)">
+            <summary>
+            验证用户
+            系统不自动更新最后登录时间
+            </summary>
+            <param name="username">用户名称</param>
+            <param name="password">密码明文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateUser(System.String,System.String,System.Int32)">
+            <summary>
+            更新用户头像
+            </summary>
+            <param name="headportrait">头像地址</param>
+            <param name="ipAddress">当前用户IP</param>
+            <param name="userid">用户ID</param>
+            <param name="guid"></param>
+            <returns>返回成功与否</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateUser(System.Int32,System.String,System.Int32)">
+            <summary>
+            更新用户鸟分类
+            </summary>
+            <param name="usertype">用户分类</param>
+            <param name="ipAddress">当前用户IP</param>
+            <param name="userid">用户ID</param>
+            <returns>返回成功与否</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UnlockUser(System.String)">
+            <summary>
+            解除用户锁定
+            </summary>
+            <param name="username">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteUser(System.String)">
+            <summary>
+            根据用户名删除用户,并不真正删除用户，只是打上标记
+            </summary>
+            <param name="username">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.LockUser(System.String)">
+            <summary>
+            锁定用户，让其无法访问资源
+            </summary>
+            <param name="username">用户名</param>
+            <returns>１　锁定成功　０　失败</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ApprovalUser(System.String)">
+            <summary>
+            审核用户
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.CheckUserExists(System.String)">
+            <summary>
+            检查用户是否存在
+            </summary>
+            <param name="username">用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetPasswordAnswerByUserName(System.String,Framework.Securities.EncryptMode@,System.String@)">
+            <summary>
+            取出用户密码格式和答案
+            </summary>
+            <param name="username">用户名</param>
+            <param name="passwordFormat">密码格式</param>
+            <param name="passwordAnswer">密码答案</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ChangePasswordQuestionAndAnswer(System.String,System.String,System.String,System.String)">
+            <summary>
+            更改用户密码问题和答案
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="newPasswordQuestion">新密码问题</param>
+            <param name="newPasswordAnswer">新答案</param>
+            <returns>成功与否</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetPassword(System.String,System.String)">
+            <summary>
+            获得用户的密码
+            </summary>
+            <param name="username">用户名</param>
+            <param name="answer">问题答案</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetPasswordFormat(System.String)">
+            <summary>
+            取出用户的密码格式 
+            </summary>
+            <param name="username">用户名</param>
+            <returns>整型，此值在项目中可被转换成为密码格式的枚举类型</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdatePassword(System.String,System.String,System.String)">
+            <summary>
+            更新用户密码
+            </summary>
+            <param name="username">用户名</param>
+            <param name="passwordHash">密文</param>
+            <param name="passwordSalt">混淆码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateLastActivityDate(System.String,System.String)">
+            <summary>
+            更新用户最后活动日期
+            
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateLastActivityDate(System.String)">
+            <summary>
+            更新用户最后活动日期
+            
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateLastLoginDate(System.String,System.String)">
+            <summary>
+            更新用户最后登录时间，系统将自动更新登录次数
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateLastLoginDate(System.String)">
+            <summary>
+            更新用户最后登录时间
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ClearUserCache(Framework.Components.UserShortInfo)">
+            <summary>
+            清除缓存中指定用户的信息
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetNumberOfUsersOnline(System.DateTime)">
+            <summary>
+            获取在线用户数 
+            <param name="UserIsOnlineTimeWindow">用户最后活动的起始时间，日期型。即从何时至现在的意思。</param>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetUserID(System.String)">
+            <summary>
+            获得用户的ＩＤ
+            </summary>
+            <param name="username">用户名</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetUserNameByEmail(System.String)">
+            <summary>
+            根据Email获取用户名
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetUsers(System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            读取ID大于某个值的用户列表
+            </summary>
+            <param name="minUserID"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="totalRecord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ConvertToUser(Authentication.DataEntity.UserEntity,Authentication.DataEntity.UserProfileEntity)">
+            <summary>
+            获得针对于CMS用户的信息
+            如果有多个用户系统，只有用户的登陆名是唯一的，因此在进行不同的数据库的用户信息交互时必须使用此方法来获得相关的ＩＤ
+            </summary>
+            <param name="username">用户登陆名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ConvertToUserEntity(Framework.Components.UserInfo)">
+            <summary>
+            将用户转换成数据库对应类型
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.ConvertToUserProfile(Framework.Components.UserInfo)">
+            <summary>
+            
+            </summary>
+            <param name="u"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetAnonymousUser(System.Int32)">
+            <summary>
+            读取匿名用户
+            </summary>
+            <param name="settingsID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetFullUserInformation(System.String)">
+            <summary>
+            获得用户完整信息
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetSimpleUserInformation(System.Int32)">
+            <summary>
+            获得用户基本信息
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetUser(System.Int32,System.String,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            获得用户信息
+            </summary>
+            <param name="userID">用户ＩＤ</param>
+            <param name="username">用户名称</param>
+            <param name="isOnline">进行此操作时是否在线，也就是是否将用户在线的时间进行更改。这里主要用于处理在线用户清单。</param>
+            <param name="isEditable">是否可编辑</param>
+            <param name="lastAction">最后活动</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据EMAIL查用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.FindUsersByName(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据用户名查用户信息
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetAllUsers(System.Int32,System.Int32,Framework.Enumerations.UserStatus,System.Int32@)">
+            <summary>
+            获得所有用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetUsers(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得所有满足条件的用户信息
+            </summary>
+            <param name="whereClause">条件，一般格式类似a.userid=10,具体参见分页存储过程条件的设定方法</param>
+            <param name="pageIndex">页号</param>
+            <param name="pageSize">每页记录数</param>
+            <param name="totalRecords">符合条件的总记录数</param>
+            <returns>MembershipUser集合</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.IsModuleExists(System.Int32)">
+            <summary>
+            判断是否存在该记录
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.AddModule(Authentication.DataEntity.ModuleEntity)">
+            <summary>
+             增加一条数据
+            </summary>
+            <param name="moduleEntity"></param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateModule(Authentication.DataEntity.ModuleEntity)">
+            <summary>
+            更新一条数据
+            </summary>
+            <param name="moduleEntity"></param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetModuleEntity(System.Int32)">
+            <summary>
+            得到一个对象实体
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetModuleList">
+            <summary>
+             获得数据列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetModuleListByParentID(System.Int32)">
+            <summary>
+            获得数据列表（根据父模块编号）
+            </summary>
+            <param name="parentID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetModuleListByLevel(System.Int32)">
+            <summary>
+            获得数据列表（根据模块级别）
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetModuleAssembly(System.Int32)">
+            <summary>
+            查询模块的权限处理类
+            有可能指定的模块并没有显示指明权限处理类，因此可能需要向上回溯。
+            </summary>
+            <param name="moduleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.CreateRole(System.String)">
+            <summary>
+            创建角色
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.CreateRole(Authentication.DataEntity.RoleEntity)">
+            <summary>
+            新增一条角色
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.UpdateRole(Authentication.DataEntity.RoleEntity)">
+            <summary>
+            更新角色
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteRole(System.String,System.Boolean)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="rolename">角色名称</param>
+            <param name="throwOnPopulatedRole">当角色已被分配时是否抛出异常</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteRole(System.Int32)">
+            <summary>
+            根据角色ID删除角色
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteRole(System.String)">
+            <summary>
+            根据角色名删除角色
+            </summary>
+            <param name="roleName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleEntity(System.Int32)">
+            <summary>
+            获得指定角色ID的实体
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleEntity(System.String)">
+            <summary>
+            获得指定角色名称的实体
+            </summary>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleByCode(System.String)">
+            <summary>
+            获得指定角色ID的实体
+            </summary>
+            <param name="roleCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleList">
+            <summary>
+            获取角色列表
+            仅返回类型为Group的角色
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleList(System.Int32)">
+            <summary>
+            获取角色列表
+            仅返回类型为Group的角色
+            </summary>
+            <param name="parentRoleID"></param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleList(Framework.Enumerations.RoleType)">
+            <summary>
+            获取角色列表
+            </summary>
+            <param name="roleType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleList(System.Int32,Framework.Enumerations.RoleType)">
+            <summary>
+            获取角色列表
+            </summary>
+            <param name="parentRoleID"></param>
+            <param name="roleType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleList(System.Int32,Framework.Enumerations.RoleType,System.Boolean,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取角色列表
+            </summary>
+            <param name="parentRoleID"></param>
+            <param name="roleType"></param>
+            <param name="includeChildren">是否包括层级子项</param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.IsRoleExists(System.String)">
+            <summary>
+            判断指定角色是否存在
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRoleID(System.String)">
+            <summary>
+            查询角色ID
+            </summary>
+            <param name="rolename"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.AddUsersToRoles(System.String[],System.String[],Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            给用户分配角色
+            现在这种写法有一个问题，就是：如果用户名或角色名不存在的情况下，可能导到插入异样。
+            </summary>
+            <param name="usernames">用户列表数组</param>
+            <param name="rolenames">角色列表数组</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemoveUserFromRole(System.Int32)">
+            <summary>
+            删除指定Ｕｓｅｒ的所有角色关系
+            </summary>
+            <param name="userID">用户ＩＤ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemoveUserFromRole(System.Int32,System.Int32,Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            删除指定用户与角色的关系
+            默认为成员关系，非管理者关系。
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemoveUserFromRole(System.Int32,System.Int32)">
+            <summary>
+            删除指定用户与角色关系。
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="ownType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemoveRoleFromUser(System.Int32)">
+            <summary>
+            删除指定角色下的所有用户关系
+            </summary>
+            <param name="roleID">角色ＩＤ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetOwnedUsersByRole(System.Int32,Authentication.DataEntity.RoleOwnType,Framework.Enumerations.RoleType)">
+            <summary>
+            查询用户的下属列表
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="ownType">拥有权限类型</param>
+            <param name="roleType">角色类型,一般情况下应该是Department</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.IsUserInRole(System.Int32,System.Int32,Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            判断用户是否拥有指定角色
+            </summary>
+            <param name="userID"></param>
+            <param name="roleID"></param>
+            <param name="ownType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.IsUserInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            判断用户是否拥有指定角色
+            </summary>
+            <param name="username">用户名</param>
+            <param name="rolename">角色名称</param>
+            <param name="ownType"></param>
+            <returns>int</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.FindUsersInRole(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取拥有指定角色的用户
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.FindUsersInRole(System.String,System.String,Authentication.DataEntity.RoleOwnType,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            查找拥有指定角色的用户
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.FindRolesInUser(System.String,Authentication.DataEntity.RoleOwnType)">
+            <summary>
+            获取指定用户所分配的角色
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemovePermissionFromRole(System.Int32,System.Int32)">
+            <summary>
+            删除指定角色的所有权限
+            </summary>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemovePermissionFromRole(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemovePermissionFromRole(System.Int32,System.Int32,Framework.Securities.RightGrantType,System.Int32)">
+            <summary>
+            删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemovePermissionFromRole(System.Int32,System.Int32[],System.Int32)">
+            <summary>
+            批量删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.RemovePermissionFromRole(System.Int32,System.Int32[],Framework.Securities.RightGrantType,System.Int32)">
+            <summary>
+            批量删除角色对指定模块的权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteRights(System.Int32,System.Int32)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="rightsID">权限ID</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteRights(System.Int32[],System.Int32)">
+            <summary>
+            批量删除权限
+            </summary>
+            <param name="rightsID">权限ID数组</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteRightsByOperator(System.Int32)">
+            <summary>
+            删除指定操作员所赋予的所有权限
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.AddRolePermissions(Authentication.DataEntity.RightsEntity)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="entity">权限实体</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.AddRolePermissions(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            增加权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleID">模块ID</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.AddRolePermissions(System.Int32,System.Int32[],System.Int32,Framework.Securities.RightGrantType)">
+            <summary>
+            批量增加权限
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="moduleIDs">模块ID数组</param>
+            <param name="operatorID">操作员ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRolePermissions(System.Int32)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRolePermissions(System.Int32,Framework.Securities.RightGrantType)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRolePermissions(System.Int32,System.Int32,Framework.Securities.RightGrantType)">
+            <summary>
+            获得角色所拥有的权限列表
+            </summary>
+            <param name="roleID">角色ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetUserPermissions(System.Int32)">
+            <summary>
+            获得用户所拥有的权限列表
+            </summary>
+            <param name="userID">用户ID</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetUserPermissions(System.Int32,Framework.Securities.RightGrantType)">
+            <summary>
+            获得用户所拥有的权限列表
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="flag">允许或拒绝标志（0：拒绝，1：允许）</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetPermissionEntity(System.Int32)">
+            <summary>
+            得到一个权限实体
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetPermissionsByOperator(System.Int32)">
+            <summary>
+            获得操作员所授权的权限列表
+            </summary>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.CreateUpdateDeleteLog(Framework.Components.OperateLog,Framework.Enumerations.DataProviderAction)">
+            <summary>
+            记录用户操作日志
+            </summary>
+            <param name="log">用户操作日志</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.DeleteOperateLog(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            删除某些用户操作记录
+            如果不设置任何条件，系统不执行
+            </summary>
+            <param name="userID">用户ID，如果不设，则置为－1</param>
+            <param name="moduleID">模块ID，如果不设，则置为－1</param>
+            <param name="categoryID">分类ID，如果不设，则置为－1</param>
+            <param name="channleID">栏位ID，如果不设，则置为－1</param>
+            <param name="beginTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetRecentOperates(System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            获得某个用户最近一段时间的操作记录
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="beginTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="topCount">每页记录数</param>
+            <param name="pageIndex">当前页号</param>
+            <returns>操作记录集合</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetAlwaysOperates(System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            获得某个用户最频繁的操作记录
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="beginTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="topCount">每页记录数</param>
+            <param name="pageIndex">当前页号</param>
+            <returns>操作记录集合</returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.GetOperateList(System.Int32,System.Int32,System.Int32,System.Int32,System.DateTime,System.DateTime,System.Int32,System.Int32)">
+            <summary>
+            取得日志操作列表
+            </summary>
+            <param name="userID">用户ID，如果不设，则置为－1</param>
+            <param name="moduleID">模块ID，如果不设，则置为－1</param>
+            <param name="categoryID">分类ID，如果不设，则置为－1</param>
+            <param name="channleID">栏位ID，如果不设，则置为－1</param>
+            <param name="beginTime">开始时间</param>
+            <param name="endTime">结束时间</param>
+            <param name="topCount">每页记录数</param>
+            <param name="pageIndex">当前页号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.IServices.AuthenticationDataProvider.PopulateCMSPermissionFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            将DataReader对象转化为CMSPermission(CMS权限对象)
+            </summary>
+            <param name="reader">DataReader对象</param>
+            <returns>返回CMSPermission对象</returns>
+        </member>
+    </members>
+</doc>

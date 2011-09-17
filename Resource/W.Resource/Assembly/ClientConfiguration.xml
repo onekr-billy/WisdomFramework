@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SF>
+	<Client cacheFactor="5" remoteCall="true">
+		<Providers>
+			<clear />
+			<add
+			 name = "SiteUrlsProvider"
+			 type = "Client.Web.UrlManager.SiteUrlsData,Client.Web.UrlManager"
+			 file="siteurls.config"
+				/>
+		</Providers>
+		<RemoteObjects>
+			<clear />
+			<add name="Authentication" namespace="Authentication.Services"  protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="Site" namespace="Site.Services" uri="Site.Services.SiteManager"  protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="Message" namespace="Message.Services" uri="Message.Services.UserMessageServices" protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="Event" namespace="Message.Services" uri="Message.Services.EventServices" protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="EventLog" namespace="Message.Services" uri="Message.Services.EventLogServices" protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="Exception" namespace="Message.Services" uri="Message.Services.ExceptionServices" protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="Permission" namespace="Authentication.Services" uri="Authentication.Services.Permission" protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="CRM" namespace="CRM.Services" uri="CRM.Services.CRMServices" protocol="tcp" ip="60.191.63.78" port="9030" />
+			<add name="OA" namespace="OA.Services" protocol="tcp" ip="60.191.63.78" port="8081" />
+			<add name="AutoUpdate" namespace="ClientAutoUpdater.Services" uri="ClientAutoUpdater.Services.FileAutoUpdater" protocol="tcp" ip="60.191.63.78" port="9030" />
+		</RemoteObjects>
+		<RemoteObjects1>
+			<clear />
+			<add name="Authentication" namespace="Authentication.Services"  protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="Site" namespace="Site.Services" uri="Site.Services.SiteManager"  protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="Message" namespace="Message.Services" uri="Message.Services.UserMessageServices" protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="Event" namespace="Message.Services" uri="Message.Services.EventServices" protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="EventLog" namespace="Message.Services" uri="Message.Services.EventLogServices" protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="Exception" namespace="Message.Services" uri="Message.Services.ExceptionServices" protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="Permission" namespace="Authentication.Services" uri="Authentication.Services.Permission" protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="CRM" namespace="CRM.Services" uri="CRM.Services.CRMServices" protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="OA" namespace="OA.Services" protocol="tcp" ip="192.168.0.108" port="9030" />
+			<add name="AutoUpdate" namespace="ClientAutoUpdater.Services" uri="ClientAutoUpdater.Services.FileAutoUpdater" protocol="tcp" ip="192.168.0.108" port="9030" />
+		</RemoteObjects1>
+		<message>
+			<add name="TextMessageProvider" type="Client.Message.TextMessageProvider, Client.Components" fileName="c:\eventlog.txt" />
+			<add name="DBMessageProvider" type="Client.Message.DBMessageProvider, Client.Components" connectionString="mssql_message" databaseOwnerStringName = "sa" />
+			<add name="EmailMessageProvider" type="Client.Message.EmailMessageProvider, Client.Components"  from="" to="" smtp=""  />
+			<add name="MsmqMessageProvider" type="Client.Message.MsmqMessageProvider,Client.Components" />
+			<add name="XMLMessageProvider" type="Client.Message.XMLMessageProvider, Client.Components" fileName="log.xml" />
+			<add name="EventLogMessageProvider" type="Client.Message.EventLogMessageProvider, Client.Components" logName="Framework" source="SF"  />
+		</message>
+		<users>
+			<membership userIsOnlineTimeWindow="15" default="SinomenMembership">
+				<providers>
+					<clear />
+					<add name="SinomenMembership" type="Sinomen.Membership.SinomenMembershipProvider, Sinomen.Membership" connectionStringName="mssql_authentication" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" requiresUniqueEmail="true" passwordFormat="Hashed" applicationName="dev" description="Stores and retrieves membership data from the local Microsoft SQL Server database" maxInvalidPasswordAttempts="999" passwordAttemptWindow="999" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" />
+				</providers>
+			</membership>
+
+			<roleManager default="CommunityServerSqlProvider" enabled="true" cacheRolesInCookie="true" cookieName=".CSRoles" cookieTimeout="60000" cookiePath="/" cookieRequireSSL="false" cookieSlidingExpiration="true" createPersistentCookie="true" cookieProtection="All" maxCachedResults="1000">
+				<providers>
+					<clear />
+					<add name="CommunityServerSqlProvider" type="CommunityServer.ASPNet20MemberRole.CSRoleProvider, CommunityServer.ASPNet20MemberRole" connectionStringName="SiteSqlServer" applicationName="dev" description="Stores and retrieves roles data from the local Microsoft SQL Server database" />
+				</providers>
+			</roleManager>
+
+			<profile default="CommunityServerSqlProvider" enabled="true">
+				<providers>
+					<clear />
+					<add name="CommunityServerSqlProvider" type="CommunityServer.ASPNet20MemberRole.CSProfileProvider, CommunityServer.ASPNet20MemberRole" connectionStringName="SiteSqlServer" applicationName="dev" description="Stores and retrieves profile data from the local Microsoft SQL Server database" />
+				</providers>
+
+				<properties>
+					<add name="commonName" type="string" />
+					<add name="birthdate" type="DateTime" />
+					<add name="gender" type="int" defaultValue="0" />
+					<add name="dateFormat" type="string" defaultValue="MM-dd-yyyy" />
+					<add name="publicEmail" type="string" />
+					<add name="language" type="string" />
+					<add name="webAddress" type="string" />
+					<add name="webLog" type="string" />
+					<add name="webGallery" type="string" />
+					<add name="signature" type="string" />
+					<add name="signatureFormatted" type="string" />
+					<add name="location" type="string" />
+					<add name="occupation" type="string" />
+					<add name="interests" type="string" />
+					<add name="msnIM" type="string" />
+					<add name="yahooIM" type="string" />
+					<add name="aolIM" type="string" />
+					<add name="icqIM" type="string" />
+					<add name="enablePostPreviewPopup" type="System.Boolean" defaultValue="false" />
+					<add name="enableEmoticons" type="System.Boolean" defaultValue="true" />
+					<add name="timezone" type="System.Double" defaultValue="0" />
+					<add name="fontsize" type="int" defaultValue="0" />
+					<add name="bio" type="string" />
+				</properties>
+			</profile>
+
+			<!-- 
+		========================
+		Anonymous Identification
+		========================
+		anonymousIdentification configuration:
+			enabled="[true|false]"                            Feature is enabled?
+                	cookieName=".ASPXANONYMOUS"                       Cookie Name
+                	cookieTimeout="100000"                            Cookie Timeout in minutes
+                	cookiePath="/"                                    Cookie Path
+                	cookieRequireSSL="[true|false]"                   Set Secure bit in Cookie
+                	cookieSlidingExpiration="[true|false]"            Reissue expiring cookies?
+                	cookieProtection="[None|Validation|Encryption|All]"    How to protect cookies from being read/tampered
+                	domain="[domain]"                                 Enables output of the "domain" cookie attribute set to the specified value
+	        -->
+			<anonymousIdentification name="anonymousIdentification" enabled="true" cookieName=".ASPXANONYMOUS" cookieTimeout="100000" cookiePath="/" cookieRequireSSL="false" cookieSlidingExpiration="true" cookieProtection="None" domain="" />
+		</users>
+	</Client>
+</SF>

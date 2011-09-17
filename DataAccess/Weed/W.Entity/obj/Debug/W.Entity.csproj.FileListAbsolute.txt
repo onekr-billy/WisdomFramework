@@ -1,0 +1,14 @@
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\bin\Debug\W.Entity.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\bin\Debug\W.Entity.pdb
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\obj\Debug\W.Entity.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\obj\Debug\W.Entity.pdb
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\bin\Debug\Weed.xml
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\bin\Debug\Weed.BCF.xml
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\bin\Debug\Weed.BCF.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.Entity\bin\Debug\Weed.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.Entity\bin\Debug\W.Entity.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.Entity\bin\Debug\W.Entity.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.Entity\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.Entity\obj\Debug\W.Entity.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.Entity\obj\Debug\W.Entity.pdb

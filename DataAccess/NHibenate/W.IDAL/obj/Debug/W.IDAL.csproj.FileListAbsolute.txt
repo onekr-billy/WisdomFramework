@@ -1,0 +1,7 @@
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IDAL\bin\Debug\W.IDAL.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IDAL\bin\Debug\W.IDAL.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IDAL\bin\Debug\W.Model.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IDAL\bin\Debug\W.Model.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IDAL\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IDAL\obj\Debug\W.IDAL.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IDAL\obj\Debug\W.IDAL.pdb

@@ -1,0 +1,5 @@
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.DTO\bin\Debug\W.DTO.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.DTO\bin\Debug\W.DTO.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.DTO\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.DTO\obj\Debug\W.DTO.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.DTO\obj\Debug\W.DTO.pdb

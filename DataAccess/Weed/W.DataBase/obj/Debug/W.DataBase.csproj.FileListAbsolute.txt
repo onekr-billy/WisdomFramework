@@ -1,0 +1,14 @@
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\bin\Debug\W.DataBase.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\bin\Debug\W.DataBase.pdb
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\obj\Debug\W.DataBase.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\obj\Debug\W.DataBase.pdb
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\bin\Debug\Weed.xml
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\bin\Debug\Weed.BCF.xml
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\bin\Debug\Weed.BCF.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.DataBase\bin\Debug\Weed.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.DataBase\bin\Debug\W.DataBase.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.DataBase\bin\Debug\W.DataBase.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.DataBase\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.DataBase\obj\Debug\W.DataBase.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\Weed\W.DataBase\obj\Debug\W.DataBase.pdb

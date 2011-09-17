@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Message.EmailServer</name>
+    </assembly>
+    <members>
+        <member name="F:Message.EmailServer.ProjectInstaller.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Message.EmailServer.ProjectInstaller.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Message.EmailServer.ProjectInstaller.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Message.EmailServer.EmailSenderServer.GetNextEmailToSend">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Message.EmailServer.EmailSenderServer._MailList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.EmailServer.EmailSenderServer.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Message.EmailServer.EmailSenderServer.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Message.EmailServer.EmailSenderServer.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:MailServerTest.TestForm.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:MailServerTest.TestForm.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:MailServerTest.TestForm.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:Message.EmailServer.Program.Main">
+            <summary>
+            应用程序的主入口点。
+            </summary>
+        </member>
+    </members>
+</doc>

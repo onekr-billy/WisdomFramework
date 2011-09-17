@@ -1,0 +1,1109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SNS.IMove</name>
+    </assembly>
+    <members>
+        <member name="T:SNS.Move.FavoriteLogType">
+            <summary>
+            用户收藏资源类型
+            </summary>
+        </member>
+        <member name="F:SNS.Move.FavoriteLogType.WWW">
+            <summary>
+            本站
+            </summary>
+        </member>
+        <member name="F:SNS.Move.FavoriteLogType.Refer">
+            <summary>
+            外站
+            </summary>
+        </member>
+        <member name="T:SNS.Move.MoveGetTypes">
+            <summary>
+            获取用户动态用到的类型
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveGetTypes.MyMove">
+            <summary>
+            我的动态
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveGetTypes.FRIENDS_FAV_MUISC">
+            <summary>
+            好友喜欢音乐动态
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveGetTypes.FRIENDS_OTHER_MOVE">
+            <summary>
+            好友其它动态
+            </summary>
+        </member>
+        <member name="T:SNS.Move.IMoveObj">
+            <summary>
+            行为接口
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.WhoseId">
+            <summary>
+            在谁的地盘上发生（用户ID）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.WhoseName">
+            <summary>
+            在谁的地盘上发生（用户名）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.WhereId">
+            <summary>
+            在哪里发生(地点ID，如歌曲页，个人主页)
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.WhereName">
+            <summary>
+            在哪里发生(地点名称，如歌曲页，个人主页)
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.WhereType">
+            <summary>
+            在哪里发生(地点类型，如歌曲页，个人主页)
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.TargetId">
+            <summary>
+            目标对象ID（如给好友留了言，则这里为好友用户ID）
+            如果对景点提问，此处记录问题的ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.TargetName">
+            <summary>
+            目标对象名称（如给好友留了言，则这里为好友用户名）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.Note">
+            <summary>
+            目标对象内容（如给好友留了言，则这里为留言的内容）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.ObjectID">
+            <summary>
+            相关的对像ID，如对景点提问时此处填写景点的ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.ObjectType">
+            <summary>
+            相关的对像类型
+            </summary>
+        </member>
+        <member name="P:SNS.Move.IMoveObj.Money">
+            <summary>
+            产生的费用，正数为支出，负数为收入
+            </summary>
+        </member>
+        <member name="T:SNS.Move.VisitObj">
+            <summary>
+            访问信息
+            </summary>
+        </member>
+        <member name="P:SNS.Move.VisitObj.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.VisitObj.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:SNS.Move.VisitObj.UserHead">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="P:SNS.Move.VisitObj.Time">
+            <summary>
+            访问时间
+            </summary>
+        </member>
+        <member name="T:SNS.Move.MoveBigTypes">
+            <summary>
+            用户行为大类型
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveBigTypes.FAV_MUISC">
+            <summary>
+            音乐动态
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveBigTypes.OTHER_MOVE">
+            <summary>
+            其它动态
+            </summary>
+        </member>
+        <member name="T:SNS.Move.FriendTypes">
+            <summary>
+            好友关系类型
+            </summary>
+        </member>
+        <member name="F:SNS.Move.FriendTypes.SINGLE">
+            <summary>
+            单向
+            </summary>
+        </member>
+        <member name="F:SNS.Move.FriendTypes.BOTH">
+            <summary>
+            双向
+            </summary>
+        </member>
+        <member name="T:SNS.Move.ListenSong">
+            <summary>
+            听过的歌
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.ArtId">
+            <summary>
+            歌手ID/作者ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.ArtName">
+            <summary>
+            歌手名/作者名
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.TrkId">
+            <summary>
+            歌曲ID/翻唱ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.TrkName">
+            <summary>
+            歌曲名/翻唱名
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:SNS.Move.ListenSong.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="T:SNS.Move.MoveTypes">
+            <summary>
+            行为类型
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_TRACK">
+            <summary>
+            收藏了歌曲
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_ALBUM">
+            <summary>
+            收藏了专辑
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_ARTIST">
+            <summary>
+            收藏了歌手
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_CUSTOM_ALBUM">
+            <summary>
+            收藏了自编专辑
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_SHOW">
+            <summary>
+            收藏了翻唱
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.ADD_FRIEND">
+            <summary>
+            添加了好友
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.DEL_FRIEND">
+            <summary>
+            删除了好友
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.ADD_CONCERN">
+            <summary>
+            添加关注
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.DEL_CONCERN">
+            <summary>
+            删除关注
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_TRACK">
+            <summary>
+            评论了歌曲
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_ALBUM">
+            <summary>
+            评论了专辑
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_ARTIST">
+            <summary>
+            评论了歌手
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_CUSTOM_ALBUM">
+            <summary>
+            评论了自编专辑
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_SHOW">
+            <summary>
+            评论了翻唱
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.LEAVE_WORD">
+            <summary>
+            给谁留言了
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.UPLOAD_RECORD">
+            <summary>
+            发布了哪些录音
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.UPLOAD_CUSTOM_ALBUM">
+            <summary>
+            发布了自编专辑
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_TRACK">
+            <summary>
+            推荐了歌曲
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_ALBUM">
+            <summary>
+            推荐了专辑
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_ARTIST">
+            <summary>
+            推荐了歌手
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_CUSTOM_ALBUM">
+            <summary>
+            推荐了自编专辑
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_SHOW">
+            <summary>
+            推荐了翻唱
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.LISTEN_TRACK">
+            <summary>
+            听本站歌曲
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.LISTEN_SHOW">
+            <summary>
+            听翻唱
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.MUSIC_MOODS">
+            <summary>
+            音乐心情
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_OBJECT">
+            <summary>
+            收藏了
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_SCENE">
+            <summary>
+            收藏了景点
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_TRIP">
+            <summary>
+            收藏了行程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_LOG">
+            <summary>
+            收藏了游记
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_REGION">
+            <summary>
+            收藏了地区
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_HOTEL">
+            <summary>
+            收藏了客栈
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.FAV_FOOD">
+            <summary>
+            收藏了美食
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_OBJECT">
+            <summary>
+            推荐了
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_SCENE">
+            <summary>
+            推荐了景点
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_TRIP">
+            <summary>
+            推荐了行程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_LOG">
+            <summary>
+            推荐了游记
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_REGION">
+            <summary>
+            推荐了地区
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_HOTEL">
+            <summary>
+            推荐了客栈
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.RECOMMEND_FOOD">
+            <summary>
+            推荐了美食
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_OBJECT">
+            <summary>
+            评论了
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_SCENE">
+            <summary>
+            评论了景点
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_TRIP">
+            <summary>
+            评论了行程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_LOG">
+            <summary>
+            评论了游记
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_REGION">
+            <summary>
+            评论了地区
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_HOTEL">
+            <summary>
+            评论了客栈
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COMMENT_FOOD">
+            <summary>
+            评论了美食
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.UPLOAD_PHOTO">
+            <summary>
+            上传了照片
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.CHANGE_LOGO">
+            <summary>
+            更换了图标
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.CHANGE_GROUP">
+            <summary>
+            更换了群组
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.WANTGO">
+            <summary>
+            想去
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.GONE">
+            <summary>
+            去过
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SCORE_OBJECT">
+            <summary>
+            评分了
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.ISSUE_TRIP">
+            <summary>
+            发布了行程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.COPY_TRIP">
+            <summary>
+            复制了行程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.CREATE_TRIP">
+            <summary>
+            创建了行程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.MODIFY_TRIP">
+            <summary>
+            编辑了行程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.CREATE_QUESTION">
+            <summary>
+            提出了问题
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.REPLY_QUESTION">
+            <summary>
+            回复了问题
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_EXCHANGE">
+            <summary>
+            交易
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_EXCHANGE_BUY">
+            <summary>
+            交易（成功购买）
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_EXCHANGE_SELL">
+            <summary>
+            成功贩卖
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_GUESS">
+            <summary>
+            猜拳
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_GUESS_WIN">
+            <summary>
+            猜拳获胜
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_GUESS_LOSS">
+            <summary>
+            猜拳失败
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_GUESS_DRAW">
+            <summary>
+            猜拳平局
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_SEND_MESSAGE">
+            <summary>
+            发送短信息
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_GREET">
+            <summary>
+            打招呼
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_BROKER_UPGRADE">
+            <summary>
+            玩家升级
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_STAR_UPGRADE">
+            <summary>
+            机器人升级
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_GROUP_UPGRADE">
+            <summary>
+            楼房升级
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_SCHOOL_JOIN">
+            <summary>
+            补习班参加
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_SCHOOL_EXIT">
+            <summary>
+            补习班退出
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_SCHOOL_EXAM">
+            <summary>
+            补习班测验
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_SCHOOL_EXAM_PASSALL">
+            <summary>
+            补习班测验全部通过
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_WORK">
+            <summary>
+            打工赚钱
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_WORK_POST_TOPIC">
+            <summary>
+            打工赚钱(发主题)
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_WORK_REPLY_TOPIC">
+            <summary>
+            打工赚钱(回复主题)
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_SHOPPING">
+            <summary>
+            购物动态
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_REWARD">
+            <summary>
+            奖励（奖励的类型具体放在对象ID里保存）
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveTypes.SS_TRADE_BUY">
+            <summary>
+            明前茶怒度
+            </summary>
+        </member>
+        <member name="T:SNS.Move.ObjectTypeEnum">
+            <summary>
+            数据对像类型，需与全局的保持一致
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.NaN">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Scene">
+            <summary>
+            景点
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Region">
+            <summary>
+            地区
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Hotel">
+            <summary>
+            客栈
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Food">
+            <summary>
+            美食
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Line">
+            <summary>
+            路线
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Traffic">
+            <summary>
+            交通,景点之间的交通
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Tip">
+            <summary>
+            小贴士
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.TravelNotes">
+            <summary>
+             游记
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Person">
+            <summary>
+            简历
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Enterprise">
+            <summary>
+            企业
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Train">
+            <summary>
+            培训机构
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Agency">
+            <summary>
+            中介
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.OtherOrg">
+            <summary>
+            其他组织
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.JobApply">
+            <summary>
+            求职意向
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Engage">
+            <summary>
+            招工信息
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.TrainClass">
+            <summary>
+            培训课程
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Contactor">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.GraduactionPerson">
+            <summary>
+            毕业生
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Article">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Image">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Blog">
+            <summary>
+            博客
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Comment">
+            <summary>
+            评论
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Media">
+            <summary>
+            媒体
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Vote">
+            <summary>
+            投票
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Discuz">
+            <summary>
+            论坛
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Subject">
+            <summary>
+            专题
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Album">
+            <summary>
+            专辑相册
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.GuestBook">
+            <summary>
+            留言
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.GuestBookReply">
+            <summary>
+            留言回复
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Question">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Thesis">
+            <summary>
+            辩论
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.AD">
+            <summary>
+            广告
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.User">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Friends">
+            <summary>
+            好友
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Moods">
+            <summary>
+            心情
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.FellowGroup">
+            <summary>
+            好友组
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Group">
+            <summary>
+            圈子
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Package">
+            <summary>
+            包
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Rights">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Module">
+            <summary>
+            模块
+            </summary>
+        </member>
+        <member name="F:SNS.Move.ObjectTypeEnum.Action">
+            <summary>
+            动作
+            </summary>
+        </member>
+        <member name="T:SNS.Move.BaseUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SNS.Move.BaseUser.Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.BaseUser.Name">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:SNS.Move.BaseUser.Ip">
+            <summary>
+            用户IP
+            </summary>
+        </member>
+        <member name="T:SNS.Move.MoveObj">
+            <summary>
+            行为对象(内容部分)
+            </summary>
+        </member>
+        <member name="M:SNS.Move.MoveObj.Serializer(SNS.Move.MoveObj)">
+            <summary>
+            序列化行为
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SNS.Move.MoveObj.Deserialize(System.String)">
+            <summary>
+            反序列化行为
+            </summary>
+            <param name="base64Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SNS.Move.MoveObj.S64Escape(System.Byte[])">
+            <summary>
+            BASE64编码
+            </summary>
+            <param name="clearBytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SNS.Move.MoveObj.S64Unsecape(System.String)">
+            <summary>
+            BASE64解码
+            </summary>
+            <param name="base64Text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SNS.Move.MoveObj.Clone">
+            <summary>
+            返回新实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SNS.Move.MoveObj.WhoseId">
+            <summary>
+            在谁的地盘上发生（用户ID）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.WhoseName">
+            <summary>
+            在谁的地盘上发生（用户名）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.WhereId">
+            <summary>
+            在哪里发生(地点ID，如歌曲页，个人主页)
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.WhereName">
+            <summary>
+            在哪里发生(地点名称，如歌曲页，个人主页)
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.WhereType">
+            <summary>
+            在哪里发生(地点类型，如歌曲页，个人主页)
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.TargetId">
+            <summary>
+            目标对象ID（如给好友留了言，则这里为好友用户ID）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.TargetName">
+            <summary>
+            目标对象名称（如给好友留了言，则这里为好友用户名）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.TargetType">
+            <summary>
+            目标对象类型(默认为用户)
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.Note">
+            <summary>
+            目标对象内容（如给好友留了言，则这里为留言的内容）
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.ObjectID">
+            <summary>
+            涉及的对像ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.ObjectType">
+            <summary>
+            涉及的对像类型
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.Money">
+            <summary>
+            产生的费用，正数为支出，负数为收入
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.RegionID">
+            <summary>
+            地点ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.RegionName">
+            <summary>
+            地点名称
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.HotelID">
+            <summary>
+            酒店ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.HotelName">
+            <summary>
+            酒店名称
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.RestID">
+            <summary>
+            饭店ID
+            </summary>
+        </member>
+        <member name="P:SNS.Move.MoveObj.RestName">
+            <summary>
+            饭店名称
+            </summary>
+        </member>
+        <member name="T:SNS.Move.FullMove">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SNS.Move.FullMove.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:SNS.Move.FullMove.Id">
+            <summary>
+            行为ID，这个是添加的时候接口自动分配的
+            </summary>
+        </member>
+        <member name="P:SNS.Move.FullMove.User">
+            <summary>
+            当前用户信息
+            </summary>
+        </member>
+        <member name="P:SNS.Move.FullMove.Type">
+            <summary>
+            行为类型
+            </summary>
+        </member>
+        <member name="P:SNS.Move.FullMove.Content">
+            <summary>
+            行为内容
+            </summary>
+        </member>
+        <member name="P:SNS.Move.FullMove.Time">
+            <summary>
+            发生时间
+            </summary>
+        </member>
+        <member name="T:SNS.Move.IUserMove">
+            <summary>
+            用户行为接口
+            </summary>
+        </member>
+        <!-- 对于成员“M:SNS.Move.IUserMove.AddFriend(System.Int32,System.Int32,SNS.Move.FriendTypes)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:SNS.Move.IUserMove.DelFriend(System.Int32,System.Int32)”忽略有格式错误的 XML 注释 -->
+        <member name="M:SNS.Move.IUserMove.DoMove(SNS.Move.MoveAddTypes,SNS.Move.FullMove)">
+            <summary>
+            添加用户行为
+            </summary>
+            <param name="type">添加用户动态用到的类型</param>
+            <param name="move">完整行为对象</param>
+            <returns>添加是否成功</returns>
+        </member>
+        <member name="M:SNS.Move.IUserMove.GetMoveList(SNS.Move.MoveGetTypes,System.Int32,System.Int32)">
+            <summary>
+            获取用户的动态　
+            </summary>
+            <param name="userId">当前用户ID</param>
+            <param name="type">获取用户动态用到的类型</param>
+            <param name="top">获取的数量</param>
+            <returns>行为列表</returns>
+        </member>
+        <member name="M:SNS.Move.IUserMove.AddListenSong(SNS.Move.ListenSong)">
+            <summary>
+            插入听歌记录(只是测试用，正式使用中用JS直接从客户端插入数据)
+            </summary>
+            <param name="song">听歌数据</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:SNS.Move.IUserMove.GetListenSongList(System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取听歌记录数据
+            </summary>
+            <param name="userID">用户ID</param>
+            <param name="curPage">当前页</param>
+            <param name="pageSize">页面大小</param>
+            <returns>听歌数据列表</returns>
+        </member>
+        <member name="M:SNS.Move.IUserMove.DoVisit(System.Int32,SNS.Move.VisitObj)">
+            <summary>
+            访问记录添加
+            </summary>
+            <param name="iD">圈子ID</param>
+            <param name="visit">访问者</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:SNS.Move.IUserMove.GetVisitList(System.Int32,System.Int32@)">
+            <summary>
+            获取访问记录
+            </summary>
+            <param name="iD">对象ID</param>
+            <param name="count">总记录数</param>
+            <returns>访问记录列表</returns>
+        </member>
+        <member name="T:SNS.Move.MoveAddTypes">
+            <summary>
+            添加用户动态用到的类型
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveAddTypes.FAV_MUISC">
+            <summary>
+            收藏音乐相关操作
+            </summary>
+        </member>
+        <member name="F:SNS.Move.MoveAddTypes.OTHER_MOVE">
+            <summary>
+            其他行为动态
+            </summary>
+        </member>
+    </members>
+</doc>

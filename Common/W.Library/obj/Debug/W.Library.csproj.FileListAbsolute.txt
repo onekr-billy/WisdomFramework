@@ -1,0 +1,10 @@
+E:\Work\Project\Web\asp.net\Wisdom\W.Library\bin\Debug\W.Library.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.Library\bin\Debug\W.Library.pdb
+E:\Work\Project\Web\asp.net\Wisdom\W.Library\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\Wisdom\W.Library\obj\Debug\W.Library.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.Library\obj\Debug\W.Library.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.Library\bin\Debug\W.Library.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.Library\bin\Debug\W.Library.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.Library\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.Library\obj\Debug\W.Library.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\Common\W.Library\obj\Debug\W.Library.pdb

@@ -1,0 +1,2624 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CMS.System</name>
+    </assembly>
+    <members>
+        <member name="T:CMS.Components.Staticpublishdelet">
+            <summary>
+            生成:2010/06/20 10:40:20
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.StaticPublishID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.Html">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.DeleteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublishdelet.IsValid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Category">
+            <summary>
+            生成:2010/02/05 08:13:43
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.CategoryName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.OrderIndex">
+            <summary>
+            游玩的顺序，从0开始，顺序递增。
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.DocCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.NavigatePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Category.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.System.IHelper">
+            <summary>
+            帮助接口
+            </summary>
+        </member>
+        <member name="M:CMS.System.IHelper.Get(System.String)">
+            <summary>
+            获取一个帮助对象（包括URL、标题、搜索功能等）
+            </summary>
+            <param name="guid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.System.IHelper.Packages">
+            <summary>
+            获取目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CMS.Components.StaticPublishSet">
+            <summary>
+            Summary description for UserSet.
+            </summary>
+        </member>
+        <member name="T:CMS.System.ShortcutLevel">
+            <summary>
+            快捷操作级别
+            </summary>
+        </member>
+        <member name="F:CMS.System.ShortcutLevel.Package">
+            <summary>
+            包级别
+            </summary>
+        </member>
+        <member name="F:CMS.System.ShortcutLevel.Function">
+            <summary>
+            功能级别
+            </summary>
+        </member>
+        <member name="T:CMS.System.Filtrate">
+            <summary>
+            导航过滤器
+            </summary>
+            <param name="guid">资源GUID</param>
+            <returns>过滤结果</returns>
+        </member>
+        <member name="T:CMS.System.INavigation">
+            <summary>
+            导航接口（包括主菜单和快捷操作导航生成）
+            </summary>
+        </member>
+        <member name="M:CMS.System.INavigation.Filte(CMS.System.Filtrate)">
+            <summary>
+            过滤器(设定)
+            </summary>
+            <param name="filter">过滤器</param>
+        </member>
+        <member name="M:CMS.System.INavigation.GuidesOf">
+            <summary>
+            获取引导操作（即框架页主菜单）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.System.INavigation.ShortcutOf(System.String,CMS.System.ShortcutLevel)">
+            <summary>
+            获取某功能相关的快捷操作
+            </summary>
+            <param name="funGUID">功能[页面]GUID</param>
+            <returns>快捷操作</returns>
+        </member>
+        <member name="M:CMS.System.INavigation.HasShortcuts(System.String)">
+            <summary>
+            是否有功能级的快捷操作
+            </summary>
+            <param name="functionGUID">功能[页面]GUID</param>
+            <returns>有否？</returns>
+        </member>
+        <member name="M:CMS.System.INavigation.Fun(System.String)">
+            <summary>
+            获取一个功能信息
+            </summary>
+            <param name="funGUID">功能</param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.System.INavigation.Packages">
+            <summary>
+            获取所有包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CMS.Components.Staticpublish">
+            <summary>
+            生成:2010/06/20 10:40:20
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.StaticPublishID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.Html">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Staticpublish.IsValid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Picture">
+            <summary>
+            生成:2010/02/05 08:13:44
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Picture.PictureID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Picture.ObjectType">
+            <summary>
+            用户区要地区、景点、路线、日程、酒店等信息分类
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Picture.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Picture.PictureLarge">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Picture.AlbumName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Picture.PictureDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Picture.PictureSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.DbConfig">
+            <summary>
+            数据库链接
+            </summary>
+        </member>
+        <member name="P:CMS.Components.DbConfig.Source">
+            <summary>
+            外部数据来源，如火车等
+            </summary>
+        </member>
+        <member name="P:CMS.Components.DbConfig.Mall">
+            <summary>
+            商城数据
+            </summary>
+        </member>
+        <member name="T:CMS.System.Plugin.ActionItem">
+            <summary>
+            动作项
+            </summary>
+        </member>
+        <member name="T:CMS.Components.RegionM">
+            <summary>
+            生成:2010/02/05 08:13:45
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.RegionCode">
+            <summary>
+            指国家标准行政地区编码
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.LevelCode">
+            <summary>
+            国家行政地区编码无法准确表达层级关系，需要有一个编码来表述。
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.CreateUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.DataStatus">
+            <summary>
+            0 表示已经创建            1 表示公开            -1 表示删除
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.DateModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.ModifyUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.IsLock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.CurrentVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.OrgVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.LNG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.LAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.MapLevel">
+            <summary>
+            0-19地图级别，与Google地图保持一致。
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.HotLevel">
+            <summary>
+            记录用户对此景点的关注程度
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.IsRecommend">
+            <summary>
+            系统推荐等级0-19，可能与地图级别匹配。
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.CertLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.ShortName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.RegionM.ShowLevel">
+            <summary>
+            默认打开地图时的地图级别
+            </summary>
+        </member>
+        <member name="M:CMS.System.IPort.SynchronPackages">
+            <summary>
+            将插件包信息，同步到数据库
+            </summary>
+        </member>
+        <member name="M:CMS.System.Port.SynchronPackages">
+            <summary>
+            同步到标准权限库
+            </summary>
+        </member>
+        <member name="M:CMS.System.Port.SynchronPackagesBCF">
+            <summary>
+            同步(到BCF库)
+            </summary>
+        </member>
+        <member name="T:CMS.System.IPassport">
+            <summary>
+            用户帐号接口
+            </summary>
+        </member>
+        <member name="P:CMS.System.IUser.PUID">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:CMS.System.IUser.UserId">
+            <summary>
+            用户登录帐号
+            </summary>
+        </member>
+        <member name="P:CMS.System.IUser.UserName">
+            <summary>
+            用户包称
+            </summary>
+        </member>
+        <member name="P:CMS.System.IUser.ClientIP">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="M:CMS.System.IPassport.Login(System.String,System.String)">
+            <summary>
+            登录ing...
+            </summary>
+            <param name="userId"></param>
+            <param name="passWd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.System.IPassport.IsLogin">
+            <summary>
+            是否已登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.System.IPassport.Check(System.String)">
+            <summary>
+            确认资源使用权
+            </summary>
+        </member>
+        <member name="P:CMS.System.Passport.ClientIP">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="T:CMS.System.ExcelImport">
+            <summary>
+            Excel导入模块
+            </summary>
+        </member>
+        <member name="M:CMS.System.ExcelImport.GetWorksheetData(System.String,System.Int32)">
+            <summary>
+            从Excel文件指定工作表中获取数据
+            </summary>
+            <param name="filename">Excel文件路径，不支持Excel2007文件格式xlsx</param>
+            <param name="sheetIndex">工作表索引，从0开始</param>
+            <returns><![CDATA[IList<string[]>]]></returns>
+        </member>
+        <member name="P:CMS.System.ExcelImport.ExcelFilePath">
+            <summary>
+            获取或设置需要导入数据的Excel文件路径
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelImport.BeginCellName">
+            <summary>
+            获取或设置起始数据所在单元格名称，默认为“A1”，不区分大小写
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelImport.RowCount">
+            <summary>
+            获取或设置数据总行数，默认为50000
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelImport.ColumnCount">
+            <summary>
+            获取或设置数据总列数，默认为1
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Cell_Extend">
+            <summary>
+            栏位扩展
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Cell">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.CellID">
+            <summary>
+            栏位ID
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.CellName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.IsStaticPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.IsAutoPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.RelationCategories">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.ScheduleExpression">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.NotSetIsAllow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.NeedRecordHits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.Hits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.CellCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.Memo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.MorePageUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.ParentCellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.DataSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.AutoPublishCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.AutoPublishParentCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell.AutoPublishByParent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell_Extend.IsPublished">
+            <summary>
+            本次是否已经发布
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell_Extend.PackageProvider">
+            <summary>
+            数据插件
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell_Extend.SubCells">
+            <summary>
+            子栏位
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell_Extend.Parameters">
+            <summary>
+            数据插件的相关参数
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell_Extend.PackageName">
+            <summary>
+            包的名称
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell_Extend.PortalID">
+            <summary>
+            站点ID
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Cell_Extend.PageName">
+            <summary>
+            页面名称
+            </summary>
+        </member>
+        <member name="T:CMS.Components.StaticpublishM">
+            <summary>
+            生成:2010/06/20 10:40:20
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.StaticPublishID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.Html">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishM.IsValid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.PublishdeletM">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.PublicDeleteID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.HTML">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.URL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.IsTopic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.Pic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.PictureSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F6">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F7">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.ContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.F9">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.IsManual">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.DeleteUserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.DeleteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.ClickCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.Provinceid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishdeletM.RegionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.System.Plugin.ShortcutItem">
+            <summary>
+            快捷操作项
+            </summary>
+        </member>
+        <member name="T:CMS.Components.PictureM">
+            <summary>
+            生成:2010/02/05 08:13:44
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PictureM.PictureID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PictureM.ObjectType">
+            <summary>
+            用户区要地区、景点、路线、日程、酒店等信息分类
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PictureM.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PictureM.PictureLarge">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PictureM.AlbumName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PictureM.PictureDesc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PictureM.PictureSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.StaticpublishdeletM">
+            <summary>
+            生成:2010/06/20 10:40:20
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.StaticPublishID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.Html">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.DeleteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.StaticpublishdeletM.IsValid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Publishdelet">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.PublicDeleteID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.HTML">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.URL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.IsTopic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.Pic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.PictureSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F6">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F7">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.ContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.F9">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.IsManual">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.DeleteUserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.DeleteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.ClickCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.Provinceid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publishdelet.RegionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.PackageConfig">
+            <summary>
+            生成:2010/01/04 03:26:37
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.SetID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.ConfigName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.Target">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.SQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.LastUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.ConfigType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.PackageConfig.ConfigValueType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Region">
+            <summary>
+            生成:2010/02/05 08:13:45
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.RegionCode">
+            <summary>
+            指国家标准行政地区编码
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.LevelCode">
+            <summary>
+            国家行政地区编码无法准确表达层级关系，需要有一个编码来表述。
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.CreateUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.DataStatus">
+            <summary>
+            0 表示已经创建            1 表示公开            -1 表示删除
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.DateModified">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.ModifyUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.Tags">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.IsLock">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.CurrentVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.OrgVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.LNG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.LAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.MapLevel">
+            <summary>
+            0-19地图级别，与Google地图保持一致。
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.ShowLevel">
+            <summary>
+            默认打开地图时的地图级别
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.HotLevel">
+            <summary>
+            记录用户对此景点的关注程度
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.IsRecommend">
+            <summary>
+            系统推荐等级0-19，可能与地图级别匹配。
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.CertLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.ShortName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.Path">
+            <summary>
+            层级名称
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.IDPath">
+            <summary>
+            层级名称
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Region.BestTravelTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.CellM">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.CellID">
+            <summary>
+            栏位ID
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.CellName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.IsStaticPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.IsAutoPublish">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.RelationCategories">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.ScheduleExpression">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.NotSetIsAllow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.NeedRecordHits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.Hits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.CellCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.Memo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.MorePageUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.ParentCellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.DataSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.AutoPublishCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.AutoPublishParentCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CellM.AutoPublishByParent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.CategoryM">
+            <summary>
+            生成:2010/02/05 08:13:43
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.ParentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.CategoryName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.OrderIndex">
+            <summary>
+            游玩的顺序，从0开始，顺序递增。
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.DocCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.Logo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.NavigatePath">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.CategoryM.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Publish_Extend">
+            <summary>
+            发布的数据结构
+            扩展属性占用Publish的F3,F4,F5
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Publish">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.PublishID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.ClickCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.URL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.IsTopic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.Pic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.PictureSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F6">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F7">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.ContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.F9">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.IsManual">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.Provinceid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish.RegionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.IContentInfo">
+            <summary>
+            频道数据接口
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Key">
+            <summary>
+            数据的Key，用于识别变更与否
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.CellID">
+            <summary>
+            栏位ID
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.ObjectID">
+            <summary>
+            对像ID
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.ObjectType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Icon">
+            <summary>
+            图标或小图片
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Image">
+            <summary>
+            大图片
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Source">
+            <summary>
+            来源或作者
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.DateCreated">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Tags">
+            <summary>
+            Tag标签
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.URL">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.CategoryID">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.OrderIndex">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:CMS.Components.IContentInfo.DateIssued">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.UseUrlFormat">
+            <summary>
+            是否使用Siteurls中的地址进行格式化
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Icon">
+            <summary>
+            图标或小图片
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Image">
+            <summary>
+            大图片
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Source">
+            <summary>
+            来源或作者
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.DateCreated">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Tags">
+            <summary>
+            Tag标签
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Desc">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.OrderIndex">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.DateIssued">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.Key">
+            <summary>
+            数据的Key，用于识别变更与否
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.SceneID">
+            <summary>
+            主要景点ID
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend.SceneName">
+            <summary>
+            主要景点名称
+            </summary>
+        </member>
+        <member name="T:CMS.System.Plugin.PackageItem">
+            <summary>
+            包项
+            </summary>
+        </member>
+        <member name="P:CMS.System.Plugin.PackageItem.Macro">
+            <summary>
+            宏解析器
+            
+            解析配置文件里,关于{0},{1},{name}之类的宏定义
+            </summary>
+        </member>
+        <member name="T:CMS.System.Plugin.APIItem">
+            <summary>
+            API项
+            </summary>
+        </member>
+        <member name="T:CMS.System.Plugin.PackageParser">
+            <summary>
+            包操作
+            </summary>
+        </member>
+        <member name="M:CMS.System.Plugin.PackageParser.Val(System.Xml.XmlNode)">
+            <summary>
+            获取节点的值
+            </summary>
+            <param name="node"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CMS.Services.ContentsServices">
+            <summary>
+            CMS内容读取及操作类
+            用于前台页面搜索
+            </summary>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.GetPublish(System.Int32,System.Int32)">
+            <summary>
+            取发布的数据（含 地点信息）
+            </summary>
+            <param name="publishID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.DeletePublishData(System.String,System.Int32)">
+            <summary>
+            删除发布数据
+            </summary>
+            <param name="ids"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.AddPublishData(CMS.Components.Publish_Extend,System.Int32)">
+            <summary>
+            增加发布数据
+            </summary>
+            <param name="pe"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.UpdatePublsihData(CMS.Components.Publish_Extend,System.Int32)">
+            <summary>
+            修改发布数据
+            </summary>
+            <param name="pe"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.ImportPublishFromObject(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            将对像发布到 栏位中
+            </summary>
+            <param name="objectType"></param>
+            <param name="ObjectID"></param>
+            <param name="cellID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.MakePictureThumnate(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            制作对应格式的缩略图
+            </summary>
+            <param name="pictureID"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.GetObjectTypeList">
+            <summary>
+            获得类型的一个列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.Services.ContentsServices.GetUploadImageUrl(System.String,System.Int32,System.Int32)">
+            <summary>
+            格式化用户上传图片的全地址
+            </summary>
+            <param name="relurl"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CMS.Components.PortalpagM">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalpagM.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalpagM.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalpagM.PageName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalpagM.PageUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalpagM.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Portal">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.ReplacePortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalCreateTIme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalEndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.UploadImgUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portal.PortalMemo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.PackageConfigM">
+            <summary>
+            生成:2010/01/04 03:26:37
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.SetID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.PackageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.ConfigName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.Source">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.Target">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.Title">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.SQL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.LastUpdate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.ConfigType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PackageConfigM.ConfigValueType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.PublishSet">
+            <summary>
+            Summary description for UserSet.
+            </summary>
+        </member>
+        <member name="T:CMS.Components.PortalM">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.ReplacePortalUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalCreateTIme">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalEndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalServer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.UploadImgUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PortalM.PortalMemo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.System.Navigation">
+            <summary>
+            快捷操作获取服务
+            </summary>
+        </member>
+        <member name="M:CMS.System.Navigation.Filte(CMS.System.Filtrate)">
+            <summary>
+            过滤器(设定)
+            </summary>
+            <param name="filter">过滤器</param>
+        </member>
+        <member name="M:CMS.System.Navigation.GuidesOf">
+            <summary>
+            获取引导操作（即框架页主菜单）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CMS.System.Navigation.ShortcutOf(System.String,CMS.System.ShortcutLevel)">
+            <summary>
+            获取某功能相关的快捷操作
+            </summary>
+            <param name="funGUID">功能[页面]GUID</param>
+            <returns>快捷操作</returns>
+        </member>
+        <member name="M:CMS.System.Navigation.HasShortcuts(System.String)">
+            <summary>
+            是否存在功能级别的快捷操作
+            </summary>
+            <example>
+            if(HasShortcuts())
+                return FunctionOf();
+            else
+                return PackageOf();
+            </example>
+            <param name="funGUID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CMS.System.Plugin.FunctionItem">
+            <summary>
+            功能项
+            </summary>
+        </member>
+        <member name="P:CMS.System.Plugin.FunctionItem.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:CMS.System.Plugin.FunctionItem.URLx">
+            <summary>
+            增加RSID参数的URL
+            </summary>
+        </member>
+        <member name="P:CMS.System.Plugin.FunctionItem.Package">
+            <summary>
+            所属包的GUID
+            </summary>
+        </member>
+        <member name="P:CMS.System.Plugin.FunctionItem.IsGuide">
+            <summary>
+            是否为引导性功能（包的第一个功能，为引导性功能）
+            </summary>
+        </member>
+        <member name="T:CMS.Components.ImageConfiguration">
+            <summary>
+            ImageConfiguration 的摘要说明。
+            </summary>
+        </member>
+        <member name="P:CMS.Components.ImageConfiguration.OrgImagePath">
+            <summary>
+            原始图片地址
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Portalpag">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portalpag.PageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portalpag.PortalID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portalpag.PageName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portalpag.PageUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Portalpag.IsActive">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.TreeViewItem">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:CMS.Components.TreeViewItem.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.TreeViewItem.text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.TreeViewItem.value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:CMS.Components.TreeViewItem.hasChildren">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CMS.System.Plugin.HelpItem.Search(System.String,CMS.System.Plugin.SearchType)">
+            <summary>
+            根据关键字搜索
+            </summary>
+            <param name="key">关键字</param>
+        </member>
+        <member name="P:CMS.System.Plugin.HelpItem.Content">
+            <summary>
+            帮助内容
+            </summary>
+        </member>
+        <member name="T:CMS.Components.PublishM">
+            <summary>
+            生成:2010/06/20 10:40:19
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.PublishID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.CategoryID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.CellID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.ObjectID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.ObjectType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.PublishTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.ClickCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.URL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.IsTopic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.Pic">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.PictureSmall">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F5">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F6">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F7">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.ContentID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.F9">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.IsManual">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.PublishTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.RegionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.Provinceid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CMS.Components.PublishM.RegionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CMS.Components.Publish_Extend_Do">
+            <summary>
+            发布的数据结构
+            此处主要用于自动发布时的处理
+            </summary>
+        </member>
+        <member name="M:CMS.Components.Publish_Extend_Do.CompareTo(System.Object)">
+            <summary>
+            比较对像
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend_Do.PublishSets">
+            <summary>
+            子栏位数据
+            </summary>
+        </member>
+        <member name="P:CMS.Components.Publish_Extend_Do.PublishSet">
+            <summary>
+            子栏止
+            </summary>
+        </member>
+        <member name="T:CMS.System.ExcelExport">
+             <summary>
+             Excel导出模块
+             </summary>
+             <example>
+             <![CDATA[
+                     string[] title = new string[] { "编号", "姓名", "年龄" };
+                     IList<string[]> list = new List<string[]>();
+                     list.Add(new string[] { "1", "aaa", "11" });
+                     list.Add(new string[] { "2", "bbb", "22" });
+                     list.Add(new string[] { "3", "ccc", "33" });
+                     list.Add(new string[] { "4", "ddd", "44" });
+            
+                     string[,] rowData = new string[1000,3];
+            
+                     ExcelLiteHelper excel = new ExcelLiteHelper();
+                     excel.Data = list;
+                     excel.DataCaption = title;
+                     excel.CaptionBackcolor = Color.BlanchedAlmond;
+                     excel.LineColor = Color.BurlyWood;
+                     excel.Export();
+                   ]]>
+             </example>
+        </member>
+        <member name="M:CMS.System.ExcelExport.Export">
+            <summary>
+            导出Excel文件
+            </summary>
+            <returns>返回导出文件的物理路径</returns>
+        </member>
+        <member name="P:CMS.System.ExcelExport.FilePath">
+            <summary>
+            获取或设置Excel文件导出路径，默认为当前应用程序根目录下的“Export”目录
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelExport.Filename">
+            <summary>
+            获取或设置导出的Excel文件名，若未设置则采用默认文件名（Guid字符串加扩展名xls）
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelExport.LineColor">
+            <summary>
+            获取或设置表格线条颜色
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelExport.CaptionBackcolor">
+            <summary>
+            获取或设置表格标题行背景颜色
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelExport.CaptionFontColor">
+            <summary>
+            获取或设置表格标题行字体颜色
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelExport.RowFontColor">
+            <summary>
+            获取或设置表格数据行字体颜色
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelExport.RowBackcolor">
+            <summary>
+            获取或设置表格数据行背景颜色
+            </summary>
+        </member>
+        <member name="P:CMS.System.ExcelExport.AlterationRowBackcolor">
+            <summary>
+            获取或设置表格数据交替行背景颜色
+            </summary>
+        </member>
+        <member name="T:CMS.Components.StaticPublish_Extend">
+            <summary>
+            表《StaticPublish》对应的类
+            </summary>
+        </member>
+        <member name="T:CMS.System.Plugin.PackageLogItem">
+            <summary>
+            包日志项
+            </summary>
+        </member>
+        <member name="T:CMS.Components.CMSConfiguration">
+            <summary>
+            Summary description for GalleryConfiguration.
+            </summary>
+        </member>
+        <member name="M:CMS.Components.CMSConfiguration.GetConfigSection(System.String)">
+            <summary>
+            Enables reading of the configuration file's XML without reloading the file
+            </summary>
+            <param name="nodePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CMS.Services.SiteServices">
+            <summary>
+            频道栏目的设定与管理
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,7 @@
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IBLL\bin\Debug\W.IBLL.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IBLL\bin\Debug\W.IBLL.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IBLL\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IBLL\obj\Debug\W.IBLL.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IBLL\obj\Debug\W.IBLL.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IBLL\bin\Debug\W.Model.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\DataAccess\NHibenate\W.IBLL\bin\Debug\W.Model.pdb

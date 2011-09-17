@@ -1,0 +1,2243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Weed.BCF</name>
+    </assembly>
+    <members>
+        <member name="T:Weed.BCF.XmlResource">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.Culture">
+            <summary>
+              为使用此强类型资源类的所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.BCF_InitData">
+             <summary>
+               查找类似 TRUNCATE TABLE BCF_Config
+            TRUNCATE TABLE BCF_Resource
+            TRUNCATE TABLE BCF_Resource_Linked
+            TRUNCATE TABLE BCF_Group
+            TRUNCATE TABLE BCF_OPSx
+            TRUNCATE TABLE BCF_User
+            TRUNCATE TABLE BCF_User_Linked
+            TRUNCATE TABLE BCF_Log
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Config.LK_OBJT&apos;, &apos;1&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Group.LK_OBJT&apos;, &apos;2&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Log.LK_OBJT&apos;, &apos;3&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_OPSx.LK_OBJT&apos;, &apos;4&apos;)
+            INSERT [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.BCF_Mssql_Build">
+             <summary>
+               查找类似 
+                    
+            IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N&apos;[dbo].[BCF_OPSx]&apos;) AND type in (N&apos;U&apos;))
+            BEGIN
+            CREATE TABLE [dbo].[BCF_OPSx](
+            	[LK_OBJT] [int] NOT NULL,
+            	[LK_OBJT_ID] [varchar](32) COLLATE Chinese_PRC_CI_AS NOT NULL,
+            	[Tags] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+            	[OPSx] [text] COLLATE Chinese_PRC_CI_AS NULL,
+             CONSTRAINT [PK_BCF_OPSx] PRIMARY KEY CLUSTERED 
+            (
+            	[LK_OBJT] ASC,
+            	[LK_OBJT_ID] ASC,
+            	[Tags] ASC
+            )WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+            ) ON [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.BCF_Mssql_SP">
+            <summary>
+              查找类似  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.BCF_Mssql_Update">
+             <summary>
+               查找类似 
+            DELETE [BCF_Config] WHERE [Name] LIKE &apos;BCF_%&apos; OR [Name] LIKE &apos;DEFINE.BCF_%&apos;
+            
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Config.LK_OBJT&apos;, &apos;1&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Group.LK_OBJT&apos;, &apos;2&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Log.LK_OBJT&apos;, &apos;3&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_OPSx.LK_OBJT&apos;, &apos;4&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Resource.LK_OBJT&apos;, &apos;5&apos;)
+            INSERT INTO BCF_Config(Name, Value) VALUES (&apos;BCF_Resource_Linked.LK_OBJT&apos;,  [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.BCF_MySQL_Build">
+             <summary>
+               查找类似 CREATE TABLE `BCF_Config` (
+              `Name` varchar(50) NOT NULL default &apos;&apos;,
+              `Value` varchar(50) NOT NULL default &apos;&apos;,
+              `Note` varchar(200) default NULL,
+              PRIMARY KEY  (`Name`)
+            );
+            
+            CREATE TABLE `BCF_Group` (
+              `PGID` varchar(32) NOT NULL default &apos;&apos;,
+              `P_PGID` varchar(32) NOT NULL default &apos;&apos;,
+              `R_PGID` int(11) NOT NULL default &apos;0&apos;,
+              `PG_Code` varchar(50) default NULL,
+              `CN_Name` varchar(50) default NULL,
+              `EN_Name` varchar(50) default NULL,
+              `In_Level` int(11) default &apos;0&apos;,
+              `Tags` varchar(5 [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:Weed.BCF.XmlResource.BCF_Oracle_Build">
+            <summary>
+              查找类似  的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.UserEx">
+            <summary>
+            用户扩展对象
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.BCF_User">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.BCF_User.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定委托数据
+            </summary>
+            <param name="get">委托数据源</param>
+            <param name="src">源类型</param>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.PUID">
+            <summary>
+            用户PUID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.User_Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.Pass_Wd">
+            <summary>
+            密码（加密后的）
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.CN_Name">
+            <summary>
+            中文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.EN_Name">
+            <summary>
+            英文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.PW_Mail">
+            <summary>
+            密码邮箱
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.Is_Disabled">
+            <summary>
+            是否被禁用了(不可登录)
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.Is_Visibled">
+            <summary>
+            是否可见（在管理时不可见）
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.Create_Time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_User.Last_Update">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.IOPSxExtend">
+            <summary>
+            OPSx 信息扩展接口(OPS内部对象在BCF_OPSx表里的扩展信息)
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.IOPSxExtend.OPSx">
+            <summary>
+            获取OPSx扩展信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.IOPSxExtend.OPSx(System.String)">
+            <summary>
+            设置OPSx扩展信息
+            </summary>
+            <param name="opsXml">ops-xml</param>
+        </member>
+        <member name="M:Weed.BCF.UserEx.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定委托数据源
+            </summary>
+            <param name="get"></param>
+            <param name="src"></param>
+        </member>
+        <member name="M:Weed.BCF.UserEx.OPSx">
+            <summary>
+            获取OPSx扩展信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.UserEx.OPSx(System.String)">
+            <summary>
+            设置OPSx扩展信息
+            </summary>
+            <param name="opsXml">ops-xml</param>
+        </member>
+        <member name="P:Weed.BCF.UserEx.PGID">
+            <summary>
+            组PGID
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.User">
+            <summary>
+            用户对象
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.User.OPSx">
+            <summary>
+            获取OPSx扩展信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.User.OPSx(System.String)">
+            <summary>
+            设置OPSx扩展信息
+            </summary>
+            <param name="opsXml">ops-xml</param>
+        </member>
+        <member name="M:Weed.BCF.User.EncryptPassWd(System.String,System.String)">
+            <summary>
+            对密码进行加码
+            </summary>
+            <param name="userId">用户登录帐号</param>
+            <param name="passWd">未加密的代码</param>
+            <returns>加密后的代码</returns>
+        </member>
+        <member name="M:Weed.BCF.User.ModifyPassWd(System.String,System.String)">
+            <summary>
+            修改一个用户的密码
+            </summary>
+            <param name="userId">用户登录帐号</param>
+            <param name="passWd">未加密的代码</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.User.EncryptPassWd">
+            <summary>
+            如果Pass_Wd 的宽度没有40位,则进行加密(不管是否为空密码)(加密后为40位长)仅负责进行密码加密
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.User.IsInGroup(System.String)">
+            <summary>
+            是否在一个组里
+            </summary>
+            <param name="pgid">组ID</param>
+            <returns>是否有加入</returns>
+        </member>
+        <member name="M:Weed.BCF.User.IsInGroup(System.String,System.String)">
+            <summary>
+            是否在一个组里
+            </summary>
+            <param name="puid">用户ID</param>
+            <param name="pgid">组ID</param>
+            <returns>是否有加入</returns>
+        </member>
+        <member name="M:Weed.BCF.User.JoinToGroup(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            加入一个组
+            </summary>
+            <param name="pgid">组ID</param>
+            <param name="tran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.User.LeaveGroup(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            脱离与一个组的关联
+            </summary>
+            <param name="pgid">组ID</param>
+            <param name="tran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.User.ClearGroupLinked(System.Int32,Weed.SDQ.QDbTran)">
+            <summary>
+            清理与某一类组的关系
+            </summary>
+            <param name="groupDefine"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.User.JoinToGroup(System.String,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            加入一个组
+            </summary>
+            <param name="puid">用户ID</param>
+            <param name="pgid">组ID</param>
+            <param name="tran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.User.LeaveGroup(System.String,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            脱离与一个组的关联
+            </summary>
+            <param name="puid">用户ID</param>
+            <param name="pgid">组ID</param>
+            <param name="tran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.User.ClearGroupLinked(System.String,System.Int32,Weed.SDQ.QDbTran)">
+            <summary>
+            清除与某一类组之间的关联
+            </summary>
+            <param name="puid">用户ID</param>
+            <param name="groupDefine">组定义</param>
+            <param name="tran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="P:Weed.BCF.User.LK_OBJT">
+            <summary>
+            被关联时的对象标识
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.WebClient">
+            <summary>
+            WebClient
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.BCF_PARAMS">
+            <summary>
+            BCF 参数
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.BCF_PARAMS.NewSQ">
+            <summary>
+            实例化一个SQuery
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.BCF_PARAMS.NewTran">
+            <summary>
+            实例化一个事务对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.BCF_PARAMS.NewID">
+            <summary>
+            创建一个ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.BCF_PARAMS.IsNullOrEmpty(System.String)">
+            <summary>
+            是否为空或Null字符
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.BCF_PARAMS.ToHSA1(System.String)">
+            <summary>
+            使用SHA1加密
+            </summary>
+            <param name="clearText">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.BCF_PARAMS.InitializeFrame">
+            <summary>
+            初始化BCF框架（危险动作，删除数据库里相关的表并重建）
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.BCF_PARAMS.InitializeData">
+            <summary>
+            初始化BCF框架数据（危险动作，清空数据库里相关的表并插入初始化数据）
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_PARAMS.DEFAULT_SDQ_NAME">
+            <summary>
+            默认SDQ配置节名称
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.WebClient.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.WebClient.Login(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="passWd">密码</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.WebClient.Login(System.String,System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="passWd">密码</param>
+            <param name="groupId">限定的组ID</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.WebClient.CheckPassWd(System.String,System.String)">
+            <summary>
+            核对密码
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WebClient.CurrentGroup">
+            <summary>
+            当前用户组信息
+            
+            需要在登录时,输入groupId
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WebClient.CurrentUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WebClient.Session">
+            <summary>
+            Session
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WebClient.Request">
+            <summary>
+            Request
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WebClient.IP">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WebClient.CurrentPage">
+            <summary>
+            当前Page
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WebClient.AppPath">
+            <summary>
+            应用程序路径
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.OPSxM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.BCFException">
+            <summary>
+            BCF异常
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.BCFException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="T:Weed.BCF.GroupServiceBase`1">
+            <summary>
+            组服务基类
+            </summary>
+            <typeparam name="T">实体T</typeparam>
+        </member>
+        <member name="F:Weed.BCF.GroupServiceBase`1._DEFINE_VALUE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoAppendGroup(`0,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="group"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.Exists(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoRemoveGroup(Weed.SDQ.QDbTran,System.String[])">
+            <summary>
+            移除Group,同时移除Group关联的信息
+            </summary>
+            <param name="tran"></param>
+            <param name="pgids"></param>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoDisableGroup(System.Boolean,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="disable"></param>
+            <param name="pgids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoModifyGroup(`0,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="group"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoClearGroups(System.Int32[])">
+            <summary>
+            
+            </summary>
+            <param name="defines"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoGetGroup(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoGetGroups(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="pgidS"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoGetInGroups(System.String,System.Boolean)">
+            <summary>
+            获取User所在的组
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.GetInGroupsSQ(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="puid"></param>
+            <param name="incDisabled"></param>
+            <param name="forView"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoGetGroups(System.Boolean,System.Boolean,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="incDisabled"></param>
+            <param name="incUnVisible"></param>
+            <param name="p_pgids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoGetGroups(Weed.SDQ.QTable,System.Boolean,System.Boolean,System.String[])">
+            <summary>
+            获取组
+            </summary>
+            <param name="joinTable"></param>
+            <param name="incDisabled"></param>
+            <param name="incUnVisible"></param>
+            <param name="p_pgids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoGetGroupsInUser(System.String,System.String[])">
+            <summary>
+            获取用户相关的组
+            </summary>
+            <param name="puid">用户PUID</param>
+            <param name="p_pgids">目标组的P_PGID组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.DoGetGroups">
+            <summary>
+            获取所有组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.PGIDToCode(System.String)">
+            <summary>
+            通过PGID获取PG_Code
+            </summary>
+            <param name="pgid">PGID</param>
+            <returns>PG_Code</returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.CodeToPGID(System.String)">
+            <summary>
+            通过PG_Code获取PGID
+            </summary>
+            <param name="code">PG_Code</param>
+            <returns>PGID</returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.ExistsUsers(System.String)">
+            <summary>
+            是否存有组内用户
+            </summary>
+            <param name="pgid">组PGID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.ExistsUsers(System.String,System.Boolean)">
+            <summary>
+            是否存有组内用户
+            </summary>
+            <param name="pgid">组PGID</param>
+            <param name="incDisabled">是否包括禁用的</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.ExistsChildern(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            是否存有子级
+            </summary>
+            <param name="pgid">组PGID</param>
+            <param name="incDisabled">是否包括禁用的</param>
+            <param name="incUnVisible">是否包括不可见的</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.ExistsResources(System.String)">
+            <summary>
+            是否存有关联的资源
+            </summary>
+            <param name="pgid">组PGID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupServiceBase`1.Exists(Weed.SDQ.QColumn,System.String)">
+            <summary>
+            是否存有组(@列=值)
+            </summary>
+            <param name="col">列</param>
+            <param name="val">值</param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.BCF.GroupServiceBase`1.DEFINE_VALUE">
+            <summary>
+            虚拟组的定义值
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.ResourceService">
+            <summary>
+            资源管理服务
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.ResourceService.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.AppendResource(Weed.BCF.Resource,Weed.SDQ.QDbTran)">
+            <summary>
+            添加资源
+            </summary>
+            <param name="resource">资源实体</param>
+            <param name="tran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.RemoveResource(System.String[])">
+            <summary>
+            移除资源，同时移除资源与其它对象的关联信息
+            </summary>
+            <param name="rsids">资源ID组</param>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.RemoveResource(Weed.SDQ.QDbTran,System.String[])">
+            <summary>
+            移除资源，同时移除资源与其它对象的关联信息
+            </summary>
+            <param name="rsids">资源ID组</param>
+            <param name="tran">事务</param>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.RemoveLink(System.String[])">
+            <summary>
+            移除与"Group"或"User"的关联
+            </summary>
+            <param name="lkidS">关联对象的ID组（组ID或用户ID）</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.RemoveLink(Weed.SDQ.QDbTran,System.String[])">
+            <summary>
+            移除与"Group"或"User"的关联
+            </summary>
+            <param name="lkidS">关联对象的ID组（组ID或用户ID）</param>
+            <param name="tran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.ModifyResource(Weed.BCF.Resource)">
+            <summary>
+            修改资源信息
+            </summary>
+            <param name="resource">资源实体</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.Exists(System.String)">
+            <summary>
+            是否存在某资源
+            </summary>
+            <param name="rsid">资源ID</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetResource(System.String)">
+            <summary>
+            获取某一资源信息
+            </summary>
+            <param name="rsid">资源ID</param>
+            <returns>资源实体</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetInUserResources(System.String,System.String[])">
+            <summary>
+            获取某一个用户的资源列表
+            </summary>
+            <param name="packageIds">对用户资源的所在包,进行限定</param>
+            <param name="puid">用户ID</param>
+            <returns>资源扩展信息列表</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetInUserResources1(System.String,System.Boolean,System.String[])">
+            <summary>
+            获取某一个用户的资源列表
+            </summary>
+            <param name="packageIds">对用户资源的所在包,进行限定</param>
+            <param name="puid">用户ID</param>
+            <param name="isComposePG">是否组合包的名字</param>
+            <returns>资源扩展信息列表</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetInGroupResources(System.String[])">
+            <summary>
+            获取Group[in @pgidS]的资源
+            </summary>
+            <param name="pgidS">对组资源的所在包,进行限定</param>
+            <returns>资源扩展信息列表</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetInGroupResources1(System.Boolean,System.String[])">
+            <summary>
+            获取Group[in @pgidS]的资源
+            </summary>
+            <param name="pgidS">对组资源的所在包,进行限定</param>
+            <returns>资源扩展信息列表</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetResources">
+            <summary>
+            获取所有的Resource(资源)
+            </summary>
+            <returns>资源列表</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetResources(System.String[])">
+            <summary>
+            获取指定包里的资源(不包括忆禁用的部分)
+            </summary>
+            <param name="packageIds">包ID组</param>
+            <returns>资源列表</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetResources(System.Boolean,System.String[])">
+            <summary>
+            获取指定包里的资源
+            </summary>
+            <param name="packageIds">包ID组</param>
+            <param name="incDisabled">是否包括忆禁用的部分</param>
+            <returns>资源列表</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.ClearInUserLinked(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            清除与User[@puid]之间的连接关系
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.ClearInGroupLinked(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            清除与Group[@pgid]之间的连接关系
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetInUserLinked(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            获取与User[@puid]之间的连接关系
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetInGroupLinked(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            获取与Group[@pgid]之间的连接关系
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.GetInGroupOfUserLinked(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            获取用户所在组的连接
+            </summary>
+            <param name="puid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.CodeToRSID(System.String)">
+            <summary>
+            通过Code获取RSID
+            </summary>
+            <param name="code">资源Code</param>
+            <returns>null or RSID</returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceService.RSIDToCode(System.String)">
+            <summary>
+            通过RSID获取Code
+            </summary>
+            <param name="rsid">资源ID</param>
+            <returns>null or Code</returns>
+        </member>
+        <member name="T:Weed.BCF.Web.UserInfor">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Web.UserInfor.MyResources(System.String[])">
+            <summary>
+            关于[模块=@rsid]的权限表达式
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.UserInfor.PUID">
+            <summary>
+            用户PUID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.UserInfor.User_Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.User_LinkedM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.User_LinkedM.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.User_LinkedM.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sdqName"></param>
+        </member>
+        <member name="M:Weed.BCF.User_LinkedM.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.User_LinkedM.OnInit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.User_LinkedM.PUID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.User_LinkedM.LK_OBJT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.User_LinkedM.LK_OBJT_ID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.User_LinkedM.LK_Operate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.User_Linked">
+            <summary>
+            用户关联...
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.User_Linked.PUID">
+            <summary>
+            用户PUID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.User_Linked.LK_OBJT">
+            <summary>
+            LK_OBJT
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.User_Linked.LK_OBJT_ID">
+            <summary>
+            关联的对象ID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.User_Linked.LK_Operate">
+            <summary>
+            关联操作符
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Log">
+            <summary>
+            日志实体
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.BCF_Log">
+            <summary>
+            BCF日志
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.BCF_Log.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定委托数据
+            </summary>
+            <param name="get">委托数据源</param>
+            <param name="src">源类型</param>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.LGID">
+            <summary>
+            日志ID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.LG_Type">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.PUID">
+            <summary>
+            用户PUID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.CN_Name">
+            <summary>
+            用户中文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.EN_Name">
+            <summary>
+            用户英文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.At_Where">
+            <summary>
+            在哪里?
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.On_When">
+            <summary>
+            什么时候?
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.Vs_Who">
+            <summary>
+            谁?
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.Vs_Who_Key">
+            <summary>
+            谁?.KEY
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.Do_What">
+            <summary>
+            做了什么?
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.Note">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Log.State">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Log.NewID">
+            <summary>
+            生成一个新的ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Log.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.BCF.Log.LK_OBJT">
+            <summary>
+            LK_OBJT
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.UserService">
+            <summary>
+            用户管理服务
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.UserService.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.AppendUser(Weed.BCF.User,Weed.SDQ.QDbTran)">
+            <summary>
+            添加时,已实现自动[Pass_Wd]加密
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.RemoveUser(System.String[])">
+            <summary>
+            移除User,同时移除User 与其它对象的关联
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.RemoveLink(System.String[])">
+            <summary>
+            删除组与用户的关联
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.RemoveLink(Weed.SDQ.QDbTran,System.String[])">
+            <summary>
+            删除组与用户的关联
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.ModifyUserPassWd(System.String,System.String)">
+            <summary>
+            修改用户必码
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="passWd">未加密的代码</param>
+        </member>
+        <member name="M:Weed.BCF.UserService.ModifyUser(Weed.BCF.User,Weed.SDQ.QDbTran)">
+            <summary>
+            修改时,已实现自动[Pass_Wd]加密
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.Exists(System.String,System.String)">
+            <summary>
+            是否存在一个用户
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.GetUser(System.String,System.String)">
+            <summary>
+            获取一个User[@orPuid 或者 @orUser_id]对象
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.UserService.GetUsersQuery(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="pgCode">代码模式：3301|33%|33__01%</param>
+            <param name="incDisabled"></param>
+            <param name="incUnVisible"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.BCF.Package">
+            <summary>
+            资源包料体
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Group">
+            <summary>
+            组实体
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.BCF_Group">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.PGID">
+            <summary>
+            组PGID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.P_PGID">
+            <summary>
+            组父级PGID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.R_PGID">
+            <summary>
+            组根级PGID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.PG_Code">
+            <summary>
+            组自定义Code
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.CN_Name">
+            <summary>
+            组中文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.EN_Name">
+            <summary>
+            组英文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.In_Level">
+            <summary>
+            组级别
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.Tags">
+            <summary>
+            组标签
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.Order_Index">
+            <summary>
+            组排序
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.Is_Disabled">
+            <summary>
+            是否禁用(不可用)
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.Is_Visibled">
+            <summary>
+            是否可见（管理是可见）
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.Create_Time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Group.Last_Update">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Group.OPSx">
+            <summary>
+            获取OPSx扩展信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Group.OPSx(System.String)">
+            <summary>
+            设置OPSx扩展信息
+            </summary>
+            <param name="opsXml">ops-xml</param>
+        </member>
+        <member name="M:Weed.BCF.Group.RemoveUserLink(Weed.SDQ.QDbTran,System.String[])">
+            <summary>
+            移除与用户之间的关联
+            </summary>
+            <param name="tran">事务对象</param>
+            <param name="puidS">用户PUID组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Group.RemoveResourceLink(Weed.SDQ.QDbTran,System.String[])">
+            <summary>
+            移除与资源之间的关联
+            </summary>
+            <param name="tran">事务对象</param>
+            <param name="rsidS">资源RSID组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Group.ExistsPGCode(System.String)">
+            <summary>
+            存在多少具有相同PG_Code的Group
+            </summary>
+            <param name="pgCode">PG_Code值</param>
+            <returns>多少</returns>
+        </member>
+        <member name="M:Weed.BCF.Group.PGIDToCode(System.String)">
+            <summary>
+            根据PGID获取对应的PG_Code
+            </summary>
+            <param name="pgid">PGID</param>
+            <returns>null or Code</returns>
+        </member>
+        <member name="M:Weed.BCF.Group.CodeToPGID(System.String)">
+            <summary>
+            根据PG_Code获取对应的PGID
+            </summary>
+            <param name="code">PG_Code</param>
+            <returns>null or PGID</returns>
+        </member>
+        <member name="P:Weed.BCF.Group.R_PGID_NAME">
+            <summary>
+            组的[R_PGID]字段组名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Group.LK_OBJT">
+            <summary>
+            LK_OBJT
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Package.DEFINE">
+            <summary>
+            在Group里的定义值[R_PGID]
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Win.UserInfor">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.UserInfor.PUID">
+            <summary>
+            用户PUID
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.UserInfor.User_Id">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.UserInfor.CN_Name">
+            <summary>
+            用户中文名称
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.UserInfor.EN_Name">
+            <summary>
+            用户英文名称
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.UserInfor.PW_Mail">
+            <summary>
+            密码邮箱
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.UserInfor.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Win.UserInfor.Bind(Weed.BCF.User)">
+            <summary>
+            绑定
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Win.UserInfor.HasResources(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="packageIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Win.UserInfor.MyResources(System.String[])">
+            <summary>
+            关于[模块=@rsid]的权限表达式
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.ResourceExView">
+            <summary>
+            资源扩展视图
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ResourceExView.As(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="asName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceExView.#ctor(System.Boolean)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="isOnlyLink">是否办需要关联信息</param>
+        </member>
+        <member name="P:Weed.BCF.ResourceExView.RSID">
+            <summary>
+            资源RSI
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceExView.PGID">
+            <summary>
+            资源包PGID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceExView.PKG_Is_Disabled">
+            <summary>
+            资源包.是否被禁用
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceExView.PKG_Order_Index">
+            <summary>
+            资源包.排序
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceExView.Is_Disabled">
+            <summary>
+            是否被禁用
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceExView.Order_Index">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.GroupService">
+            <summary>
+            组管理服务
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.GroupService.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.GroupService.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.GroupService.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="define">组定义</param>
+        </member>
+        <member name="M:Weed.BCF.GroupService.ShiftDefine(System.Int32)">
+            <summary>
+            切换组定义
+            </summary>
+            <param name="define">在组里的定义[R_PGID]</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupService.AppendGroup(Weed.BCF.Group,Weed.SDQ.QDbTran)">
+            <summary>
+            添加一个组
+            </summary>
+            <param name="group"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupService.RemoveGroup(Weed.SDQ.QDbTran,System.String[])">
+            <summary>
+            移除[删除]组
+            </summary>
+            <param name="tran"></param>
+            <param name="pgids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupService.DisableGroup(System.Boolean,System.String[])">
+            <summary>
+            禁止组
+            </summary>
+            <param name="disable"></param>
+            <param name="pgids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupService.ModifyGroup(Weed.BCF.Group,Weed.SDQ.QDbTran)">
+            <summary>
+            修改组
+            </summary>
+            <param name="group"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupService.ClearGroups(System.Int32[])">
+            <summary>
+            清空某定义的组
+            </summary>
+            <param name="defines"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupService.GetGroup(System.String)">
+            <summary>
+            获取组
+            </summary>
+            <param name="pgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.GroupService.GetGroups(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="pgidS"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.BCF.BCF_OPSx">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.BCF_OPSx.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定委托数据
+            </summary>
+            <param name="get">委托数据源</param>
+            <param name="src">源类型</param>
+        </member>
+        <member name="P:Weed.BCF.BCF_OPSx.LK_OBJT">
+            <summary>
+            LK_OBJT
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_OPSx.LK_OBJT_ID">
+            <summary>
+            对象ID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_OPSx.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_OPSx.OPSx">
+            <summary>
+            OPSx
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.PackageService">
+            <summary>
+            资源包服务
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.PackageService.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.PackageService.AppendPackage(Weed.BCF.Package,Weed.SDQ.QDbTran)">
+            <summary>
+            添加一个资源包
+            </summary>
+            <param name="package"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.PackageService.RemovePackage(System.String[])">
+            <summary>
+            移除[删除]一个资源包
+            </summary>
+            <param name="pgids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.PackageService.ModifyPackage(Weed.BCF.Package,Weed.SDQ.QDbTran)">
+            <summary>
+            修改一个资源包
+            </summary>
+            <param name="package"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.PackageService.GetPackage(System.String)">
+            <summary>
+            获取一个资源包
+            </summary>
+            <param name="pgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.PackageService.GetPackages">
+            <summary>
+            获取所有资源包
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.PackageService.GetPackages(Weed.SDQ.QTable,System.String[])">
+            <summary>
+            获取资源包与关联表的组合信息
+            </summary>
+            <param name="joinTable">关联表</param>
+            <param name="p_pgids">资源包的父级PGID组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.PackageService.GetPackages(Weed.SDQ.QTable,System.Boolean,System.String[])">
+            <summary>
+            获取资源包与关联表的组合信息
+            </summary>
+            <param name="joinTable">关联表</param>
+            <param name="incDisabled">是否包括被禁用的</param>
+            <param name="p_pgids">资源包的父级PGID组</param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.BCF.PackageService.DEFINE_VALUE">
+            <summary>
+            在组里的定义[R_PGID]
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Role">
+            <summary>
+            支持"层级"关系的组
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Role.DEFINE">
+            <summary>
+            在组里的定义[R_PGID]
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.ResourceEx">
+            <summary>
+            资源扩展信息
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.BCF_Resource">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.BCF_Resource.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定委托数据
+            </summary>
+            <param name="get">委托数据源</param>
+            <param name="src">源类型</param>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.RSID">
+            <summary>
+            资源RSID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.RS_Code">
+            <summary>
+            资源自定义Code
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.CN_Name">
+            <summary>
+            资源中文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.EN_Name">
+            <summary>
+            资源英文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Uri_Path">
+            <summary>
+            URI 路径
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Uri_Target">
+            <summary>
+            URI 打开的目标框架名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Ico_Path">
+            <summary>
+            图标 路径
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Order_Index">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.In_Level">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Note">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Is_Disabled">
+            <summary>
+            是否禁用（不可使用）
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Is_Visibled">
+            <summary>
+            是否可见（不出现在菜单范围里）
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Create_Time">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.BCF_Resource.Last_Update">
+            <summary>
+            最后更新时间
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ResourceEx.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定委托数据
+            </summary>
+            <param name="get">委托数据源</param>
+            <param name="src">源类型</param>
+        </member>
+        <member name="M:Weed.BCF.ResourceEx.OPSx">
+            <summary>
+            获取OPSx扩展信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.ResourceEx.OPSx(System.String)">
+            <summary>
+            设置OPSx扩展信息
+            </summary>
+            <param name="opsXml">ops-xml</param>
+        </member>
+        <member name="P:Weed.BCF.ResourceEx.PGID">
+            <summary>
+            所属资源包的PGID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceEx.PG_CN_Name">
+            <summary>
+            所属资源包的中文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceEx.PG_EN_Name">
+            <summary>
+            所属资源包的英文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceEx.PG_Order_Index">
+            <summary>
+            所属资源包的排序
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceEx.LK_Operate">
+            <summary>
+            所属资源包的关系操作符
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceEx.LK_OBJT">
+            <summary>
+            LK_OBJT
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.ResourceEx.P_Express">
+            <summary>
+            权值表达式
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Unit">
+            <summary>
+            支持"层级"关系的组
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Unit.DEFINE">
+            <summary>
+            在组里的定义[R_PGID]
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.WinClient">
+            <summary>
+            WinClient
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.WinClient.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.WinClient.Login(System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="passWd">密码</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.WinClient.Login(System.String,System.String,System.String)">
+            <summary>
+            登录
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="passWd">密码</param>
+            <param name="groupId">限定的组ID</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.WinClient.CheckPassWd(System.String,System.String)">
+            <summary>
+            核对密码
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WinClient.CurrentGroup">
+            <summary>
+            当前用户组信息
+            
+            需要在登录时,输入groupId
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WinClient.CurrentUser">
+            <summary>
+            当前用户
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.WinClient.AppPath">
+            <summary>
+            应用程序路径
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Win.GroupInfor">
+            <summary>
+            用于在用户登陆系统之后的数据存储单位
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Win.GroupInfor.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="define">组定义</param>
+        </member>
+        <member name="F:Weed.BCF.Win.GroupInfor.PGID">
+            <summary>
+            组PGID
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.GroupInfor.P_PGID">
+            <summary>
+            组父级PGID
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.GroupInfor.PG_Code">
+            <summary>
+            组自定义Code
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.GroupInfor.CN_Name">
+            <summary>
+            组中文名称
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.GroupInfor.EN_Name">
+            <summary>
+            组英文名称
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.GroupInfor.In_Level">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.Win.GroupInfor.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Win.GroupInfor.Bind(Weed.BCF.Group)">
+            <summary>
+            绑定
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.BCF.PExpress">
+            <summary>
+            权限表达式
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.PExpress.Null">
+            <summary>
+            exp = 0
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.PExpress.ReadOnly">
+            <summary>
+            exp = 1
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.PExpress.Write">
+            <summary>
+            exp = 2
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.PExpress.Control">
+            <summary>
+            exp = 4
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Resource">
+            <summary>
+            资源
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Resource.OPSx">
+            <summary>
+            获取OPSx扩展信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.OPSx(System.String)">
+            <summary>
+            设置OPSx扩展信息
+            </summary>
+            <param name="opsXml">ops-xml</param>
+        </member>
+        <member name="M:Weed.BCF.Resource.Clone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.IsInGroup(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="pgid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToGroup(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="pgid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToGroup(System.String,Weed.BCF.PExpress,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="pgid"></param>
+            <param name="exp"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.LeaveGroup(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="pgid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToGroup(System.String,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="rsid"></param>
+            <param name="pgid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToGroup(System.String,System.String,Weed.BCF.PExpress,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="rsid"></param>
+            <param name="pgid"></param>
+            <param name="exp"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.LeaveGroup(System.String,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="rsid"></param>
+            <param name="pgid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToUser(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="puid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToUser(System.String,Weed.BCF.PExpress,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="puid"></param>
+            <param name="exp"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.LeaveUser(System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="puid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToUser(System.String,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="rsid"></param>
+            <param name="puid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.JoinToUser(System.String,System.String,Weed.BCF.PExpress,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="rsid"></param>
+            <param name="puid"></param>
+            <param name="exp"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.LeaveUser(System.String,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            
+            </summary>
+            <param name="rsid"></param>
+            <param name="puid"></param>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.CodeToRSID(System.String)">
+            <returns>null or RSID</returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.RSIDToCode(System.String)">
+            <returns>null or Code</returns>
+        </member>
+        <member name="M:Weed.BCF.Resource.ExpressOfUser(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="rsid"></param>
+            <param name="puid"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.BCF.Resource.LK_OBJT">
+            <summary>
+            LK_OBJT
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.ConfigM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.UserM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.ConfigService">
+            <summary>
+            配置服务
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ConfigService.Get_LK_OBJT(System.String)">
+            <summary>
+            获取数据表的链接对象定义(数据表简写)
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ConfigService.Get_GROUP_DEFINE(System.String)">
+            <summary>
+            获取虚拟对象的定义
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.ConfigService.Set_DEFINE(System.String,System.Int32)">
+            <summary>
+            设置虚拟对象的定义
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.LogService">
+            <summary>
+            日志服务
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.LogService.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.LogService.WriteLog(Weed.BCF.Log)">
+            <summary>
+            写入日志
+            </summary>
+            <param name="log">日志对象</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.LogService.WriteLog(Weed.BCF.Log,Weed.SDQ.QDbTran)">
+            <summary>
+            写入日志
+            </summary>
+            <param name="log">日志对象</param>
+            <param name="tran">事务[可以为null]</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.BCF.LogService.ClearLogs">
+            <summary>
+            清空所有日志
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.LogService.Select(System.Int32,System.Int32)">
+            <summary>
+            分页形式获取日志记录
+            </summary>
+            <param name="pageSize">分页长度</param>
+            <param name="pageIndex">分页索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.LogService.Select(System.String,System.Int32,System.Int32)">
+            <summary>
+            根据日志类型，分页形式获取日志记录
+            </summary>
+            <param name="lg_type">日志类型</param>
+            <param name="pageSize">分页长度</param>
+            <param name="pageIndex">分页索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.LogService.Select(Weed.SDQ.SQuery,System.Int32,System.Int32)">
+            <summary>
+            根据条件对象，分页形式获取日志记录
+            </summary>
+            <param name="where">条件对象</param>
+            <param name="pageSize">分页长度</param>
+            <param name="pageIndex">分页索引</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.LogService.Count">
+            <summary>
+            获取日志总数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.LogService.Count(System.String)">
+            <summary>
+            获取某类型的日志总数
+            </summary>
+            <param name="lg_type">日志类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.LogService.Count(Weed.SDQ.SQuery)">
+            <summary>
+            获取某条件的日志总数
+            </summary>
+            <param name="where"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.BCF.Dept">
+            <summary>
+            支持"层级"关系的组
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Dept.DEFINE">
+            <summary>
+            在组里的定义[R_PGID]
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Web.GroupInfor">
+            <summary>
+            用于在用户登陆系统之后的数据存储单位
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Web.GroupInfor.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="define">组定义</param>
+        </member>
+        <member name="M:Weed.BCF.Web.GroupInfor.Bind(Weed.BCF.Group)">
+            <summary>
+            绑定
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.BCF.Web.GroupInfor.PGID">
+            <summary>
+            组PGID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.GroupInfor.P_PGID">
+            <summary>
+            组父级PGID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.GroupInfor.PG_Code">
+            <summary>
+            组自定义Code
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.GroupInfor.CN_Name">
+            <summary>
+            组中文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.GroupInfor.EN_Name">
+            <summary>
+            组英文名称
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.GroupInfor.In_Level">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Web.GroupInfor.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Resource_Linked">
+            <summary>
+            资源关联...
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.Resource_Linked.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定委托数据
+            </summary>
+            <param name="get">委托数据源</param>
+            <param name="src">源类型</param>
+        </member>
+        <member name="P:Weed.BCF.Resource_Linked.RSID">
+            <summary>
+            资源RSID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Resource_Linked.LK_OBJT">
+            <summary>
+            LK_OBJT
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Resource_Linked.LK_OBJT_ID">
+            <summary>
+            关联的对象ID
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Resource_Linked.LK_Operate">
+            <summary>
+            关联操作符
+            </summary>
+        </member>
+        <member name="P:Weed.BCF.Resource_Linked.P_Express">
+            <summary>
+            权值表达式
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.LogM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.Resource_LinkedM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.ResourceM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.GroupM">
+            <summary>
+            生成:2008/06/04 08:34:07
+            作者:自动生成
+            
+            备注:请不要轻易手动更改类的实现代码!!!
+            </summary>
+        </member>
+        <member name="T:Weed.BCF.OPSxService">
+            <summary>
+            OPS-XML 存储服务
+            </summary>
+        </member>
+        <member name="F:Weed.BCF.OPSxService.G">
+            <summary>
+            静态实例
+            </summary>
+        </member>
+        <member name="M:Weed.BCF.OPSxService.SetOPSx(System.Int32,System.String,System.String)">
+            <summary>
+            设置OPSx
+            </summary>
+            <param name="LK_OBJT"></param>
+            <param name="LK_OBJT_ID"></param>
+            <param name="opsXml"></param>
+        </member>
+        <member name="M:Weed.BCF.OPSxService.SetOPSx(System.Int32,System.String,System.String,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            设置OPSx
+            </summary>
+            <param name="LK_OBJT"></param>
+            <param name="LK_OBJT_ID"></param>
+            <param name="tags"></param>
+            <param name="opsXml"></param>
+            <param name="tran"></param>
+        </member>
+        <member name="M:Weed.BCF.OPSxService.GetOPSx(System.Int32,System.String)">
+            <summary>
+            获取OPSx
+            </summary>
+            <param name="LK_OBJT"></param>
+            <param name="LK_OBJT_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.OPSxService.GetOPSx(System.Int32,System.String,System.String)">
+            <summary>
+            获取OPSx
+            </summary>
+            <param name="LK_OBJT"></param>
+            <param name="LK_OBJT_ID"></param>
+            <param name="tags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.BCF.OPSxService.RemoveOPSx(System.Int32,System.String)">
+            <summary>
+            移除[删除]OPSx
+            </summary>
+            <param name="LK_OBJT"></param>
+            <param name="LK_OBJT_ID"></param>
+        </member>
+        <member name="M:Weed.BCF.OPSxService.RemoveOPSx(System.Int32,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            移除[删除]OPSx
+            </summary>
+            <param name="LK_OBJT"></param>
+            <param name="LK_OBJT_ID"></param>
+            <param name="tran"></param>
+        </member>
+    </members>
+</doc>

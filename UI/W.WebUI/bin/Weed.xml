@@ -1,0 +1,2680 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Weed</name>
+    </assembly>
+    <members>
+        <member name="F:Weed.Caching.MemCache.IsInstanced">
+            <summary>
+            MemCache Client 是否安装成功
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.QTableExp">
+            <summary>
+            表级点的表达式|函数
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QTableExp.COUNT1">
+            <summary>
+            COUNT(1)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTableExp.RAND(System.Int32)">
+            <summary>
+            RAND(seed)
+            </summary>
+            <param name="seed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTableExp.RAND">
+            <summary>
+            RAND()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTableExp.NEWID">
+            <summary>
+            新的GUID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTableExp.NOW">
+            <summary>
+            NOW()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.SDQ.QTable">
+            <summary>
+            数据[表/视图]基类(封装SQL操作)
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.AQuery`1">
+            <summary>
+            抽取[SQuery]、[QTable.Query]公共的外壳
+            --------------------------------------
+            创建:谢月甲,20080420
+            </summary>
+            <typeparam name="Q">AQuery的继承类</typeparam>
+        </member>
+        <member name="T:Weed.ACacheUsing`1">
+            <summary>
+            为实现服务
+            </summary>
+        </member>
+        <member name="T:Weed.ICacheUsing`1">
+            <summary>
+            为接口定义服务
+            </summary>
+        </member>
+        <member name="P:Weed.ICacheControllerState.CacheSeconds">
+            <summary>
+            缓存时间(多少秒)
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.IQElement">
+            <summary>
+            查询元素接口
+            </summary>
+        </member>
+        <member name="T:Weed.ICacheControllerEx">
+            <summary>
+            Weed 内部专辑的Cache控制器，便于动态CacheService
+            </summary>
+        </member>
+        <member name="T:Weed.ICacheController">
+            <summary>
+            Cache控制器
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="P:Weed.ITraceMessage.Target">
+            <summary>
+            目标
+            </summary>
+        </member>
+        <member name="P:Weed.ITraceMessage.MiniSeconds">
+            <summary>
+            花费的时间
+            </summary>
+        </member>
+        <member name="P:Weed.ITraceMessage.BindSeconds">
+            <summary>
+            绑定数据花的时间
+            </summary>
+        </member>
+        <member name="P:Weed.IFilterController.Target">
+            <summary>
+            目标
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.ShiftConfig(Weed.SDQ.SdqConfig)">
+            <summary>
+            切换配置
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.ShiftConfig(System.String)">
+            <summary>
+            切换配置
+            </summary>
+            <param name="sdqName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.DoExecAfter(Weed.SDQ.QCommand)">
+            <summary>
+            可以在执行前执行或者在执行后执行
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.SelectDict``2(Weed.SDQ.QColumn,Weed.SDQ.QColumn,System.Int32,System.Int32)">
+            <summary>
+            查询值列表
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="col">列</param>
+            <param name="defValue">默认值</param>
+            <returns>值枚举</returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.SelectMax(Weed.SDQ.QColumn)">
+            <summary>
+            获取一个列的最大值（只适合数字类型列，默认值为0）
+            </summary>
+            <param name="col">数字类型列</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.SelectValues``1(Weed.SDQ.QColumn,``0)">
+            <summary>
+            查询值列表
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="col">列</param>
+            <param name="defValue">默认值</param>
+            <returns>值枚举</returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Values``1(Weed.SDQ.QColumn,``0)">
+            <summary>
+            查询值列表
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="col">列</param>
+            <param name="defValue">默认值</param>
+            <returns>值枚举</returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.SelectValue``1(Weed.SDQ.QColumn,``0,Weed.SDQ.QDbTran)">
+            <summary>
+            查询值
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="col">列</param>
+            <param name="defValue">默认值</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Value``1(Weed.SDQ.QColumn,``0,Weed.SDQ.QDbTran)">
+            <summary>
+            查询值
+            </summary>
+            <typeparam name="T">值类型</typeparam>
+            <param name="col">列</param>
+            <param name="defValue">默认值</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.__Tran``1(System.Object,``0)">
+            <summary>
+            数据转换
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.ReturnIdentity">
+            <summary>
+            返回插入的ID标识（自增ID）
+            仅对.Insert()有效
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Values(Weed.SDQ.IQData[])">
+            <summary>
+            支持续一次性插入多条数据
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Values(System.Collections.Generic.IEnumerable{Weed.SDQ.IQData})">
+            <summary>
+            支持续一次性插入多条数据
+            </summary>
+            <param name="datas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Values(System.Boolean,Weed.SDQ.IQData[])">
+            <summary>
+            支持续一次性插入多条数据
+            </summary>
+            <param name="isAppend">是否在已有的数据中添加</param>
+            <param name="datas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Values(System.Boolean,System.Collections.Generic.IEnumerable{Weed.SDQ.IQData})">
+            <summary>
+            支持续一次性插入多条数据
+            </summary>
+            <param name="isAppend">是否在已有的数据中添加</param>
+            <param name="datas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Update(Weed.SDQ.QDbTran)">
+            <summary>
+            执行更新操作
+            </summary>
+            <param name="qTran">事务</param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Update">
+            <summary>
+            执行更新操作
+            </summary>
+            <returns>是否成功</returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.OnUnsafe(System.String)">
+            <summary>
+            非安全、跨DB方法
+            </summary>
+            <param name="onCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.WhereUnsafe(System.String)">
+            <summary>
+            非安全、跨DB方法
+            </summary>
+            <param name="whereCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.And(Weed.QCondition)">
+            <summary>
+            同时为 Where 与 Join On 服务
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Or(Weed.QCondition)">
+            <summary>
+            同时为 Where 与 Join On 服务
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1._Reset">
+            <summary>
+            实例化SelectItems,清空JoinItems数据，清空LastJoinItem,FromTable
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.AddSelect(Weed.SDQ.QColumn[])">
+            <summary>
+            添加列到查询输出
+            </summary>
+            <param name="cols"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.AddSelect(System.Collections.Generic.IEnumerable{Weed.SDQ.QColumn})">
+            <summary>
+            添加列到查询输出
+            </summary>
+            <param name="cols"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.CacheTag(System.String)">
+            <summary>
+            添加缓存标签 (统一缓存维护,以便统一删除和直接获取)
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.CacheTag(System.String,System.Object)">
+            <summary>
+            添加缓存标签 (统一缓存维护,以便统一删除和直接获取)
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.ClearCache(System.String)">
+            <summary>
+            根据缓存标签清除缓存
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.ClearCache(System.String,System.Object)">
+            <summary>
+            根据缓存标签清除缓存
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.Filting(Weed.IFilterService)">
+            <summary>
+            嵌入过滤服务
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.AQuery`1.UsingFilter(System.Boolean)">
+            <summary>
+            控制是否使用过滤功能
+            </summary>
+            <param name="isFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="E:Weed.SDQ.AQuery`1.OnExecAfter">
+            <summary>
+            执行后的事件
+            </summary>
+        </member>
+        <member name="E:Weed.SDQ.AQuery`1.OnDynamicExecH">
+            <summary>
+            动态的执行的事件，即谢用 m.OnExec(event) 时嵌入的事件
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.AQuery`1.INSERTED_ID">
+            <summary>
+            仅当.Insert(true)时有效
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.AQuery`1.OuterCaching">
+            <summary>
+            外部缓存服务
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.AQuery`1.MiniSeconds">
+            <summary>
+            执行花费的毫秒数
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.AQuery`1.BindSeconds">
+            <summary>
+            绑定实体的毫秒数
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.IQView">
+            <summary>
+            查询视图（QTable，QView 的统一接口）
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.IQData">
+            <summary>
+            可提供强类型数据
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.IQBinder">
+            <summary>
+            数据绑定者
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.IQBinder.Bind(Weed.SDQ.QReader,System.Boolean)">
+            <summary>
+            绑定QReader
+            </summary>
+            <param name="data">数据[QReader]</param>
+            <param name="isClose">是否在绑定完后关闭</param>
+            <returns>是否成功绑定</returns>
+        </member>
+        <member name="M:Weed.SDQ.IQBinder.Bind(System.Data.DataRow)">
+            <summary>
+            绑定DataRow
+            </summary>
+            <param name="data">数据[DataRow]</param>
+        </member>
+        <member name="M:Weed.SDQ.IQBinder.Bind(Weed.SDQ.IQData)">
+            <summary>
+            绑定IQData
+            </summary>
+            <param name="data">数据[IQData]</param>
+        </member>
+        <member name="M:Weed.SDQ.IQBinder.Bind(Weed.SDQ.IXData)">
+            <summary>
+            绑定IXData
+            </summary>
+            <param name="data">数据[IXData]</param>
+        </member>
+        <member name="M:Weed.SDQ.IQBinder.Bind(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            绑定NameValue集合
+            </summary>
+            <param name="data">NameValue集合</param>
+        </member>
+        <member name="M:Weed.SDQ.IQBinder.Bind(Weed.GetHandler,Weed.SDQ.SourceType)">
+            <summary>
+            绑定一个数据获取代理者
+            </summary>
+            <param name="get">数据获取代理</param>
+            <param name="src">数据源类型</param>
+        </member>
+        <member name="M:Weed.SDQ.IQBinder.Clone">
+            <summary>
+            克隆自己(继承类,须返回一个新的实例)
+            </summary>
+        </member>
+        <member name="T:Weed.OPS.IOpsSerializable">
+            <summary>
+            OPS-Xml序列化支持
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="M:Weed.OPS.IOpsSerializable.Bind(System.String)">
+            <summary>
+            绑定OPS-XML
+            </summary>
+            <param name="opsXml">符合OPS规范的XML文本</param>
+        </member>
+        <member name="M:Weed.OPS.IOpsSerializable.ToXml">
+            <summary>
+            输出为OPS-XML
+            </summary>
+        </member>
+        <member name="M:Weed.OPS.IOpsSerializable.ToJson">
+            <summary>
+            输出为OPS-JSON
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Exp(System.String,Weed.SDQ.QDbType)">
+            <summary>
+            自定义表达式
+            </summary>
+            <param name="expFormat"></param>
+            <param name="valType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Exp(System.String)">
+            <summary>
+            自定义表达式
+            </summary>
+            <param name="express"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.HasChanged">
+            <summary>
+            判断对象是否发生了变化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.HasChanged(System.Boolean)">
+            <summary>
+            判断对象是否发生了变化
+            </summary>
+            <param name="isFiltrateBefor">是否在意判断之前进行过滤</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.HasChanged(Weed.SDQ.OnColumnChange)">
+            <summary>
+            判断对象是否发生了变化
+            </summary>
+            <param name="onchange">变化时的代理事件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.HasChanged(Weed.SDQ.QColumn)">
+            <summary>
+            判断某一列是否发生了变化，同时通过column.OLD 返回旧的值
+            </summary>
+            <param name="column"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.SelectChanged(System.Boolean)">
+            <summary>
+            获取发生变化列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Transfer(System.String)">
+            <summary>
+            将当前数据库的数据迁移到另一个数据库上（要求有同步的表结构）
+            </summary>
+            <param name="toDB">目标数据库配置</param>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Transfer(Weed.SDQ.SdqConfig)">
+            <summary>
+            将当前数据库的数据迁移到另一个数据库上（要求有同步的表结构）
+            </summary>
+            <param name="toDB">目标数据库配置</param>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Contains(System.String)">
+            <summary>
+            判断是否包括某一列
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.AttachEvent">
+            <summary>
+            绑定事件
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QTable.AttachTrigger">
+            <summary>
+            绑定触发器（AttachEvent 的一个副本，便于概念性的分离）
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QTable._DoSet(Weed.SDQ.QColumn,System.Object)">
+            <summary>
+            源自DataBase时
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QTable._DoSet(System.String,System.String)">
+            <summary>
+            输入文本时
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QTable.ToXml">
+            <summary>
+            不输出IsNull的项目（XDom.Add(m).ToXml()  可输出包括IsNull的项目）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Weed#SDQ#IQView#__SelectedColumn">
+            <summary>
+            输出已选择的项（内部使用）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Weed#SDQ#IQView#__WriteFromJoinName(System.Text.StringBuilder)">
+            <summary>
+            打印查询或关联名称
+            </summary>
+            <param name="sb"></param>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Fill">
+            <summary>
+            将查询结果填充自己
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Fill(Weed.SDQ.IQBinder)">
+            <summary>
+            将查询结果填充一个 IQBinder 对象
+            </summary>
+            <param name="binder"></param>
+        </member>
+        <member name="M:Weed.SDQ.QTable.Synchro(Weed.SDQ.QDbTran)">
+            <summary>
+            同步
+            </summary>
+            <param name="tran"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.SDQ.QTable.TableName">
+            <summary>
+            表名（与DB对应）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QTable.AsName">
+            <summary>
+            As Name（查询时动态变化）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QTable.Columns">
+            <summary>
+            列集合
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QTable.Target">
+            <summary>
+            跟踪接口.目标
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QTable.Weed#SDQ#IQView#__ViewType">
+            <summary>
+            视图类型（内部使用）[QTable，QView 同归属IQView（查询视图）]
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.QReader">
+            <summary>
+            可以返回Null而不发出异常的DataReader
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QReader.Item(System.String)">
+            <summary>
+            如果不存在,则返回Null
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.IXData">
+            <summary>
+            仅提供文本数据
+            </summary>
+        </member>
+        <member name="M:Weed.OPS.XDom.CDATA(System.String)">
+            <summary>
+            去除<![CDATA[]]>代码
+            </summary>
+            <param name="xmlText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.OPS.XDom.Load(System.String)">
+            <summary>
+            过时的方法,请改用 LoadUri
+            </summary>
+            <param name="fileUri"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.OPS.XDom.Name">
+            <summary>
+            不可能设定默认值!（AsItem)时
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.XDom.Item(System.String)">
+            <summary>
+            获取子项，如果不存在，则自动添加一项
+            </summary>
+            <param name="name">项名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.Addins.AddinItem">
+            <summary>
+            创建:谢月甲
+            修改:谢月甲,20080529（将类型实例化，放到调用的时候运行；同时可将出错的机率降低）
+            </summary>
+        </member>
+        <member name="M:Weed.Addins.AddinItem.GetAttr(System.String)">
+            <summary>
+            获取XML属性
+            </summary>
+        </member>
+        <member name="M:Weed.Addins.AddinItem.GetType(System.String,System.Boolean)">
+            <summary>
+            解析类型
+            </summary>
+        </member>
+        <member name="T:Weed.Addins.AddinCache">
+            <summary>
+            插件缓存器
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.QProcess">
+            <summary>
+            存储过程基类
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.CacheTag(System.String)">
+            <summary>
+            添加缓存标签 (统一缓存维护,以便统一删除和直接获取)
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.CacheTag(System.String,System.Object)">
+            <summary>
+            添加缓存标签 (统一缓存维护,以便统一删除和直接获取)
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.ClearCache(System.String)">
+            <summary>
+            根据缓存标签清除缓存
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.ClearCache(System.String,System.Object)">
+            <summary>
+            根据缓存标签和标签值清除缓存
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.GetCache(System.String,System.Object)">
+            <summary>
+            根据缓存标签获取数据
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.UpdateCache(System.String,System.Object)">
+            <summary>
+            根据缓存标签更新数据
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.UpdateCache(System.String,System.Object,System.Int32)">
+            <summary>
+            根据缓存标签更新数据
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.Data(System.Object)">
+            <summary>
+            设置需要缓存的数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.Data">
+            <summary>
+            获取被缓存时的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.Data``1">
+            <summary>
+            获取被缓存时的数据
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.Result``1">
+            <summary>
+            获取最近一次执行的结果数据
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.Add(Weed.QParam)">
+            <summary>
+            添加一个参数
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.G``1(System.String)">
+            <summary>
+            获取一个参数
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.S(System.String,System.Object)">
+            <summary>
+            设置一个参数
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.InputAll(System.Boolean)">
+            <summary>
+            输入全部的参数[没有值的,输入默认值{string :'';int:0;datetime:now}]
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.BindCacheParams(Weed.SDQ.QProcess)">
+            <summary>
+            绑定被缓存的参数
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.BuildByNonDefault(System.Data.Common.DbCommand,System.Boolean)">
+            <summary>
+            支持存储过程[无默认值的]
+            </summary>
+            <param name="cmd"></param>
+            <param name="isRead"></param>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.BuildByHasDefault(System.Data.Common.DbCommand,System.Boolean)">
+            <summary>
+            支持存储过程[有默认值的]
+            </summary>
+            <param name="cmd"></param>
+            <param name="isRead"></param>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.Output">
+            <summary>
+            仅在ExeReader时才需要执行
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.ShiftConfig(Weed.SDQ.SdqConfig)">
+            <summary>
+            切换SDQ配置
+            </summary>
+            <param name="config">配置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QProcess.ShiftConfig(System.String)">
+            <summary>
+            切换SDQ配置
+            </summary>
+            <param name="sdqName">配置名称</param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.SDQ.QProcess.MiniSeconds">
+            <summary>
+            执行花费的毫秒数
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QProcess.BindSeconds">
+            <summary>
+            绑定实体的毫秒数
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.IQParser.Bind(Weed.SDQ.QKernel)">
+            <summary>
+            绑定一个查询内核
+            </summary>
+            <param name="kernel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.IQParser.GetInsertSql1(Weed.GetHandler,Weed.IFilterController)">
+            <summary>
+            获取插入单行数据代码
+            </summary>
+            <param name="get">插入的数据源（可以传入Null）</param>
+            <param name="filter">过滤控制器</param>
+            <returns>SQL代码</returns>
+        </member>
+        <member name="M:Weed.SDQ.IQParser.GetInsertSqlM(Weed.IFilterController)">
+            <summary>
+            获取插入多行数据代码
+            </summary>
+            <param name="filter">过滤控制器</param>
+            <returns>SQL代码</returns>
+        </member>
+        <member name="M:Weed.SDQ.IQParser.GetUpdateSql(Weed.IFilterController)">
+            <summary>
+            获取更新数据代码
+            </summary>
+            <param name="filter">过滤控制器</param>
+            <returns>SQL代码</returns>
+        </member>
+        <member name="M:Weed.SDQ.IQParser.GetDeleteSql">
+            <summary>
+            获取删除数据代码
+            </summary>
+            <returns>SQL代码</returns>
+        </member>
+        <member name="M:Weed.SDQ.IQParser.WriteJoinSql(System.Text.StringBuilder,System.Boolean)">
+            <summary>
+            打印Join代码
+            </summary>
+            <param name="sb"></param>
+            <param name="isWriteValue">是否打印值（用于条件归类）</param>
+        </member>
+        <member name="M:Weed.SDQ.IQParser.WriteWhereSql(System.Text.StringBuilder,System.Boolean,System.Boolean)">
+            <summary>
+            打印Where代码
+            </summary>
+            <param name="sb"></param>
+            <param name="isWriteAsName">是否打印列前缀（表.AsName）</param>
+            <param name="isWriteValue">是否打印值（用于条件归类）</param>
+        </member>
+        <member name="T:Weed.SDQ.QColumn">
+            <summary>
+            数据[表/视图].列基类（查询列）
+            -----------------------------
+            所有函数、QView都通过封装为QColumn，进而归属到查询系统
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.AQVar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQVar._DateType">
+            <summary>
+            value类型
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.AQVar.SetText(System.String)">
+            <summary>
+            不允许通过SetText设置Null值 
+            ==============================
+            由于SetText主要用于绑定;避免大量null值产生
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="P:Weed.SDQ.AQVar.Name">
+            <summary>
+            变量名称
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.AQVar.IsCheck">
+            <summary>
+            是否需要核查（如过滤时...）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.AQVar.Data">
+            <summary>
+            变量数据
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.AQVar.Type">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.As(System.String)">
+            <summary>
+            if(isTryBracket = false)
+            </summary>
+            <param name="asName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.As">
+            <summary>
+            if(isTryBracket)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Weed.SDQ.QColumn.IsDData">
+            <summary>
+            是否为动态数据(只对插入的更新有效)（目前还没有提供友好支持）
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.DData(Weed.SDQ.QColumn)">
+            <summary>
+            设置动态数据（包括运算数据，引用数据，函数数据等）
+            </summary>
+            <example>
+            1. Count = Count+1;
+            2. Count = MAX(UserId);
+            3. Count = b.Count;
+            </example>
+            <param name="dData">动态数据</param>
+            <returns></returns>
+        </member>
+        <member name="F:Weed.SDQ.QColumn.Express">
+            <summary>
+            表达式
+            =============================
+            如果列由函数创建,则使用此变量
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.QColumn.__Meta">
+            <summary>
+            被调用时的名字(Where...Order...)
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.WriteFullName(System.Text.StringBuilder,System.String)">
+            <summary>
+            不涉及this.AsName
+            </summary>
+            <param name="sb"></param>
+            <param name="tableAsName"></param>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.WriteSelectName(System.Text.StringBuilder)">
+            <summary>
+            QViewColumn,有对此方法重写
+            </summary>
+            <param name="sb"></param>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.WriteOrderName(System.Text.StringBuilder)">
+            <summary>
+            Order 时的名字
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.AppendTo(System.Text.StringBuilder,System.Object)">
+            <summary>
+            根据Type,将val值添加到sb
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.op_Equality(Weed.SDQ.QColumn,Weed.SDQ.QColumn)">
+            <summary>
+            专为Join服务
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Len">
+            <summary>
+            SQL函数::获取长度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Max">
+            <summary>
+            SQL函数::获取最大值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Now">
+            <summary>
+            SQL函数::获取当前时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Min">
+            <summary>
+            SQL函数::获取最小值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Avg">
+            <summary>
+            SQL函数::获取平均值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Sum">
+            <summary>
+            SQL函数::获取和
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Count">
+            <summary>
+            SQL函数::获取记录数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.DatePart(System.String)">
+            <summary>
+            SQL函数::获取某时间某一部分
+            </summary>
+            <param name="part"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.DateDiff(System.DateTime)">
+            <summary>
+            SQL函数::获取两个时间之间的天数差值(d)
+            </summary>
+            <param name="date">比较日期</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Year">
+            <summary>
+            SQL函数::获取年(yyyy)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Month">
+            <summary>
+            SQL函数::获取月(m)(1..12)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Day">
+            <summary>
+            SQL函数::获取日期(d)(1..31)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.DayOfYear">
+            <summary>
+            SQL函数::获取年的第几天(d)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Week">
+            <summary>
+            SQL函数::获取第几周
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.WeekDay">
+            <summary>
+            SQL函数::获取周的第几天(d)(1:周日,2:周一...7:周六)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.SubString(System.Int32,System.Int32)">
+            <summary>
+            SQL函数::获取子字符串
+            </summary>
+            <param name="start">起始位置</param>
+            <param name="length">结束位置</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Lower">
+            <summary>
+            SQL函数::获取小写字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Upper">
+            <summary>
+            SQL函数::获取大写字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.ASCII">
+            <summary>
+            SQL函数::获取最左面字符的ASCII代码值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Fun(System.String)">
+            <summary>
+            对CallName进行表达
+            </summary>
+            <param name="funFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QColumn.Exp(System.String)">
+            <summary>
+            对.Name进行表达（一般只在[数据更新]时使用）
+            ---------------
+            3.0版本将调为执行时,再进行格式化;可以更好的根据上下文进行处理.
+            </summary>
+            <param name="expFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.IsKey">
+            <summary>
+            是否为关键字
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.IsIndex">
+            <summary>
+            是否为索引
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.DbType">
+            <summary>
+            数据库的数据类型
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn._OLD">
+            <summary>
+            当执行 m.HasChange(m.Column) == true,时附带的旧值
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.SqlType">
+            <summary>
+            SQL字段类型（为生成品预留的属性）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.IsInc">
+            <summary>
+            是否包括（..在操作范围内[insert, select, update]）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.Note">
+            <summary>
+            注释或说明
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.Table">
+            <summary>
+            所在[表|视图]
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumn.Item(System.String)">
+            <summary>
+            获取或设置元信息
+            </summary>
+            <param name="key">键</param>
+            <returns>值</returns>
+        </member>
+        <member name="T:Weed.Addin">
+            <summary>
+            插件统一管理器
+            ---------------------
+            创建:谢月甲,20080515
+            </summary>
+        </member>
+        <member name="M:Weed.Addin.Get``1">
+            <summary>
+            获取一个全局唯一的接口
+            </summary>
+            <typeparam name="T">接口类型</typeparam>
+            <returns>接口</returns>
+        </member>
+        <member name="M:Weed.Addin.Get``1(System.String)">
+            <summary>
+            获取一个全局唯一的接口
+            </summary>
+            <param name="fullName">接口的完整名称</param>
+            <typeparam name="T">接口类型</typeparam>
+            <returns>接口</returns>
+        </member>
+        <member name="M:Weed.Addin.New``1">
+            <summary>
+            获取一个新实例化的接口
+            </summary>
+            <typeparam name="T">接口类型</typeparam>
+            <returns>接口</returns>
+        </member>
+        <member name="M:Weed.Addin.New``1(System.String)">
+            <summary>
+            获取一个新实例化的接口
+            </summary>
+            <param name="fullName">接口的完整名称</param>
+            <typeparam name="T">接口类型</typeparam>
+            <returns>接口</returns>
+        </member>
+        <member name="M:Weed.Addin.Eval``1(System.String)">
+            <summary>
+            解析一个接口的实例化
+            </summary>
+            <param name="caseTypeName">实现类的完整名称</param>
+            <typeparam name="T">接口类型</typeparam>
+            <returns>接口</returns>
+        </member>
+        <member name="M:Weed.Addin.Item``1">
+            <summary>
+            获取一个插件配置项
+            </summary>
+            <typeparam name="T">接口类型</typeparam>
+            <returns>配置项</returns>
+        </member>
+        <member name="M:Weed.Addin.Item(System.String)">
+            <summary>
+            获取一个插件配置项
+            </summary>
+            <param name="fullName">接口的完整名称</param>
+            <returns>配置项</returns>
+        </member>
+        <member name="M:Weed.Json.JItem.AsArray">
+            <summary>
+            在数据为Null的时候,输出为数组
+            </summary>
+        </member>
+        <member name="M:Weed.Json.JItem.AsObject">
+            <summary>
+            在数据为Null的时候,输出为对象
+            </summary>
+        </member>
+        <member name="M:Weed.Json.JItem.AsProperty">
+            <summary>
+            在数据为Null的时候,输出为属性
+            </summary>
+        </member>
+        <member name="T:Weed.QExecutor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Weed.ConfigHandler">
+            <summary>
+            配置代理
+            </summary>
+        </member>
+        <member name="M:Weed.ConfigHandler.GetSectionNode(System.String)">
+            <summary>
+            获取XML配置节点（不走Handler通道）
+            </summary>
+            <param name="sectionName">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.ConfigHandler.GetSection(System.String)">
+            <summary>
+            获取XML配置节点（走Handler通道）
+            </summary>
+            <param name="sectionName">节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.ConfigHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            创建一个配置信息对象
+            </summary>
+            <param name="parent"></param>
+            <param name="configContext"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.OPS.XItem.CDATA">
+            <summary>
+            去除<![CDATA[]]>代码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.OPS.XItem.Format(System.Object[])">
+            <summary>
+            以Text为模板,进行格式化
+            ------------------------
+            当以模板引擎的形式时,使用
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.XItem.Bool">
+            <summary>
+            以 bool 类型获取值
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.XItem.Num">
+            <summary>
+            以 decimal 类型获取值
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.XItem.NumInt">
+            <summary>
+            以 int 类型获取值
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.XItem.Time">
+            <summary>
+            以时间类型获取值
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.XItem.NewText">
+            <summary>
+            格式化后的值 文件值
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.XItem.Item(System.String)">
+            <summary>
+            获取子项，如果不存在，则自动添加一项
+            </summary>
+            <param name="name">项名称</param>
+            <returns></returns>
+        </member>
+        <member name="F:Weed.OPS.XType.Text">
+            <summary>
+            文本（需要进行XML特殊字符转换）
+            </summary>
+        </member>
+        <member name="F:Weed.OPS.XType.Xml">
+            <summary>
+            XML数据（不需要进行XML特殊字符转换）
+            </summary>
+        </member>
+        <member name="T:Weed.FilterService">
+            <summary>
+            过滤执行服务
+            </summary>
+        </member>
+        <member name="M:Weed.OPS.OpsReader.LoadOps(System.String,System.String)">
+            <summary>
+            加载级一级的opsXml
+            </summary>
+            <param name="p_ops">上一级opsXml</param>
+            <param name="tagName">标记名称</param>
+        </member>
+        <member name="M:Weed.OPS.OpsReader.LoadOps(System.String)">
+            <summary>
+            加载级一级的opsXml(自动抽取根节点名)
+            </summary>
+            <param name="p_ops">上一级opsXml</param>
+        </member>
+        <member name="M:Weed.OPS.OpsReader.IsTextOnly">
+            <summary>
+            节点内是否只有Text内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.OPS.OpsReader.RootName">
+            <summary>
+            根节点名称
+            </summary>
+        </member>
+        <member name="P:Weed.OPS.OpsReader.FirstName">
+            <summary>
+            首节点名字
+            </summary>
+        </member>
+        <member name="T:Weed.Escape">
+            <summary>
+            Escape (转换 @C#)
+            
+            谢月甲,2006-01-14
+            </summary>
+        </member>
+        <member name="M:Weed.Escape.QuoteEscape(System.String)">
+            <summary>
+            将半角的引号转为全角
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.Escape.QuoteUnEscape(System.String)">
+            <summary>
+            将全角的引号转为半角
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.Escape.GetPlural(System.String)">
+            <summary>
+            单数转为复数
+            </summary>
+            <param name="word">单词</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.Escape.GetSingular(System.String)">
+            <summary>
+            复数转为单数
+            </summary>
+            <param name="plural"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.Addins.Mapin.Mapping(System.String)">
+            <summary>
+            根据映射关系,和传入的接口名称进行映射
+            </summary>
+            <param name="faceFullName">接口全名称</param>
+            <returns>caseTypeFullName</returns>
+        </member>
+        <member name="T:Weed.SDQ.SdqSettings">
+            <summary>
+            线程安全处理改造：lock 写操作
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SdqSettings.LoadXml(System.String)">
+            <summary>
+            加载配置的XML内容
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SdqSettings.Load(System.String)">
+            <summary>
+            加载配置节名称
+            </summary>
+            <param name="configSection"></param>
+        </member>
+        <member name="M:Weed.SDQ.SdqSettings.Load(System.Xml.XmlNode)">
+            <summary>
+            加载配置XML-NODE
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SdqSettings.Contains(System.String)">
+            <summary>
+            不要在内部调用,否则可能会lock冲突
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.SdqSettings.Add(Weed.SDQ.SdqConfig)">
+            <summary>
+            不会增加已存在的键
+            </summary>
+            <param name="item">配置项</param>
+        </member>
+        <member name="F:Weed.SDQ.AccessType.Null">
+            <summary>
+            未定义
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.AccessType.Unknow">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.AccessType.Mssql8">
+            <summary>
+            MS-SQL 2000
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.AccessType.Mssql9">
+            <summary>
+            MS-SQL 2005
+            </summary>
+        </member>
+        <member name="T:Weed.Caching.FNV1_32">
+            <summary>
+            Fowler-Noll-Vo hash, variant 1, 32-bit version.
+            http://www.isthe.com/chongo/tech/comp/fnv/
+            </summary>
+        </member>
+        <member name="T:Weed.Caching.FNV1a_32">
+            <summary>
+            Fowler-Noll-Vo hash, variant 1a, 32-bit version.
+            http://www.isthe.com/chongo/tech/comp/fnv/
+            </summary>
+        </member>
+        <member name="T:Weed.Caching.ModifiedFNV1_32">
+            <summary>
+            Modified Fowler-Noll-Vo hash, 32-bit version.
+            http://home.comcast.net/~bretm/hash/6.html
+            </summary>
+        </member>
+        <member name="M:Weed.CacheUsing.Get``1(Weed.ExeHandler{``0},System.String)">
+            <summary>
+            获取一个执行结果
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="exec">执行方法</param>
+            <param name="weedKey">缓存关健字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.CacheUsing.Get1``1(Weed.ExeHandler{``0},System.String)">
+            <summary>
+            获取一个执行结果(缓存时,包含自身的参数)
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="exec">执行方法</param>
+            <param name="weedKey">缓存关健字</param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.CacheUsing.CacheTag(System.String)">
+            <summary>
+            添加缓存标签 (统一缓存维护,以便统一删除和直接获取)
+            </summary>
+            <param name="tag">标签</param>
+        </member>
+        <member name="M:Weed.CacheUsing.CacheTag(System.String,System.Object)">
+            <summary>
+            添加缓存标签 (统一缓存维护,以便统一删除和直接获取)
+            </summary>
+            <param name="tag">标签名</param>
+            <param name="val">标签值</param>
+        </member>
+        <member name="M:Weed.CacheUsing.ClearCache(System.String)">
+            <summary>
+            根据缓存标签清除缓存
+            </summary>
+            <param name="tag"></param>
+        </member>
+        <member name="M:Weed.CacheUsing.ClearCache(System.String,System.Object)">
+            <summary>
+            根据缓存标签清除缓存
+            </summary>
+            <param name="tag">标签名</param>
+            <param name="val">标签值</param>
+        </member>
+        <member name="M:Weed.CacheUsing.Caching(Weed.ICacheService)">
+            <summary>
+            嵌入缓存服务
+            </summary>
+            <param name="cacheService">缓存服务</param>
+        </member>
+        <member name="P:Weed.CacheUsing.OuterCaching">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.QViewAsColumn">
+            <summary>
+            将一个视图转为一个列
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.WhereItem.WriteSql(System.Text.StringBuilder,System.Boolean,System.Boolean)">
+            <param name="isWriteAsName">是否打印列前缀（表.AsName）</param>
+            <param name="isWriteValue">是否打印值（用于条件归类）</param>
+        </member>
+        <member name="P:Weed.SDQ.WhereItem.Relate">
+            <summary>
+            关系
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.WhereItem.Condition">
+            <summary>
+            未位自留一下空位
+            </summary>
+        </member>
+        <member name="T:Weed.Caching.PooledSocket">
+            <summary>
+            The PooledSocket class encapsulates a socket connection to a specified memcached server.
+            It contains a buffered stream for communication, and methods for sending and retrieving
+            data from the memcached server, as well as general memcached error checking.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.Dispose">
+            <summary>
+            Disposing of a PooledSocket object in any way causes it to be returned to its SocketPool.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.Close">
+            <summary>
+            This method closes the underlying stream and socket.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.Write(System.String)">
+            <summary>
+            Writes a string to the socket encoded in UTF8 format.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.Write(System.Byte[])">
+            <summary>
+            Writes an array of bytes to the socket and flushes the stream.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.ReadLine">
+            <summary>
+            Reads from the socket until the sequence '\r\n' is encountered, 
+            and returns everything up to but not including that sequence as a UTF8-encoded string
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.ReadResponse">
+            <summary>
+            Reads a response line from the socket, checks for general memcached errors, and returns the line.
+            If an error is encountered, this method will throw an exception.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.Read(System.Byte[])">
+            <summary>
+            Fills the given byte array with data from the socket.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.SkipUntilEndOfLine">
+            <summary>
+            Reads from the socket until the sequence '\r\n' is encountered.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.PooledSocket.Reset">
+            <summary>
+            Resets this PooledSocket by making sure the incoming buffer of the socket is empty.
+            If there was any leftover data, this method return true.
+            </summary>
+        </member>
+        <member name="P:Weed.Caching.PooledSocket.IsAlive">
+            <summary>
+            Checks if the underlying socket and stream is connected and available.
+            </summary>
+        </member>
+        <member name="T:Weed.Caching.CacheConfig">
+            <summary>
+            缓存配置项
+            </summary>
+        </member>
+        <member name="T:Weed.Caching._CacheService">
+            <summary>
+            示例及测试用
+            </summary>
+        </member>
+        <member name="F:Weed.Caching._CacheService.DefaultCache">
+            <summary>
+            默认的缓存配置
+            </summary>
+        </member>
+        <member name="F:Weed.Caching._CacheService.COMMONT">
+            <summary>
+            [COMMONT]获取对象及列表信息的缓存
+            </summary>
+        </member>
+        <member name="F:Weed.Caching._CacheService.RECOMMEND">
+            <summary>
+            [RECOMMEND]获取对象及列表信息的缓存
+            </summary>
+        </member>
+        <member name="F:Weed.Caching._CacheService.GROUP">
+            <summary>
+            [GROUP]获取对象及列表信息的缓存
+            </summary>
+        </member>
+        <member name="F:Weed.Caching._CacheService.MY">
+            <summary>
+            [MY]获取对象及列表信息的缓存
+            </summary>
+        </member>
+        <member name="F:Weed.Caching._CacheService.CustomAlbum">
+            <summary>
+            [CustomAlbum]获取自编专辑的缓存
+            </summary>
+        </member>
+        <member name="F:Weed.Caching._CacheService.CHECK_INFO">
+            <summary>
+            [FILTER]获取对象及列表信息的缓存
+            </summary>
+        </member>
+        <member name="T:Weed.ICacheServiceFactory">
+            <summary>
+            缓存服务工厂
+            </summary>
+        </member>
+        <member name="M:Weed.ICacheServiceFactory.Create(System.String)">
+            <summary>
+            创建一个新的服务
+            </summary>
+        </member>
+        <member name="M:Weed.ICacheServiceFactory.Get(System.String)">
+            <summary>
+            获取一个单态服务
+            </summary>
+        </member>
+        <member name="T:Weed.QConditionCase">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="F:Weed.QCondition._Code">
+            <summary>
+            非安全代码
+            </summary>
+        </member>
+        <member name="M:Weed.QCondition.WriteSql(System.Text.StringBuilder,System.Boolean,System.Boolean)">
+            <param name="isWriteAsName">是否打印列前缀（表.AsName）</param>
+            <param name="isWriteValue">是否打印值（用于条件归类）</param>
+        </member>
+        <member name="M:Weed.QCondition.UnsafeNew(System.String)">
+            <summary>
+            非安全创建
+            </summary>
+        </member>
+        <member name="P:Weed.QCondition.Elem1C">
+            <summary>
+            元素1.列
+            </summary>
+        </member>
+        <member name="P:Weed.QCondition.Elem1S">
+            <summary>
+            元素1.值 || 元素1.列.Table.AsName
+            </summary>
+        </member>
+        <member name="P:Weed.QCondition.Elem2C">
+            <summary>
+            元素2.列
+            </summary>
+        </member>
+        <member name="P:Weed.QCondition.Elem2S">
+            <summary>
+            元素2.值 || 元素2.列.Table.AsName
+            </summary>
+        </member>
+        <member name="P:Weed.QCondition.OP">
+            <summary>
+            操作符
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.QColumnT`1._SData">
+            <summary>
+            静态数据（强类型）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumnT`1.NEW">
+            <summary>
+            .Value 的概念性复本（相对于OLD）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumnT`1.OLD">
+            <summary>
+            .SelectChanged() 用于记录更新前的旧值
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QColumnT`1.Data">
+            <summary>
+            静态数据
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.SqlRun">
+            <summary>
+            谢月甲
+            
+            SQL 代码运行时（不封装Cache，Trace, Filter, 格式化输出）
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.SqlRun.DEFAULT_SDQ_NAME">
+            <summary>
+            全局默认数据库访问实例
+            
+            如发生改变,将改变所有默认数据库访问实例（该属性提供一个动态控制默认访问实例的机制）
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SqlRun.ExeTable(System.String,System.Int32,System.Int32,Weed.SDQ.QDbTran)">
+            <param name="pageIndex">[从0开始计数]</param>
+        </member>
+        <member name="M:Weed.SDQ.SqlRun.ExeTable(System.Int32,System.Int32,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            已实现对Cache的支持
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SqlRun.ExeDataSet(System.Data.Common.DbDataAdapter)">
+            <summary>
+            已集成Cache
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SqlRun.ExeDataSet(System.Int32,System.Int32,System.String,Weed.SDQ.QDbTran)">
+            <summary>
+            已集成Cache
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SqlRun.ExeDataSet(System.String,System.Int32,System.Int32,Weed.SDQ.QDbTran)">
+            <param name="pageIndex">[从0开始计数]</param>
+        </member>
+        <member name="M:Weed.SDQ.SqlRun.BindConnTran(System.Data.IDbCommand,Weed.SDQ.QDbTran)">
+            <summary>
+            绑定事务,或同步CONN
+            </summary>
+            <param name="cmd"></param>
+            <param name="qTran"></param>
+            <returns>true:绑定了后部Tran; false:没有绑定外部DLL</returns>
+        </member>
+        <member name="M:Weed.SDQ.SqlRun.CreateCommand(System.String,System.Data.CommandType)">
+            <summary>
+            不执行Trace的命令创建
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.SqlRun.LastExeSQL">
+            <summary>
+            最后一次执行的SQL代码
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.SqlRun.__DbTran">
+            <summary>
+            不可为具体的执行服务, 具体的服务必须以参数的形式传入
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.SqlRun.Attributes">
+            <summary>
+            配置里的任意自定义属性
+            </summary>
+        </member>
+        <member name="T:Weed.Service.DictCache">
+            <summary>
+            本地字典缓存
+            </summary>
+        </member>
+        <member name="T:Weed.Service.AspCache">
+            <summary>
+            本地ASP.NET缓存
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.QEntity">
+            <summary>
+            数据实体基类
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QEntity.Tran``1(System.Object)">
+            <summary>
+            数据转换
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QEntity.Tran``1(System.Object,``0)">
+            <summary>
+            数据转换
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QEntity.__InvalidCastException``1(System.Object,System.Boolean)">
+            <summary>
+            数据强制转换失败时，具体提供信息的异常
+            </summary>
+            <typeparam name="T">强制转换的类型</typeparam>
+            <param name="val">数据</param>
+        </member>
+        <member name="M:Weed.SDQ.QEntity._GetData(System.String)">
+            <param name="propName">支持大写小</param>
+        </member>
+        <member name="M:Weed.SDQ.QEntity._SetData(System.String,System.Object)">
+            <summary>
+            用于DataReader,DataRow的绑定
+            </summary>
+            <param name="propName">支持大写小</param>
+            <param name="data"></param>
+        </member>
+        <member name="F:Weed.SDQ.QEntity.IS_NULL_AS_DEFAULT_OUTPUT">
+            <summary>
+            将Null作为默认输出(即,当结果没有时输出Null)
+            </summary>
+        </member>
+        <member name="T:Weed.AppService">
+            <summary>
+            ConfigService 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.QKernel">
+            <summary>
+            查询内核（提供查询记录，和解析器）
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.SerializeFrom">
+            <summary>
+            序列化From
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.SerializeOrderBy">
+            <summary>
+            序列化OrderBy
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.SerializeJoin">
+            <summary>
+            序列化Join
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.UnSerialize(Weed.OPS.XDom)">
+            <summary>
+            反序列化（需要.Context.Reflector 支持）
+            </summary>
+            <param name="dom"></param>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.SerializeWhere">
+            <summary>
+            序列化Where
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.SerializeUpdate">
+            <summary>
+            序列化Update
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.SerializeDelete">
+            <summary>
+            序列化Delete
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.WhereCode">
+            <summary>
+            获取Where Sql Code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.WhereStyle">
+            <summary>
+            获取Where Sql Style（没有值的WhereCode）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.JoinCode">
+            <summary>
+            获取Join Sql Code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.JoinStyle">
+            <summary>
+            获取Join Sql Style（没有值的JoinCode）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.Open(Weed.SDQ.QTable)">
+            <summary>
+            打开内核
+            </summary>
+            <param name="table">表对象</param>
+            <returns>内核</returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.Open(Weed.SDQ.SQuery)">
+            <summary>
+            打开内核
+            </summary>
+            <param name="query">查询引擎</param>
+            <returns>内核</returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.Open(Weed.SDQ.QContext)">
+            <summary>
+            打开内核
+            </summary>
+            <param name="table">查询引擎.上下文</param>
+            <returns>内核</returns>
+        </member>
+        <member name="M:Weed.SDQ.QKernel.#ctor(Weed.SDQ.QContext)">
+            <summary>
+            必须是 internal
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="F:Weed.SDQ.QKernel.Context">
+            <summary>
+            上下文
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.QKernel.IsTableShell">
+            <summary>
+            是否为QTable外壳
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.QKernel.ExtSelectItems">
+            <summary>
+            增量的查询项
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.QKernel.IsDistinct">
+            <summary>
+            是否去除重复行
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.QKernel.IsReturnIdentity">
+            <summary>
+            是否返回插入的ID标识（自增ID）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QKernel.Parser">
+            <summary>
+            解析器
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.IQReflector">
+            <summary>
+            查询对象解析器
+            </summary>
+        </member>
+        <member name="T:Weed.Caching.ServerPool">
+            <summary>
+            The ServerPool encapsulates a collection of memcached servers and the associated SocketPool objects.
+            This class contains the server-selection logic, and contains methods for executing a block of code on 
+            a socket from the server corresponding to a given key.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.ServerPool.#ctor(System.String[])">
+            <summary>
+            Internal constructor. This method takes the array of hosts and sets up an internal list of socketpools.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.ServerPool.GetSocketPool(System.UInt32)">
+            <summary>
+            Given an item key hash, this method returns the serverpool which is closest on the server key continuum.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.ServerPool.Execute``1(System.UInt32,``0,Weed.Caching.UseSocket{``0})">
+            <summary>
+            This method executes the given delegate on a socket from the server that corresponds to the given hash.
+            If anything causes an error, the given defaultValue will be returned instead.
+            This method takes care of disposing the socket properly once the delegate has executed.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.ServerPool.ExecuteAll(Weed.Caching.UseSocket)">
+            <summary>
+            This method executes the given delegate on all servers.
+            </summary>
+        </member>
+        <member name="T:Weed.CacheTags">
+            <summary>
+            在于标签统一缓存管理(Unified Cache Manager)
+            </summary>
+        </member>
+        <member name="M:Weed.CacheTags.BeginAdd(System.String,System.Object)">
+            <summary>
+            为缓存添加一个标签（异步 Add{begin}）
+            </summary>
+            <param name="tag">标签</param>
+            <param name="val">标签值</param>
+        </member>
+        <member name="M:Weed.CacheTags.EndAdd(Weed.IWeedKey)">
+            <summary>
+            为缓存添加一个标签（异步 Add{end}）
+            </summary>
+            <param name="target">目标</param>
+        </member>
+        <member name="M:Weed.CacheTags.EndAdd(System.String)">
+            <summary>
+            为缓存添加一个标签（异步 Add{end}）
+            </summary>
+            <param name="targetCacheKey">目标缓存键</param>
+        </member>
+        <member name="M:Weed.CacheTags.Add(System.String,System.Object,Weed.IWeedKey)">
+            <summary>
+            为缓存添加一个标签（同步 Add）
+            </summary>
+            <param name="tag">标签</param>
+            <param name="val">标签值</param>
+            <param name="target">目标</param>
+        </member>
+        <member name="M:Weed.CacheTags.Add(System.String,System.Object,System.String)">
+            <summary>
+            为缓存添加一个标签（同步 Add）
+            </summary>
+            <param name="tag">标签</param>
+            <param name="val">标签值</param>
+            <param name="targetCacheKey">目标缓存键</param>
+        </member>
+        <member name="M:Weed.CacheTags.Clear(System.String,System.Object)">
+            <summary>
+            清空[@tag=val]相关的所有缓存
+            </summary>
+        </member>
+        <member name="M:Weed.CacheTags._GetFirst``1(System.String,System.Object)">
+            <summary>
+            获取第一项原始数据(可以为QProcess)
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="?"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.CacheTags.GetCacheKeys(System.String,System.Object)">
+            <summary>
+            获取一个标签里的内容
+            </summary>
+            <param name="tag"></param>
+            <param name="val"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.CacheTags.Set(System.String,System.Object,System.Object)">
+            <summary>
+            设置标签缓存里的所有数据(如果是SP,则更新SP.CacheData)
+            </summary>
+            <param name="tag"></param>
+            <param name="val"></param>
+            <param name="newCacheVal"></param>
+        </member>
+        <member name="M:Weed.CacheTags.Set(System.String,System.Object,System.Int32,System.Object)">
+            <summary>
+            设置标签缓存里的某一项数据(如果是SP,则更新SP.CacheData)
+            </summary>
+            <param name="tag"></param>
+            <param name="val"></param>
+            <param name="newCacheVal"></param>
+        </member>
+        <member name="M:Weed.SDQ.QDbTran.BeginExec(Weed.SDQ.SqlRun)">
+            <summary>
+            打开一个统一的连接,并在EndExec执行前统一使用这个连接
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QDbTran.EndExec">
+            <summary>
+            如果执行过 BeginExec,必须要确保在任何时间执行EndExec
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QDbTran.BindTo(System.Data.IDbCommand)">
+            <summary>
+            将此事务绑定到命令
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QView.InnerColumn(Weed.SDQ.QColumn,System.String)">
+            <summary>
+            将列,重新命名；以符合视图的需要
+            </summary>
+            <param name="col"></param>
+            <param name="newName"></param>
+        </member>
+        <member name="M:Weed.SDQ.QView.Column(Weed.SDQ.QColumn,System.String)">
+            <summary>
+            已过时的方法,请使用 this[col,newName]
+            </summary>
+            <param name="col"></param>
+            <param name="newName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QView.Column(Weed.SDQ.QColumn)">
+            <summary>
+            已过时的方法,请使用 this[col]
+            </summary>
+            <param name="col"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Weed.SDQ.QView._Columns">
+            <summary>
+            视图相关的列
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QView.InsertTo(Weed.SDQ.QTable,Weed.SDQ.QDbTran)">
+            <summary>
+            将子查询的结果插入到一个表里
+            </summary>
+            <param name="table"></param>
+            <param name="qTran"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.QView.Union(Weed.SDQ.QView)">
+            <summary>
+            
+            </summary>
+            <param name="subSelect"></param>
+            <returns>Union两个视图的新视图</returns>
+        </member>
+        <member name="M:Weed.SDQ.QView.UnionAll(Weed.SDQ.QView)">
+            <summary>
+            
+            </summary>
+            <param name="subSelect"></param>
+            <returns>Union All两个视图的新视图</returns>
+        </member>
+        <member name="P:Weed.SDQ.QView.Item(Weed.SDQ.QColumn)">
+            <summary>
+            复制一个列；以符合视图的需要
+            </summary>
+            <param name="col"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Weed.SDQ.QView.Item(Weed.SDQ.QColumn,System.String)">
+            <summary>
+            复制一个列,并重新命名；以符合视图的需要
+            </summary>
+            <param name="col"></param>
+            <param name="newName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.StoreHandler">
+            <summary>
+            存储数据的代理（可用于缓存或其它环境）
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="T:Weed.GetHandler">
+            <summary>
+            获取数据的代理（可用于缓存或其它环境）
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="T:Weed.RemoveHandler">
+            <summary>
+            移除数据的代码（可用于缓存或其它环境）
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="T:Weed.ExeHandler`1">
+            <summary>
+            执行代理
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+            <typeparam name="T">返回类型</typeparam>
+            <returns>T</returns>
+        </member>
+        <member name="T:Weed.TraceHandler">
+            <summary>
+            跟踪代理
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+            <param name="cmdText"></param>
+            <param name="cmdType"></param>
+        </member>
+        <member name="T:Weed.ErrorHandler">
+            <summary>
+            错误发生时的代理
+            --------------------------
+            创建:谢月甲,20080617
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="T:Weed.WeedBinder">
+            <summary>
+            Weed-代理桥接器
+            </summary>
+        </member>
+        <member name="M:Weed.WeedBinder.CacheBind(Weed.ICacheService)">
+            <summary>
+            绑定缓存服务
+            </summary>
+            <param name="cacheService"></param>
+        </member>
+        <member name="M:Weed.WeedBinder.FilterBind(Weed.FilterHandler)">
+            <summary>
+            绑定数据过滤器
+            </summary>
+            <param name="filterHand"></param>
+        </member>
+        <member name="M:Weed.WeedBinder.TraceBind(Weed.TraceHandler,Weed.ErrorHandler)">
+            <summary>
+            绑定跟踪器（执行跟踪|错误跟踪）
+            </summary>
+            <param name="traceHand"></param>
+            <param name="errorHand"></param>
+        </member>
+        <member name="T:Weed.ACacheUsingEx`2">
+            <summary>
+            为实现服务
+            </summary>
+        </member>
+        <member name="T:Weed.CacheState">
+            <summary>
+            缓存状态
+            </summary>
+        </member>
+        <member name="F:Weed.CacheState.NonUsing">
+            <summary>
+            不使用
+            </summary>
+        </member>
+        <member name="F:Weed.CacheState.Using">
+            <summary>
+            使用
+            </summary>
+        </member>
+        <member name="F:Weed.CacheState.Refurbish">
+            <summary>
+            刷新
+            </summary>
+        </member>
+        <member name="F:Weed.CacheState.Remove">
+            <summary>
+            移除
+            </summary>
+        </member>
+        <member name="T:Weed.Caching.MemcachedClient">
+            <summary>
+            Memcached client main class.
+            Use the static methods Setup and GetInstance to setup and get an instance of the client for use.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Setup(System.String,System.String[])">
+            <summary>
+            Static method for creating an instance. This method will throw an exception if the name already exists.
+            </summary>
+            <param name="name">The name of the instance.</param>
+            <param name="servers">A list of memcached servers in standard notation: host:port. 
+            If port is omitted, the default value of 11211 is used. 
+            Both IP addresses and host names are accepted, for example:
+            "localhost", "127.0.0.1", "cache01.example.com:12345", "127.0.0.1:12345", etc.</param>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Exists(System.String)">
+            <summary>
+            Static method which checks if a given named MemcachedClient instance exists.
+            </summary>
+            <param name="name">The name of the instance.</param>
+            <returns></returns>
+        </member>
+        <member name="F:Weed.Caching.MemcachedClient.defaultInstance">
+            <summary>
+            Static method for getting the default instance named "default".
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.GetInstance(System.String)">
+            <summary>
+            Static method for getting an instance. 
+            This method will first check for named instances that has been set up programmatically.
+            If no such instance exists, it will check the "beitmemcached" section of the standard 
+            config file and see if it can find configuration info for it there.
+            If that also fails, an exception is thrown.
+            </summary>
+            <param name="name">The name of the instance.</param>
+            <returns>The named instance.</returns>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.hash(System.String)">
+            <summary>
+            Private key hashing method that uses the modified FNV hash.
+            </summary>
+            <param name="key">The key to hash.</param>
+            <returns>The hashed key.</returns>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.hash(System.UInt32)">
+            <summary>
+            Private hashing method for user-supplied hash values.
+            </summary>
+            <param name="hashvalue">The user-supplied hash value to hash.</param>
+            <returns>The hashed value</returns>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.hash(System.String[])">
+            <summary>
+            Private multi-hashing method.
+            </summary>
+            <param name="keys">An array of keys to hash.</param>
+            <returns>An arrays of hashes.</returns>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.hash(System.UInt32[])">
+            <summary>
+            Private multi-hashing method for user-supplied hash values.
+            </summary>
+            <param name="hashvalues">An array of keys to hash.</param>
+            <returns>An arrays of hashes.</returns>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.checkKey(System.String)">
+            <summary>
+            Private key-checking method.
+            Throws an exception if the key does not conform to memcached protocol requirements:
+            It may not contain whitespace, it may not be null or empty, and it may not be longer than 250 characters.
+            </summary>
+            <param name="key">The key to check.</param>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Set(System.String,System.Object)">
+            <summary>
+            This method corresponds to the "set" command in the memcached protocol. 
+            It will unconditionally set the given key to the given value.
+            Using the overloads it is possible to specify an expiry time, either relative as a TimeSpan or 
+            absolute as a DateTime. It is also possible to specify a custom hash to override server selection.
+            This method returns true if the value was successfully set.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Add(System.String,System.Object)">
+            <summary>
+            This method corresponds to the "add" command in the memcached protocol. 
+            It will set the given key to the given value only if the key does not already exist.
+            Using the overloads it is possible to specify an expiry time, either relative as a TimeSpan or 
+            absolute as a DateTime. It is also possible to specify a custom hash to override server selection.
+            This method returns true if the value was successfully added.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Replace(System.String,System.Object)">
+            <summary>
+            This method corresponds to the "replace" command in the memcached protocol. 
+            It will set the given key to the given value only if the key already exists.
+            Using the overloads it is possible to specify an expiry time, either relative as a TimeSpan or 
+            absolute as a DateTime. It is also possible to specify a custom hash to override server selection.
+            This method returns true if the value was successfully replaced.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Append(System.String,System.Object)">
+            <summary>
+            This method corresponds to the "append" command in the memcached protocol.
+            It will append the given value to the given key, if the key already exists.
+            Modifying a key with this command will not change its expiry time.
+            Using the overload it is possible to specify a custom hash to override server selection.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Prepend(System.String,System.Object)">
+            <summary>
+            This method corresponds to the "prepend" command in the memcached protocol.
+            It will prepend the given value to the given key, if the key already exists.
+            Modifying a key with this command will not change its expiry time.
+            Using the overload it is possible to specify a custom hash to override server selection.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Get(System.String)">
+            <summary>
+            This method corresponds to the "get" command in the memcached protocol.
+            It will return the value for the given key. It will return null if the key did not exist,
+            or if it was unable to retrieve the value.
+            If given an array of keys, it will return a same-sized array of objects with the corresponding
+            values.
+            Use the overload to specify a custom hash to override server selection.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Gets(System.String,System.UInt64@)">
+            <summary>
+            This method corresponds to the "gets" command in the memcached protocol.
+            It works exactly like the Get method, but it will also return the cas unique value for the item.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Get(System.String[])">
+            <summary>
+            This method executes a multi-get. It will group the keys by server and execute a single get 
+            for each server, and combine the results. The returned object[] will have the same size as
+            the given key array, and contain either null or a value at each position according to
+            the key on that position.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Gets(System.String[],System.UInt64[]@)">
+            <summary>
+            This method does a multi-gets. It functions exactly like the multi-get method, but it will
+            also return an array of cas unique values as an out parameter.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Delete(System.String)">
+            <summary>
+            This method corresponds to the "delete" command in the memcache protocol.
+            It will immediately delete the given key and corresponding value.
+            Use the overloads to specify an amount of time the item should be in the delete queue on the server,
+            or to specify a custom hash to override server selection.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.SetCounter(System.String,System.UInt64)">
+            <summary>
+            This method sets the key to the given value, and stores it in a format such that the methods
+            Increment and Decrement can be used successfully on it, i.e. decimal representation of a 64-bit unsigned integer. 
+            Using the overloads it is possible to specify an expiry time, either relative as a TimeSpan or 
+            absolute as a DateTime. It is also possible to specify a custom hash to override server selection.
+            This method returns true if the counter was successfully set.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.GetCounter(System.String)">
+            <summary>
+            This method returns the value for the given key as a ulong?, a nullable 64-bit unsigned integer.
+            It returns null if the item did not exist, was not stored properly as per the SetCounter method, or 
+            if it was not able to successfully retrieve the item.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Increment(System.String,System.UInt64)">
+            <summary>
+            This method corresponds to the "incr" command in the memcached protocol.
+            It will increase the item with the given value and return the new value.
+            It will return null if the item did not exist, was not stored properly as per the SetCounter method, or 
+            if it was not able to successfully retrieve the item. 
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Decrement(System.String,System.UInt64)">
+            <summary>
+            This method corresponds to the "decr" command in the memcached protocol.
+            It will decrease the item with the given value and return the new value. If the new value would be 
+            less than 0, it will be set to 0, and the method will return 0.
+            It will return null if the item did not exist, was not stored properly as per the SetCounter method, or 
+            if it was not able to successfully retrieve the item. 
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.FlushAll">
+            <summary>
+            This method corresponds to the "flush_all" command in the memcached protocol.
+            When this method is called, it will send the flush command to all servers, thereby deleting
+            all items on all servers.
+            Use the overloads to set a delay for the flushing. If the parameter staggered is set to true,
+            the client will increase the delay for each server, i.e. the first will flush after delay*0, 
+            the second after delay*1, the third after delay*2, etc. If set to false, all servers will flush 
+            after the same delay.
+            It returns true if the command was successful on all servers.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Stats">
+            <summary>
+            This method corresponds to the "stats" command in the memcached protocol.
+            It will send the stats command to all servers, and it will return a Dictionary for each server
+            containing the results of the command.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Stats(System.String)">
+            <summary>
+            This method corresponds to the "stats" command in the memcached protocol.
+            It will send the stats command to the server that corresponds to the given key, hash or host,
+            and return a Dictionary containing the results of the command.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.MemcachedClient.Status">
+            <summary>
+            This method retrives the status from the serverpool. It checks the connection to all servers
+            and returns usage statistics for each server.
+            </summary>
+        </member>
+        <member name="P:Weed.Caching.MemcachedClient.KeyPrefix">
+            <summary>
+            If you specify a key prefix, it will be appended to all keys before they are sent to the memcached server.
+            They key prefix is not used when calculating which server a key belongs to.
+            </summary>
+        </member>
+        <member name="P:Weed.Caching.MemcachedClient.SendReceiveTimeout">
+            <summary>
+            The send receive timeout is used to determine how long the client should wait for data to be sent 
+            and received from the server, specified in milliseconds. The default value is 2000.
+            </summary>
+        </member>
+        <member name="P:Weed.Caching.MemcachedClient.MinPoolSize">
+            <summary>
+            The min pool size determines the number of sockets the socket pool will keep.
+            Note that no sockets will be created on startup, only on use, so the socket pool will only
+            contain this amount of sockets if the amount of simultaneous requests goes above it.
+            The default value is 5.
+            </summary>
+        </member>
+        <member name="P:Weed.Caching.MemcachedClient.MaxPoolSize">
+            <summary>
+            The max pool size determines how large the socket connection pool is allowed to grow.
+            There can be more sockets in use than this amount, but when the extra sockets are returned, they will be destroyed.
+            The default value is 10.
+            </summary>
+        </member>
+        <member name="P:Weed.Caching.MemcachedClient.SocketRecycleAge">
+            <summary>
+            If the pool contains more than the minimum amount of sockets, and a socket is returned that is older than this recycle age
+            that socket will be destroyed instead of put back in the pool. This allows the pool to shrink back to the min pool size after a peak in usage.
+            The default value is 30 minutes.
+            </summary>
+        </member>
+        <member name="P:Weed.Caching.MemcachedClient.CompressionThreshold">
+            <summary>
+            If an object being stored is larger in bytes than the compression threshold, it will internally be compressed before begin stored,
+            and it will transparently be decompressed when retrieved. Only strings, byte arrays and objects can be compressed.
+            The default value is 1048576 bytes = 1MB.
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.SQuery">
+            <summary>
+            [表/视图]综合运行器(封装SQL操作)
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SQuery.Set(Weed.SDQ.IQData)">
+            <summary>
+            设备Update.Set 的数据
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Weed.Caching.SocketPool">
+            <summary>
+            The SocketPool encapsulates the list of PooledSockets against one specific host, and contains methods for 
+            acquiring or returning PooledSockets.
+            </summary>
+        </member>
+        <member name="F:Weed.Caching.SocketPool.deadEndPointSecondsUntilRetry">
+            <summary>
+            If the host stops responding, we mark it as dead for this amount of seconds, 
+            and we double this for each consecutive failed retry. If the host comes alive
+            again, we reset this to 1 again.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.SocketPool.getEndPoint(System.String)">
+            <summary>
+            This method parses the given string into an IPEndPoint.
+            If the string is malformed in some way, or if the host cannot be resolved, this method will throw an exception.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.SocketPool.Acquire">
+            <summary>
+            Gets a socket from the pool.
+            If there are no free sockets, a new one will be created. If something goes
+            wrong while creating the new socket, this pool's endpoint will be marked as dead
+            and all subsequent calls to this method will return null until the retry interval
+            has passed.
+            </summary>
+        </member>
+        <member name="M:Weed.Caching.SocketPool.Return(Weed.Caching.PooledSocket)">
+            <summary>
+            Returns a socket to the pool.
+            If the socket is dead, it will be destroyed.
+            If there are more than MaxPoolSize sockets in the pool, it will be destroyed.
+            If there are less than MinPoolSize sockets in the pool, it will always be put back.
+            If there are something inbetween those values, the age of the socket is checked. 
+            If it is older than the SocketRrecycleAge, it is destroyed, otherwise it will be 
+            put back in the pool.
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.ValueMapping.IsCached">
+            <summary>
+            是否已缓存
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.ValueMapping.WeedCode">
+            <summary>
+            缓存的KEY
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.OrderItem">
+            <summary>
+            排序项
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.OrderItem.#ctor(Weed.Relation,Weed.SDQ.QColumn,Weed.OrderType)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="relation">关系（相对于前一项）</param>
+            <param name="code"></param>
+            <param name="type"></param>
+        </member>
+        <member name="P:Weed.SDQ.OrderItem.Relate">
+            <summary>
+            关系（相对于前一项）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.OrderItem.Column">
+            <summary>
+            项代码（
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.OrderItem.Type">
+            <summary>
+            排序类型
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.SourceType">
+            <summary>
+            绑定的数据源
+            --------------------------
+            创建:谢月甲,20080429
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.SourceType.DataBase">
+            <summary>
+            数据库（可以使用强制转换）
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.SourceType.Entity">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="F:Weed.SDQ.SourceType.Collection">
+            <summary>
+            集合（需要注意文本内容）
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SdqConfig.GetProvider(System.String)">
+            <summary>
+            根据名称，获取DbProvider
+            </summary>
+            <param name="providerString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Weed.SDQ.SdqConfig.ReBuildConnectionString">
+            <summary>
+            根据 Params 重新构建 ConnectionString
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.SdqConfig.ReSplitConnectionString">
+            <summary>
+            重新分开连接字符串（以便重构）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.SdqConfig.Params">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.SdqConfig.Attributes">
+            <summary>
+            配置属性
+            </summary>
+        </member>
+        <member name="T:Weed.SDQ.QContext">
+            <summary>
+            上下文
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QContext.Reflector">
+            <summary>
+            查询引擎反射器
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QContext.Kernel">
+            <summary>
+            查询引擎内核
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QContext.Parser">
+            <summary>
+            查询引擎解析器（解析SQuery，QTable运行所产生的内容）
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QContext.INSERTED_ID">
+            <summary>
+            当前上下文最后一次插入的ID（自增ID）
+            ===================================
+            仅当.Insert(true)时有效
+            </summary>
+        </member>
+        <member name="P:Weed.SDQ.QContext.Item(System.String)">
+            <summary>
+            获取或设置元信息
+            </summary>
+            <param name="key">键</param>
+            <returns>值</returns>
+        </member>
+        <member name="F:Weed.SDQ.QParamT`1._SData">
+            <summary>
+            静态数据（强类型）
+            </summary>
+        </member>
+        <member name="M:Weed.SDQ.QParamT`1.SData(`0)">
+            <summary>
+            设置静态数据（强类型）
+            </summary>
+            <param name="sData">静态数据（强类型）</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

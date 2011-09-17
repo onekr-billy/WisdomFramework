@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AppUpdater</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Samples.AppUpdater.AppUpdater.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Samples.AppUpdater.ServerPoller">
+            <summary>
+            Summary description for ServerPoller.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Samples.AppUpdater.IFileVersionCheck">
+            <summary>
+            文件内容检查类
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.AppUpdater.IFileVersionCheck.CheckForUpdate(System.String,System.String,System.Boolean@,System.String@)">
+            <summary>
+            检查文件版本是否需要更新
+            </summary>
+            <param name="clientVersion"></param>
+            <param name="updateAvailable"></param>
+            <param name="updateUrl"></param>
+            <param name="filename"></param>
+        </member>
+        <member name="M:Microsoft.Samples.AppUpdater.IFileVersionCheck.DownloadFile(System.String,System.String,System.Int32,System.Boolean@)">
+            <summary>
+            下载文件
+            </summary>
+            <param name="filename"></param>
+            <param name="serverVersion"></param>
+            <param name="pharseID"></param>
+            <param name="isCompleted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Samples.AppUpdater.IFileVersionCheck.UploadFile(System.String,System.String,System.Byte[],System.Int32,System.Boolean@)">
+            <summary>
+            上传文件
+            </summary>
+            <param name="filename"></param>
+            <param name="serverVersion"></param>
+            <param name="fileContent"></param>
+            <param name="pharseID"></param>
+            <param name="isCompleted"></param>
+        </member>
+        <member name="M:Microsoft.Samples.AppUpdater.IFileVersionCheck.GetDirectoryContents(System.Boolean)">
+            <summary>
+            读取需要下载的文件及目录列表
+            </summary>
+            <param name="deep"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Samples.AppUpdater.IFileVersionCheck.GetLastModTime(System.String)">
+            <summary>
+            读取指定文件的最后修改时间
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Samples.AppUpdater.AppKeys">
+            <summary>
+            Summary description for AppKeys.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Samples.AppUpdater.UpdateForm">
+            <summary>
+            Summary description for UpdateForm.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.AppUpdater.UpdateForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.AppUpdater.UpdateForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.AppUpdater.UpdateForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

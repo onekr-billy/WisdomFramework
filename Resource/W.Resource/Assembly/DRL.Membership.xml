@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DRL.Membership</name>
+    </assembly>
+    <members>
+        <member name="T:DRL.Membership.DRLMembershipProvider">
+            <summary>
+            Membership Provider
+            2007-4-25 Create by KLY
+            </summary>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            创建一个用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="email">Email</param>
+            <param name="passwordQuestion">密码安全问题</param>
+            <param name="passwordAnswer">密码安全答案</param>
+            <param name="isApproved">是否锁定</param>
+            <param name="providerUserKey">主键</param>
+            <param name="status">用户创建状态</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CreateUserreturnID(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            创建一个用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <param name="email">Email</param>
+            <param name="passwordQuestion">密码安全问题</param>
+            <param name="passwordAnswer">密码安全答案</param>
+            <param name="isApproved">是否锁定</param>
+            <param name="providerUserKey">主键</param>
+            <param name="status">用户创建状态</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetUser(System.String,System.Boolean)">
+            <summary>
+            获取MembershipUser对象
+            </summary>
+            <param name="username">用户名</param>
+            <param name="userIsOnline">用户是否在线，如果为True，则在读取用户信息时，将更新用户在线时间</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetUser(System.Object,System.Boolean)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="providerUserKey">主键</param>
+            <param name="userIsOnline">用户是否在线，如果为True，则在读取用户信息时，将更新用户在线时间</param>
+            <returns>MembershipUser</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.ChangePasswordQuestionAndAnswer(System.String,System.String,System.String,System.String)">
+            <summary>
+            修改密码安全问题和答案
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="newPasswordQuestion"></param>
+            <param name="newPasswordAnswer">答案明文</param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetPassword(System.String,System.String)">
+            <summary>
+            获取密码
+            </summary>
+            <param name="username"></param>
+            <param name="answer">答案明文</param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetUserNameByEmail(System.String)">
+            <summary>
+            根据Email获取用户名
+            </summary>
+            <param name="email">Email</param>
+            <returns>返回用户名</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.ValidateUser(System.String,System.String)">
+            <summary>
+            验证用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="password">密码</param>
+            <returns>成功返回True</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.ChangePassword(System.String,System.String,System.String)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="username">用户名</param>
+            <param name="oldPassword">旧密码</param>
+            <param name="newPassword">新密码</param>
+            <returns>成功返回True</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.ResetPassword(System.String,System.String)">
+            <summary>
+            重设密码
+            </summary>
+            <param name="username">用户名</param>
+            <param name="answer">密码安全答案</param>
+            <returns>返回新密码</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.UnlockUser(System.String)">
+            <summary>
+            解除用户锁定
+            </summary>
+            <param name="username">用户名</param>
+            <returns>成功返回True</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.LockUser(System.String,System.Int32)">
+            <summary>
+            锁定用户
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.DeleteUser(System.String,System.Boolean)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="username">用户名</param>
+            <param name="deleteAllRelatedData">是否删除用户相关数据，暂不实现</param>
+            <returns>删除成功返回True</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据Email查找用户
+            </summary>
+            <param name="emailToMatch">Email查询文本</param>
+            <param name="pageIndex">页索引</param>
+            <param name="pageSize">页大小</param>
+            <param name="totalRecords">记录总数</param>
+            <returns>MembershipUserCollection</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.FindUsersByName(System.String,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            根据用户名查找用户
+            </summary>
+            <param name="usernameToMatch">用户名查询文本</param>
+            <param name="pageIndex">页索引</param>
+            <param name="pageSize">页大小</param>
+            <param name="totalRecords">记录总数</param>
+            <returns>MembershipUserCollection</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetAllUsers(System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获取所有用户
+            </summary>
+            <param name="usernameToMatch">用户名查询文本</param>
+            <param name="pageIndex">页索引</param>
+            <param name="pageSize">页大小</param>
+            <param name="totalRecords">记录总数</param>
+            <returns>MembershipUserCollection</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetNumberOfUsersOnline">
+            <summary>
+            获取在线用户数
+            </summary>
+            <returns>在线用户数</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.UpdateUser(System.Web.Security.MembershipUser)">
+            <summary>
+            修改用户信息
+            </summary>
+            <param name="user">MembershipUser</param>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CheckUserExists(System.String)">
+            <summary>
+            检查指定用户名是否存在
+            </summary>
+            <param name="username">用户名</param>
+            <returns>存在同名用户返回True</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.SetPassword(System.String,System.String)">
+            <summary>
+            设置新密码
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.UpdateLastActivityDate(System.String)">
+            <summary>
+            更新用户最后活动日期
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.UpdateLastLoginDate(System.String)">
+            <summary>
+            更新用户最后登录日期
+            </summary>
+            <param name="username"></param>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.IsEmail(System.String)">
+            <summary>
+            检查Email格式
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetConfig(System.String,System.String)">
+            <summary>
+            获取配置值，若为空则指定一个默认值
+            </summary>
+            <param name="name">配置名称</param>
+            <param name="defaultValue">默认值</param>
+            <returns>配置值</returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetUserPasswordFormat(System.String)">
+            <summary>
+            获得用户加密模式
+            </summary>
+            <param name="username"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetFullUserInformation(System.String,System.String,System.String)">
+            <summary>
+            获得用户详细资料
+            </summary>
+            <param name="userName"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据EMAIL查用户信息
+            </summary>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.FindUsersByName(System.String,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            根据用户名查用户信息
+            </summary>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetAllUsers(System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得所有用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.GetUsers(System.String,System.String,System.DateTime,System.DateTime,Framework.Enumerations.UserStatus,Framework.Enumerations.UserType,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            获得所有用户
+            </summary>
+            <param name="usernameToMatch"></param>
+            <param name="emailToMatch"></param>
+            <param name="beginTime"></param>
+            <param name="endTime"></param>
+            <param name="status"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="totalRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.UpdateUser(Framework.Components.UserInfo,System.String,System.String,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            更新用户信息
+            </summary>
+            <param name="user"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CheckUserName(System.String,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            检查用户名称是否规范
+            </summary>
+            <param name="username"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CheckUserEmail(System.String,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            检查用户邮件是否规范
+            </summary>
+            <param name="email"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CheckUserPassword(System.String,System.String,Framework.Securities.EncryptMode,System.String@,System.String@,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            检查并生成用户密码
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <param name="encryptMode"></param>
+            <param name="passwordSalt"></param>
+            <param name="passwordHash"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CheckUserPasswordAnswer(System.String,System.String,System.String,Framework.Securities.EncryptMode,System.String@,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            检查密码问题
+            </summary>
+            <param name="username"></param>
+            <param name="passwordQuestion"></param>
+            <param name="passwordAnswer"></param>
+            <param name="encryptMode"></param>
+            <param name="passwordAnswerHash"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.CheckUserPasswordAnswer(System.String,System.String,Framework.Securities.EncryptMode,System.String@,System.Web.Security.MembershipCreateStatus@)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="passwordAnswer"></param>
+            <param name="encryptMode"></param>
+            <param name="passwordAnswerHash"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DRL.Membership.DRLMembershipProvider.ApproveUser(System.String,System.Int32)">
+            <summary>
+            审核通过用户信息
+            </summary>
+            <param name="userName">用户名</param>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.ApplicationName">
+            <summary>
+            应用程序名称
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.EnablePasswordReset">
+            <summary>
+            获取是否允许重设密码（固定值：true）
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.EnablePasswordRetrieval">
+            <summary>
+            获取是否允许恢复密码（由于密码都采用Hash加密，所以该属性值为false）
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.MaxInvalidPasswordAttempts">
+            <summary>
+            获取锁定成员资格用户前允许的无效密码或无效密码提示问题答案尝试次数（暂时不做限制）
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.MinRequiredNonAlphanumericCharacters">
+            <summary>
+            获取有效密码中必须包含的最少特殊字符数，默认为0，可配置
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.MinRequiredPasswordLength">
+            <summary>
+            获取密码所要求的最小长度，默认为3，可配置
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.PasswordAttemptWindow">
+            <summary>
+            获取在锁定成员资格用户之前允许的最大无效密码或无效密码提示问题答案尝试次数的分钟数（暂时不做限制）
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.RequiresQuestionAndAnswer">
+            <summary>
+            获取一个值，该值指示成员资格提供程序是否配置为要求用户在进行密码重置和检索时回答密码提示问题（固定值：false）
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.RequiresUniqueEmail">
+            <summary>
+            获取一个值，指示成员资格提供程序是否配置为要求每个用户名具有唯一的电子邮件地址，可配置
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.PasswordStrengthRegularExpression">
+            <summary>
+            获取用于计算密码的正则表达式，可配置
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.PasswordFormat">
+            <summary>
+            获取一个值，该值指示在成员资格数据存储区中存储密码的格式（固定值：MembershipPasswordFormat.Hashed）
+            </summary>
+        </member>
+        <member name="P:DRL.Membership.DRLMembershipProvider.EncryptMode">
+            <summary>
+            获取密码加密方式，可配置，目前支持两种加密方式【SHA512，MD5Old】
+            </summary>
+        </member>
+        <member name="T:DRL.Membership.MembershipCreateStatusDescription">
+            <summary>
+            用户注册错误信息描述
+            </summary>
+        </member>
+    </members>
+</doc>

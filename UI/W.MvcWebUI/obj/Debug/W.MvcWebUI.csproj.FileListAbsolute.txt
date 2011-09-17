@@ -1,0 +1,10 @@
+E:\Work\Project\Web\asp.net\Wisdom\W.MvcWebUI\bin\W.MvcWebUI.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.MvcWebUI\bin\W.MvcWebUI.pdb
+E:\Work\Project\Web\asp.net\Wisdom\W.MvcWebUI\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\Wisdom\W.MvcWebUI\obj\Debug\W.MvcWebUI.dll
+E:\Work\Project\Web\asp.net\Wisdom\W.MvcWebUI\obj\Debug\W.MvcWebUI.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\UI\W.MvcWebUI\bin\W.MvcWebUI.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\UI\W.MvcWebUI\bin\W.MvcWebUI.pdb
+E:\Work\Project\Web\asp.net\WisdomFramework\UI\W.MvcWebUI\obj\Debug\ResolveAssemblyReference.cache
+E:\Work\Project\Web\asp.net\WisdomFramework\UI\W.MvcWebUI\obj\Debug\W.MvcWebUI.dll
+E:\Work\Project\Web\asp.net\WisdomFramework\UI\W.MvcWebUI\obj\Debug\W.MvcWebUI.pdb

@@ -1,0 +1,3692 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Message.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Message.Services.TextMessageProvider">
+            <summary>
+            文本存储
+            </summary>
+        </member>
+        <member name="M:Message.Services.TextMessageProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Message.Services.TextMessageProvider.Send(Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:Message.Services.MsmqMessageProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Message.Services.MsmqMessageProvider.Send(Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.MsmqMessageProvider.Create(System.Int32,System.Int32,Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="settingsID"></param>
+            <param name="userID"></param>
+            <param name="msg"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.DAL.Base.EmailQueueBaseDALs">
+            <summary>
+            Summary description for EmailQueue $Description$
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.PopulateEmailQueueFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.PopulateEmailQueueFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.GetDefaultValues(Message.DataProvider.Entities.EmailQueue@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.EmailQueueBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="T:Message.Weed.UserMessag">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.UserMessageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.MessageTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.MessageBody">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.DateToSend">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.Sender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.Receivers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.SourceID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.MessageType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.DateSended">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.MessageStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessag.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Services.XMLMessageProvider">
+            <summary>
+            XML消息管理器
+            </summary>
+        </member>
+        <member name="M:Message.Services.XMLMessageProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Message.Services.XMLMessageProvider.Send(Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Message.Services.XMLMessageProvider.Create(System.Int32,System.Int32,Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="settingsID"></param>
+            <param name="userID"></param>
+            <param name="msg"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.AsynchronizeEventQueueSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueueSet.Add(Message.DataProvider.Entities.AsynchronizeEventQueue)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueueSet.Contains(Message.DataProvider.Entities.AsynchronizeEventQueue)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueueSet.IndexOf(Message.DataProvider.Entities.AsynchronizeEventQueue)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueueSet.Insert(System.Int32,Message.DataProvider.Entities.AsynchronizeEventQueue)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueueSet.Remove(Message.DataProvider.Entities.AsynchronizeEventQueue)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.AsynchronizeEventQueueSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.AsynchronizeEventQueueSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.AsynchronizeEventQueueSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.ExceptionDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.Base.ExceptionBaseDALs">
+            <summary>
+            Summary description for Exceptions $Description$
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.PopulateExceptionFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.PopulateExceptionFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.GetDefaultValues(Message.DataProvider.Entities.ExceptionDBEntity@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.ExceptionBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.ExceptionBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.ExceptionBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.ExceptionDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.ExceptionDALs.ParseException(Framework.Components.ExceptionEntity)">
+            <summary>
+            将系统公用的对像转换为数据库的对像
+            </summary>
+            <param name="exp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.ExceptionDALs.ParseException(Framework.Components.SFException)">
+            <summary>
+            将系统公用的对像转换为数据库的对像
+            </summary>
+            <param name="exp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.ExceptionDALs.ParseException(System.Exception)">
+            <summary>
+            将系统公用的对像转换为数据库的对像
+            </summary>
+            <param name="exp"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.Weed.UserMessageReader">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessageReader.UserMessageReadID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessageReader.UserMessageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessageReader.SenderID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessageReader.ReceiverID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessageReader.DateReceived">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessageReader.DateSended">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.UserMessageReader.MessageStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Services.DBMessageProvider">
+            <summary>
+             数据库存储
+            </summary>
+        </member>
+        <member name="M:Message.Services.DBMessageProvider.Send(Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            存储在数据库中的消息
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:Message.Services.UserMessageServices">
+            <summary>
+            用户消息服务
+            </summary>
+        </member>
+        <member name="F:Message.Services.UserMessageServices.AllUserID">
+            <summary>
+            指向所有用户时使用的ID
+            </summary>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserID(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            检查用户名
+            </summary>
+            <param name="userName"></param>
+            <param name="noExistThrowException"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.CreateUserMessage(System.Int32,Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            创建用户消息
+            如果接收人中有*，则表示所有人接收，此时其中的所有其它接收者将被清空，仅剩下*
+            如果用户消息发送时间与创建时间在两分钟内，且消息为准备发送或未设，则系统自动发送消息
+            </summary>
+            <param name="userID"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.SendUserMessage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            发送用户消息
+            系统将自动合并用户列表中重复的用户名。如果用户传入的Users为ID列表，则系统自动进行识别。
+            </summary>
+            <param name="userID">消息发送者ID</param>
+            <param name="messageID">消息ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.SendUserMessage(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            发送用户消息
+            如果接收者为*，在接收表中将不增加记录，在读取时才增加记录
+            如果接收者为其它，则在接收表中增加记录
+            </summary>
+            <param name="userID">消息发送者ID</param>
+            <param name="messageID">消息ID</param>
+            <param name="receivers">接收者列表，此处主要是为了减少数据库查询次数</param>
+            <param name="guid">客户端唯一识别码</param>
+            <param name="ipAddress">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.ReadUserMessage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            阅读用户消息
+            </summary>
+            <param name="userID">用户ID，此处假设此消息的收件人中有该用户</param>
+            <param name="messageID">消息ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.DeleteUserMessage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            删除用户消息
+            系统将判断用户是为发送者还是接收者，如果是发送者将变更Message表，如果是接收者，则变更消息读取表，如果都不是，不操作。
+            </summary>
+            <param name="messageID"></param>
+            <param name="operatorID">操作员ID，系统将检查该操作员的一些权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.DeleteUserMessages(System.Int32,System.Int32[],System.String,System.String)">
+            <summary>
+            删除用户消息用于系统管理员操作
+            </summary>
+            <param name="messageIDs"></param>
+            <param name="operatorID">操作员ID，系统将检查该操作员的一些权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.DeleteUserMessages(System.Int32,System.Collections.Generic.IList{Framework.Message.MessageEntity},System.String,System.String)">
+            <summary>
+            删除用户消息用于系统管理员操作
+            </summary>
+            <param name="messages"></param>
+            <param name="operatorID">操作员ID，系统将检查该操作员的一些权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.DeleteUserMessages(System.Int32,System.Boolean,System.String,System.String)">
+            <summary>
+            清空用户发送或接收的消息
+            </summary>
+            <param name="operatorID">操作员ID，即发送或接收消息的人的ID，根据IsReceived来判断是接收还是发送的人。</param>
+            <param name="isReceived">是否为接收的消息</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns>删除的数据条数</returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.DeleteUserMessages(System.Int32,System.Boolean,Framework.Message.MessageCategory,System.String,System.String)">
+            <summary>
+            清空用户发送或接收的消息
+            </summary>
+            <param name="operatorID">操作员ID，即发送或接收消息的人的ID，根据IsReceived来判断是接收还是发送的人。</param>
+            <param name="isReceived">是否为接收的消息</param>
+            <param name="category">在系统内部的消息分类</param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns>处理的数据条数</returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessageEntity(System.Int32,System.String,System.String)">
+            <summary>
+            获得用户消息记录
+            </summary>
+            <param name="messageID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessages(System.Int32,System.String,System.DateTime,System.DateTime,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得用户消息，分页查询
+            </summary>
+            <param name="userID">发件人ID</param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessages(System.String,System.String,System.DateTime,System.DateTime,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得用户消息，分页查询
+            </summary>
+            <param name="userName">发件人姓名</param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessages(System.Int32,System.String,System.DateTime,System.DateTime,Framework.Message.MessageStatus,Framework.Message.MessageCategory,Framework.Message.MessageOrder,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得用户消息，分页查询
+            </summary>
+            <param name="userID">发件人ID</param>
+            <param name="status"></param>
+            <param name="order"></param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetReceivedUserMessages(System.Int32,System.String,System.DateTime,System.DateTime,Framework.Message.MessageStatus,Framework.Message.MessageCategory,Framework.Message.MessageOrder,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得用户收到的符合条件消息
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="status"></param>
+            <param name="order"></param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetReceivedUserMessages(System.Int32,System.Int16,System.String,System.DateTime,System.DateTime,Framework.Message.MessageStatus,Framework.Message.MessageCategory,Framework.Message.MessageOrder,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得用户收到的符合条件消息
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="status"></param>
+            <param name="order"></param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <param name="isNotice">消息返回结果参数  1表示个人消息 2表示群发的系统消息（可能为公告，收信人为*） 3两者都有</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetReceivedUserMessagesCount(System.Int32,System.Int16,System.String,System.DateTime,System.DateTime,Framework.Message.MessageStatus,Framework.Message.MessageCategory,System.String,System.String)">
+            <summary>
+            获得用户收到的符合条件消息数量
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="status"></param>
+            <param name="order"></param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <param name="isNotice">消息返回结果参数  1表示个人消息 2表示群发的系统消息（可能为公告，收信人为*） 3两者都有</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetReceivedUserMessagesCount(System.Int32,System.String,System.DateTime,System.DateTime,Framework.Message.MessageStatus,Framework.Message.MessageCategory,System.String,System.String)">
+            <summary>
+            获得用户收到的符合条件消息数量
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="status"></param>
+            <param name="order"></param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessagesNotRead(System.Int32,System.String,System.DateTime,System.DateTime,Framework.Message.MessageCategory,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得用户未读信息，分页查询
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessagesNotRead(System.Int32,System.Int16,System.String,System.DateTime,System.DateTime,Framework.Message.MessageCategory,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得用户未读信息，分页查询
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <param name="isNotice">消息返回结果参数  1表示个人消息 2表示群发的系统消息（可能为公告，收信人为*） 3两者都有</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.IsUserMessageRead(System.Int32,System.Int32,System.String,System.String,Framework.Message.MessageStatus@)">
+            <summary>
+            是否已经阅读
+            此处假设此消息的收件人中有该用户
+            </summary>
+            <param name="userID">用户ID，此处假设此消息的收件人中有该用户</param>
+            <param name="messageID">消息ID</param>
+            <param name="ms">此消息的最终状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessageReaders(System.Int32,System.String,System.String)">
+            <summary>
+            阅读者列表
+            </summary>
+            <param name="messageID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.DeleteMessageReader(System.Int32,System.String,System.String)">
+            <summary>
+            删除阅读记录
+            </summary>
+            <param name="messageReadID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.UpdateUserMessage(System.Int32,Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            更新用户消息
+            一般不要用这个方法来更新数据，容易导致数据状态不对。
+            此方法主要用于非法数据修复。
+            </summary>
+            <param name="userID"></param>
+            <param name="me"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessageRead(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            读取用户阅读记录
+            </summary>
+            <param name="receiverID"></param>
+            <param name="messageID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.UpdateUserMessageRead(Framework.Message.MessageRead,System.String,System.String)">
+            <summary>
+            更新用户阅读记录
+            一般不要用这个方法来更新数据，容易导致数据状态不对。
+            此方法主要用于非法数据修复。
+            </summary>
+            <param name="mr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.CanMessageReply(Framework.Message.MessageEntity,System.String,System.Int32,System.String,System.String)">
+            <summary>
+            此消息是否可以回复
+            公告不能回复
+            用户设定不能回复的不能回复（这一部分尚未实现）
+            </summary>
+            <param name="msg"></param>
+            <param name="userName"></param>
+            <param name="userID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessagesRelied(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获得某个消息的回复记录
+            </summary>
+            <param name="userID"></param>
+            <param name="messageID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.UserMessageServices.GetUserMessagedReplyCount(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            获得针对某个消息的回复次数
+            </summary>
+            <param name="userID"></param>
+            <param name="messageID"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.Base.EventLogBase">
+            <summary>
+            表《EventLogs》对应的基类
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.OrgEventLogID">
+            <summary>
+            EventLogID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.EventLogID">
+            <summary>
+            EventLogID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.EventID">
+            <summary>
+            EventID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.SettingsID">
+            <summary>
+            SettingsID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.Category">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.EventType">
+            <summary>
+            EventType
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.EventDate">
+            <summary>
+            EventDate
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.MachineName">
+            <summary>
+            MachineName
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.OperatorID">
+            <summary>
+            OperatorID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventLogBase.UserID">
+            <summary>
+            UserID
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.EventLogDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.Base.EventLogBaseDALs">
+            <summary>
+            Summary description for EventLogs $Description$
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.PopulateEventLogFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.PopulateEventLogFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.GetDefaultValues(Message.DataProvider.Entities.EventLog@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventLogBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.EventLogBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.EventLogBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.EventLogDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.EventLogDALs.DeleteEventLogs(System.Int32,System.Int32,System.DateTime,System.DateTime)">
+            <summary>
+            批量删除指定数据
+            </summary>
+            <param name="settingsID"></param>
+            <param name="eventID"></param>
+            <param name="beginTIme"></param>
+            <param name="endTime"></param>
+            <returns>删除的记录数</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.EventLogDALs.ToEventLog(Framework.Events.SFEventLog)">
+            <summary>
+            将通用的SFEventLog转换成为数据库的结构
+            </summary>
+            <param name="lme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.EventLogDALs.ToSFEventLog(Message.DataProvider.Entities.EventLog)">
+            <summary>
+            将通用的EventLog转换成为Framework中的结构
+            </summary>
+            <param name="lme"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.Services.EventLogServices">
+            <summary>
+            事件日志服务，记录日志应可支持异步调用
+            </summary>
+        </member>
+        <member name="M:Message.Services.EventLogServices.LogEvent(Framework.Events.SFEventLog,System.String,System.String)">
+            <summary>
+            记录日志
+            </summary>
+            <param name="msg"></param>
+            <param name="machine"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.UserMessage">
+            <summary>
+            表《UserMessages》对应的类
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.Base.UserMessageBase">
+            <summary>
+            表《UserMessages》对应的基类
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.OrgUserMessageID">
+            <summary>
+            UserMessageID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.UserMessageID">
+            <summary>
+            UserMessageID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.SettingsID">
+            <summary>
+            SettingsID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.MessageTitle">
+            <summary>
+            MessageTitle
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.MessageBody">
+            <summary>
+            MessageBody
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.DateCreated">
+            <summary>
+            DateCreated
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.DateToSend">
+            <summary>
+            DateToSend
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.Sender">
+            <summary>
+            Sender
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.Receivers">
+            <summary>
+            Receivers
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.SourceID">
+            <summary>
+            SourceID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.MessageType">
+            <summary>
+            MessageType
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.DateSended">
+            <summary>
+            DateSended
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.MessageStatus">
+            <summary>
+            MessageStatus
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.F1">
+            <summary>
+            已被使用（回复父ID）F1
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.F2">
+            <summary>
+            F2,已经被占用，用于表示第一个收信者的ID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.F3">
+            <summary>
+            F3
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageBase.F4">
+            <summary>
+            F4
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessage.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessage.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessage.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessage.FullContent">
+            <summary>
+             混和处理,包括了Sender，Receivers AND MessageBody
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessage.ReceiveIDs">
+            <summary>
+            接收者ID列表
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessage.IsRead">
+            <summary>
+            是否已读，这个与接收者有关
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessage.ReplyID">
+            <summary>
+            此贴回复的原贴ID，使用F1字段
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessage.MessageReplied">
+            <summary>
+            回复的原贴或原消息，当ReplyID>0时，此值才有效
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessage.RepliedCount">
+            <summary>
+            针对此贴的回复数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessage.FirstReceiverID">
+            <summary>
+            第一个收信者ID，如果是公告类型的，则ID为-1
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.EmailQueue">
+            <summary>
+            表《EmailQueue》对应的类
+            因为数据设计的原因，在基类中将其属性EmailBcc更改为一个复合结构。
+            此处Ｎｅｗ　一个EmailBcc替代原来的值
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.Base.EmailQueueBase">
+            <summary>
+            表《EmailQueue》对应的基类
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.OrgEmailID">
+            <summary>
+            EmailID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailID">
+            <summary>
+            EmailID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.SettingsID">
+            <summary>
+            SettingsID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailPriority">
+            <summary>
+            EmailPriority
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailBodyFormat">
+            <summary>
+            EmailBodyFormat
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailTo">
+            <summary>
+            EmailTo
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailCC">
+            <summary>
+            EmailCC
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailBcc">
+            <summary>
+            EmailBcc
+            此处手工修改过，用于记录更多信息
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailFrom">
+            <summary>
+            EmailFrom
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailSubject">
+            <summary>
+            EmailSubject
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.EmailBody">
+            <summary>
+            EmailBody
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.NextTryTime">
+            <summary>
+            NextTryTime
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.NumberOfTries">
+            <summary>
+            NumberOfTries
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EmailQueueBase.SendStatus">
+            <summary>
+            发送状态
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueue.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueue.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueue.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueue.Parse(Framework.Message.MessageEntity)">
+            <summary>
+            将一个消息转换成邮件队列中的一个值
+            此转换可能丢失一些值
+            </summary>
+            <param name="me"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueue.ToMessage(Message.DataProvider.Entities.EmailQueue)">
+            <summary>
+            将队列中的值转换成一个消息
+            </summary>
+            <param name="eq"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueue.Bcc">
+            <summary>
+            密抄
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueue.Attachment">
+            <summary>
+            附件名
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueue.IsHtml">
+            <summary>
+            是否html格式
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueue.DateCreated">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueue.DateSended">
+            <summary>
+            发送日期
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueue.OrginalDateToSend">
+            <summary>
+            原始计划发送日期
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueue.MessageID">
+            <summary>
+            原消息ＩＤ
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs">
+            <summary>
+            Summary description for UserMessageReaders $Description$
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.PopulateUserMessageReaderFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.PopulateUserMessageReaderFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.GetDefaultValues(Message.DataProvider.Entities.UserMessageReader@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.UserMessageReaderBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.AsynchronizeEventQueueDALs">
+            <summary>
+            Summary description for .异步事件，主要用于计划事件。
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs">
+            <summary>
+            Summary description for AsynchronizeEventQueue $Description$
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.PopulateAsynchronizeEventQueueFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.PopulateAsynchronizeEventQueueFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.GetDefaultValues(Message.DataProvider.Entities.AsynchronizeEventQueue@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.AsynchronizeEventQueueBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.AsynchronizeEventQueueDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.AsynchronizeEventQueueDALs.ToAsynchronizeEvent(Message.DataProvider.Entities.AsynchronizeEventQueue)">
+            <summary>
+            转换数据成为公用架构中的异步数据。
+            </summary>
+            <param name="aeq"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.AsynchronizeEventQueueDALs.ToAsynchronizeEventQueue(Framework.Events.AsynchronizeEvent)">
+            <summary>
+            将异步数据结构转换成数据对象的结构
+            </summary>
+            <param name="ae"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.SqlMessageDataProvider">
+            <summary>
+            消息处理接口的实现
+            主要处理难点在消息
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetMessageStatusOptions(Framework.Message.MessageStatus)">
+            <summary>
+            读取复合的消息状态枚举类型
+            </summary>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetAsynchronizeEvents(System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得异步事件列表
+            </summary>
+            <param name="settingsID">站点ID，默认填0</param>
+            <param name="eventID">事件ID，即事件的说明ID</param>
+            <param name="eventType">事件类型</param>
+            <param name="eventTitle">标题</param>
+            <param name="minRetries">最小重试次数，填零表示所有</param>
+            <param name="isExecuted">是否已经执行？填－1表示所有，0表示未执行，1表示已经执行</param>
+            <param name="pageSize">页大小</param>
+            <param name="pageIndex">页索引</param>
+            <param name="totalCount">记录总数，用于返回</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.AddEmailQueue(System.Int32,Framework.Message.MessageEntity)">
+            <summary>
+            增加一个邮件到队列中
+            </summary>
+            <param name="settingsID"></param>
+            <param name="me"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetUserMessages(System.Int32,System.String,System.DateTime,System.DateTime,Framework.Message.MessageStatus,Framework.Message.MessageCategory,Framework.Message.MessageOrder,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得用户发送的消息，分页查询
+            </summary>
+            <param name="userID">发件人ID</param>
+            <param name="status"></param>
+            <param name="order"></param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetUserMessages(Framework.Message.MessageQueryParameters,System.Int32@)">
+            <summary>
+            查询用户创建或发送的消息
+            </summary>
+            <param name="mqp"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetUserMessagesCount(Framework.Message.MessageQueryParameters)">
+            <summary>
+            查询用户创建或发送的消息
+            </summary>
+            <param name="mqp"></param>
+            <param name="totalCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetUserMessageReceivedWithPager(System.Int16,System.Int32,System.Int32,System.Int32@,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得用户接受的消息，分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="userID">接收消息的用户ID</param>
+            <param name="status">消息删除状态的值</param>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="readWhereClause">数据过滤条件，主要用于过滤读取和接收的数据</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetReceivedUserMessages(Framework.Message.MessageQueryParameters,System.Int16,System.Int32@)">
+            <summary>
+            获得用户收到的所有消息
+            </summary>
+            <param name="mqp"></param>
+            <param name="totalCount"></param>
+            <param name="isNotice">消息返回结果参数  1表示个人消息 2表示群发的系统消息（可能为公告，收信人为*） 3两者都有</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetReceivedUserMessagesCount(System.Int32,System.Int16,System.String,System.DateTime,System.DateTime,Framework.Message.MessageStatus,Framework.Message.MessageCategory)">
+            <summary>
+            获得用户收到的符合条件消息数量
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="status"></param>
+            <param name="order"></param>
+            <param name="category"></param>
+            <param name="isNotice">消息返回结果参数  1表示个人消息 2表示群发的系统消息（可能为公告，收信人为*） 3两者都有</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetReceivedUserMessagesCount(Framework.Message.MessageQueryParameters,System.Int16)">
+            <summary>
+            
+            </summary>
+            <param name="mqp"></param>
+            <param name="isNotice">消息返回结果参数  1表示个人消息 2表示群发的系统消息（可能为公告，收信人为*） 3两者都有</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetUserMessagesNotRead(System.Int32,System.Int16,System.String,System.DateTime,System.DateTime,Framework.Message.MessageCategory,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            获得用户未读信息，分页查询
+            </summary>
+            <param name="userID">收件人ID</param>
+            <param name="category"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="totalCount"></param>
+            <param name="isNotice">消息返回结果参数  1表示个人消息 2表示群发的系统消息（可能为公告，收信人为*） 3两者都有</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.SendUserMessage(System.Int32,System.Int32,System.Int32[])">
+            <summary>
+            发送消息，将消息库中的数据写入到消息读取记录库中
+            </summary>
+            <param name="userID">发送者,0表明是原写信人</param>
+            <param name="messageID">消息ID</param>
+            <param name="receiverIDs">收信人的ID(站内消息）</param>
+            <returns>-1失败</returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.ReadUserMessage(System.Int32,System.Int32)">
+            <summary>
+            阅读用户消息
+            给一条消息打上读取标志,如果该消息状态不对，系统返回当前状态.如果是公告信息，用户读取时，系统自动添加一条读取记录
+            如果此信息接收人为“*”，则在发送时并没有往数据库中写接收记录，因此需要此时添加一条接收记录
+            </summary>
+            <param name="userID">用户ID，此处假设此消息的收件人中有该用户</param>
+            <param name="messageID">消息ID</param>
+            <returns>-1 消息数据不正确，－2消息状态为未发送或已删除 0表示消息已经读过 其它表示消息操作成功</returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.DeleteUserMessage(System.Int32,System.Int32)">
+            <summary>
+            删除用户消息
+            </summary>
+            <param name="messageID"></param>
+            <param name="operatorID">操作员ID，系统将检查该操作员的一些权限</param>
+            <returns>1正常 0未找到记录 其它 错误</returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.DeleteUserMessages(System.Int32,System.Int32[])">
+            <summary>
+            删除用户消息
+            </summary>
+            <param name="messageIDs"></param>
+            <param name="operatorID">操作员ID，系统将检查该操作员的一些权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.DeleteUserMessages(System.Int32,System.Collections.Generic.IList{Framework.Message.MessageEntity})">
+            <summary>
+            删除用户消息
+            </summary>
+            <param name="messages"></param>
+            <param name="operatorID">操作员ID，系统将检查该操作员的一些权限</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.DeleteUserMessages(System.Int32,System.Boolean)">
+            <summary>
+            清空用户发送或接收的消息
+            </summary>
+            <param name="operatorID">操作员ID，即发送或接收消息的人的ID，根据IsReceived来判断是接收还是发送的人。</param>
+            <param name="isReceived">是否为接收的消息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.DeleteUserMessages(System.Int32,System.Boolean,Framework.Message.MessageCategory)">
+            <summary>
+            清空用户发送或接收的消息
+            </summary>
+            <param name="operatorID">操作员ID，即发送或接收消息的人的ID，根据IsReceived来判断是接收还是发送的人。</param>
+            <param name="isReceived">是否为接收的消息</param>
+            <param name="category">消息的系统内部类别</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetUserMessagesRelied(System.Int32,System.Int32)">
+            <summary>
+            获得某条消息的回复记录
+            </summary>
+            <param name="userID">回复的用户ID，0表示不考虑回复的用户，只管所有的回复</param>
+            <param name="messageID">消息ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.SqlMessageDataProvider.GetUserMessagedReplyCount(System.Int32,System.Int32)">
+            <summary>
+            查询某条消息的回复数
+            </summary>
+            <param name="userID">回复的用户ID，0表示不考虑回复的用户，只管所有的回复</param>
+            <param name="messageID">消息ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.ExceptionSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionSet.Add(Message.DataProvider.Entities.ExceptionDBEntity)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionSet.Contains(Message.DataProvider.Entities.ExceptionDBEntity)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionSet.IndexOf(Message.DataProvider.Entities.ExceptionDBEntity)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionSet.Insert(System.Int32,Message.DataProvider.Entities.ExceptionDBEntity)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionSet.Remove(Message.DataProvider.Entities.ExceptionDBEntity)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.ExceptionSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.ExceptionSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.ExceptionSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.UserMessageReaderDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.UserMessageReaderDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.DAL.EmailQueueDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.EmailQueueDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.DAL.Base.UserMessageBaseDALs">
+            <summary>
+            Summary description for UserMessages $Description$
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.PopulateUserMessageFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.PopulateUserMessageFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.GetDefaultValues(Message.DataProvider.Entities.UserMessage@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.UserMessageBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.UserMessageBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.UserMessageBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="T:Message.Weed.EmailQueue">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailPriority">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailBodyFormat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailTo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailCC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailBcc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailSubject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.EmailBody">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.NextTryTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.NumberOfTries">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EmailQueue.SendStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.UserMessageReader">
+            <summary>
+            表《UserMessageReaders》对应的类
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.Base.UserMessageReaderBase">
+            <summary>
+            表《UserMessageReaders》对应的基类
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.OrgUserMessageReadID">
+            <summary>
+            MessageReadID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.UserMessageReadID">
+            <summary>
+            MessageReadID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.UserMessageID">
+            <summary>
+            UserMessageID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.SenderID">
+            <summary>
+            SenderID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.ReceiverID">
+            <summary>
+            ReceiverID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.DateReceived">
+            <summary>
+            DateReceived
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.DateSended">
+            <summary>
+            DateSended
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.UserMessageReaderBase.MessageStatus">
+            <summary>
+            MessageStatus
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReader.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReader.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReader.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.ExceptionDBEntity">
+            <summary>
+            表《Exceptions》对应的类
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.Base.ExceptionBase">
+            <summary>
+            表《Exceptions》对应的基类
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.OrgExceptionID">
+            <summary>
+            ExceptionID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.ExceptionID">
+            <summary>
+            ExceptionID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.SettingsID">
+            <summary>
+            SettingsID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.ExceptionHash">
+            <summary>
+            ExceptionHash
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.ExceptionCategory">
+            <summary>
+            ExceptionCategory
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.Exception">
+            <summary>
+            ExceptionDBEntity
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.ExceptionMessage">
+            <summary>
+            ExceptionMessage
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.IPAddress">
+            <summary>
+            IPAddress
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.UserAgent">
+            <summary>
+            UserAgent
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.HttpReferrer">
+            <summary>
+            HttpReferrer
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.HttpVerb">
+            <summary>
+            HttpVerb
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.PathAndQuery">
+            <summary>
+            PathAndQuery
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.DateCreated">
+            <summary>
+            DateCreated
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.DateLastOccurred">
+            <summary>
+            DateLastOccurred
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.ExceptionBase.Frequency">
+            <summary>
+            Frequency
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionDBEntity.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionDBEntity.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.ExceptionDBEntity.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.EventDescription">
+            <summary>
+            表《EventDescriptions》对应的类
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.Base.EventDescriptionBase">
+            <summary>
+            表《EventDescriptions》对应的基类
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventDescriptionBase.OrgEventID">
+            <summary>
+            EventID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventDescriptionBase.EventID">
+            <summary>
+            EventID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventDescriptionBase.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventDescriptionBase.IsAsynchronize">
+            <summary>
+            IsAsynchronize
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventDescriptionBase.EventType">
+            <summary>
+            EventType
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventDescriptionBase.EventDescription">
+            <summary>
+            EventDescription
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.EventDescriptionBase.IsDeleted">
+            <summary>
+            is deleted?
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescription.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescription.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescription.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs">
+            <summary>
+            Summary description for EventDescriptions $Description$
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.PopulateEventDescriptionFromIDataReader(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.PopulateEventDescriptionFromIDataReaderSimple(System.Data.IDataReader)">
+            <summary>
+            从IDataReader中获得值，只读取不能为空值的列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.GetDefaultValues(Message.DataProvider.Entities.EventDescription@)">
+            <summary>
+            根据数据库中设置的默认值来建立新对象的一些属性
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.eosp_GetDataWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以Collection包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.eosp_GetDataWithPagerForDataSet(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以DataSet表现</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.eosp_GetDataListWithPager(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.GetRowCount(System.String)">
+             <summary>
+             获得在特定条件下的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.ConnectionString">
+            <summary>
+            数据库联接字符串
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.DAL.Base.EventDescriptionBaseDALs.SqlText">
+            <summary>
+            读取查询该表数据的语句
+            </summary>
+        </member>
+        <member name="T:Message.Weed.AsynchronizeEventQueue">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.AsynEventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.EventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.EventTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.EventType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.ExecuteType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.NextExecuteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.LastExecuteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.CountOfRetries">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.ExecuteParameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.AsynchronizeEventQueue.UserEventAdded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.UserMessageReaderSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReaderSet.Add(Message.DataProvider.Entities.UserMessageReader)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReaderSet.Contains(Message.DataProvider.Entities.UserMessageReader)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReaderSet.IndexOf(Message.DataProvider.Entities.UserMessageReader)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReaderSet.Insert(System.Int32,Message.DataProvider.Entities.UserMessageReader)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageReaderSet.Remove(Message.DataProvider.Entities.UserMessageReader)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessageReaderSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessageReaderSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessageReaderSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.EventLogSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLogSet.Add(Message.DataProvider.Entities.EventLog)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLogSet.Contains(Message.DataProvider.Entities.EventLog)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLogSet.IndexOf(Message.DataProvider.Entities.EventLog)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLogSet.Insert(System.Int32,Message.DataProvider.Entities.EventLog)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLogSet.Remove(Message.DataProvider.Entities.EventLog)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EventLogSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EventLogSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EventLogSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.EventDescriptionSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescriptionSet.Add(Message.DataProvider.Entities.EventDescription)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescriptionSet.Contains(Message.DataProvider.Entities.EventDescription)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescriptionSet.IndexOf(Message.DataProvider.Entities.EventDescription)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescriptionSet.Insert(System.Int32,Message.DataProvider.Entities.EventDescription)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventDescriptionSet.Remove(Message.DataProvider.Entities.EventDescription)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EventDescriptionSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EventDescriptionSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EventDescriptionSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.AsynchronizeEventQueue">
+            <summary>
+            表《AsynchronizeEventQueue》对应的类
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase">
+            <summary>
+            表《AsynchronizeEventQueue》对应的基类
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.OrgAsynEventID">
+            <summary>
+            AsynEventID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.AsynEventID">
+            <summary>
+            AsynEventID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.SettingsID">
+            <summary>
+            SettingsID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.EventID">
+            <summary>
+            EventID
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.EventTitle">
+            <summary>
+            EventTitle
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.EventType">
+            <summary>
+            EventType
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.ExecuteType">
+            <summary>
+            ExecuteType
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.NextExecuteTime">
+            <summary>
+            NextExecuteTime
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.LastExecuteTime">
+            <summary>
+            LastExecuteTime
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.CountOfRetries">
+            <summary>
+            CountOfRetries
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.ExecuteParameters">
+            <summary>
+            ExecuteParameters
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.Base.AsynchronizeEventQueueBase.UserEventAdded">
+            <summary>
+            UserEventAdded
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueue.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueue.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.AsynchronizeEventQueue.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.Weed.EventDescriptionE">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventDescriptionE.EventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventDescriptionE.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventDescriptionE.IsAsynchronize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventDescriptionE.EventType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventDescriptionE.EventDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventDescriptionE.IsDeleted">
+            <summary>
+            is deleted?
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.DAL.UserMessageDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.UserMessageDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.UserMessageDALs.eosp_GetDataListWithPagerWithReply(System.Int32,System.Int32,System.Int32@,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获得分页数据,并且同步返回消息回复的原消息信息
+            默认调用系统自动生成的存储过程，如有需要或多表联接，可以修改存储过程。
+            </summary>
+            <param name="pageSize">每页数据大小</param>
+            <param name="pageIndex">当前页号，从0页开始计算</param>
+            <param name="rowCount">总记录数，此参数不传或传入0。如在调用前已经确定知道总记录数，也可以传入总记录数。</param>
+            <param name="columnClause">输出的列，如不想设置，可以填入NULL值，系统将根据填入“a.*”，即输出所有主表字段</param>
+            <param name="orderbyColumn">参与排序的字段列表，如果不设，可以填入NULL值，系统将以该表的唯一关键字或唯一索引（当无关键字时）来填值</param>
+            <param name="whereClause">数据过滤条件，如果不设，请填入NULL</param>
+            <param name="orderByClause">最后输出的排序规则，如果不填，请传入NULL值，系统将根据关键字正序排列</param>
+            <param name="orderBy2Clause">与最后输出相反的排序规则，如果不填，请传入NULL值，系统将根据关键字反序排列</param>
+            <returns>符合条件的记录集，以IList包装</returns>
+        </member>
+        <member name="T:Message.DataProvider.DAL.EventDescriptionDALs">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.DAL.EventDescriptionDALs.Instance(System.String)">
+            <summary>
+            获得一个实例的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.DAL.EventDescriptionDALs.ToEventEntity(Message.DataProvider.Entities.EventDescription)">
+            <summary>
+            将数据库中的对像转换为中间件的对像。
+            </summary>
+            <param name="ed"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.Mails.MailSmtpSend">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Mails.MailSmtpSend.Html">
+            <summary>
+            是否Html邮件
+            </summary> 
+        </member>
+        <member name="F:Message.Mails.MailSmtpSend.Recipient">
+            <summary>
+            收件人列表
+            </summary>
+        </member>
+        <member name="F:Message.Mails.MailSmtpSend.RecipientBCC">
+            <summary>
+            密送收件人列表
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.SMTPServer">
+            <summary>
+            SMTP服务器域名
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Port">
+            <summary>
+            SMTP端口
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Username">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Subject">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Body">
+            <summary>
+            文本内容
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Htmlbody">
+            <summary>
+            超文本内容
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.From">
+            <summary>
+            发件人地址
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.To">
+            <summary>
+            收件人地址
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Fromname">
+            <summary>
+            发件人姓名
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Toname">
+            <summary>
+            收件人姓名
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Content_type">
+            <summary>
+            邮件类型
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Encode">
+            <summary>
+            邮件编码
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Charset">
+            <summary>
+            语言编码
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Filelist">
+            <summary>
+            附件列表,ROW:filename,fileContent 均为string型
+            </summary>
+        </member>
+        <member name="P:Message.Mails.MailSmtpSend.Priority">
+            <summary>
+            邮件优先级可设置为"High","Normal","Low"或"1","3","5"
+            </summary>
+        </member>
+        <member name="T:Message.Weed.EventLogM">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.EventLogID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.EventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.Category">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.EventType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.EventDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.MachineName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.OperatorID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventLogM.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Weed.EventDescriptionM">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventDescriptionM.EventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventDescriptionM.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventDescriptionM.IsAsynchronize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventDescriptionM.EventType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventDescriptionM.EventDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EventDescriptionM.IsDeleted">
+            <summary>
+            is deleted?
+            </summary>
+        </member>
+        <member name="T:Message.Weed.UserMessagM">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.UserMessageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.MessageTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.MessageBody">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.DateToSend">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.Sender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.Receivers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.SourceID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.MessageType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.DateSended">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.MessageStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.F1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.F2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.F3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessagM.F4">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Services.EventServices">
+            <summary>
+            关于事件类型说明的服务及异步计划事件的服务
+            </summary>
+        </member>
+        <member name="T:Message.Services.EmailMessageProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Message.Services.EmailMessageProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Message.Services.EmailMessageProvider.Send(Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="M:Message.Services.EmailMessageProvider.Create(System.Int32,System.Int32,Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            创建 一个邮件，注意此函数将被废除
+            </summary>
+            <param name="settingsID"></param>
+            <param name="userID"></param>
+            <param name="msg"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.EventLog">
+            <summary>
+            表《EventLogs》对应的类
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLog.CompareTo(System.Object)">
+            <summary>
+            比较
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLog.Equals(System.Object)">
+            <summary>
+            比较两个对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EventLog.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.Services.ExceptionServices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.LogException(System.Int32,Framework.Components.SFException,System.String,System.String)">
+            <summary>
+            记录异常
+            </summary>
+            <param name="settingsID"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.LogException(System.Int32,System.Exception,System.String,System.String)">
+            <summary>
+            记录异常
+            </summary>
+            <param name="settingsID"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.GetExceptions(System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得指定异常信息列表
+            </summary>
+            <param name="exceptionType"></param>
+            <param name="minFrequency"></param>
+            <param name="sortOrder"></param>
+            <param name="includeUnknown"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="title"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.GetExceptions(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.String,System.String)">
+            <summary>
+            提取异常
+            </summary>
+            <param name="exceptionType"></param>
+            <param name="minFrequency"></param>
+            <param name="sortOrder"></param>
+            <param name="includeUnknown"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.GetExceptionEntities(System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32@,System.String,System.String)">
+            <summary>
+            获得指定异常信息列表
+            </summary>
+            <param name="exceptionType"></param>
+            <param name="minFrequency"></param>
+            <param name="sortOrder"></param>
+            <param name="includeUnknown"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.GetExceptionEntities(System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.String,System.String)">
+            <summary>
+            提取异常
+            </summary>
+            <param name="exceptionType"></param>
+            <param name="minFrequency"></param>
+            <param name="sortOrder"></param>
+            <param name="includeUnknown"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.DeleteExceptions(System.Int32,System.Collections.Generic.IList{Framework.Components.SFException},System.String,System.String)">
+            <summary>
+            删除异常
+            </summary>
+            <param name="settingsID"></param>
+            <param name="deleteList"></param>
+        </member>
+        <member name="M:Message.Services.ExceptionServices.DeleteException(System.Int32,System.String,System.String)">
+            <summary>
+            删除一条异常
+            </summary>
+            <param name="exceptionID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.UserMessageQueryParameters">
+            <summary>
+            消息参数处理
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.UserMessageQueryParameters.GetInstance(Framework.Message.MessageQueryParameters)">
+            <summary>
+            转换类型
+            </summary>
+            <param name="mqp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.UserMessageQueryParameters.GetReadWhereClause">
+            <summary>
+            获得读取消息条件的SQL语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.UserMessageQueryParameters.GetWhereClause">
+            <summary>
+            根据条件，构建符合条件的Where SQL语句
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Message.DataProvider.Entities.EmailQueueSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueueSet.Add(Message.DataProvider.Entities.EmailQueue)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueueSet.Contains(Message.DataProvider.Entities.EmailQueue)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueueSet.IndexOf(Message.DataProvider.Entities.EmailQueue)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueueSet.Insert(System.Int32,Message.DataProvider.Entities.EmailQueue)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.EmailQueueSet.Remove(Message.DataProvider.Entities.EmailQueue)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueueSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueueSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.EmailQueueSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Message.DataProvider.Entities.UserMessageSet">
+            <summary>
+            Summary description for .
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageSet.Add(Message.DataProvider.Entities.UserMessage)">
+            <summary>
+            加入到队列
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageSet.Contains(Message.DataProvider.Entities.UserMessage)">
+            <summary>
+            是否包含某个对像
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageSet.IndexOf(Message.DataProvider.Entities.UserMessage)">
+            <summary>
+            对象所有位置
+            </summary>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageSet.Insert(System.Int32,Message.DataProvider.Entities.UserMessage)">
+            <summary>
+            插入对像到集合中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Message.DataProvider.Entities.UserMessageSet.Remove(Message.DataProvider.Entities.UserMessage)">
+            <summary>
+            从集合中删除对像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessageSet.CurrentPos">
+            <summary>
+            当前指针位置
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessageSet.TotalRecordCount">
+            <summary>
+            所有的记录数
+            </summary>
+        </member>
+        <member name="P:Message.DataProvider.Entities.UserMessageSet.Item(System.Int32)">
+            <summary>
+            引用
+            </summary>
+        </member>
+        <member name="T:Message.Mails.EmailMessage">
+            <summary>
+            Email消息类
+            </summary>
+        </member>
+        <member name="M:Message.Mails.EmailMessage.Parse(Framework.Message.MessageEntity)">
+            <summary>
+            从消息中转换成一个邮件,默认模板，HTML格式,普通优先级
+            </summary>
+            <param name="me"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessage.Parse(Framework.Message.MessageTemplate)">
+            <summary>
+            从邮件格式中创建一个邮件
+            </summary>
+            <param name="mt"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.Attachment">
+            <summary>
+            附件名
+            </summary>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.Priority">
+            <summary>
+            邮件优先级
+            </summary>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.IsHtml">
+            <summary>
+            是否html格式
+            </summary>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.UserID">
+            <summary>
+            用户ID号
+            </summary>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.CC">
+            <summary>
+            抄送
+            </summary>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.BCC">
+            <summary>
+            密抄
+            </summary>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.ServerPassword">
+            <summary>
+            服务器密码
+            </summary>
+        </member>
+        <member name="P:Message.Mails.EmailMessage.Server">
+            <summary>
+            服务器
+            </summary>
+        </member>
+        <member name="T:Message.Weed.ExceptionE">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.ExceptionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.ExceptionHash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.ExceptionCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.Exception">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.ExceptionMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.IPAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.UserAgent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.HttpReferrer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.HttpVerb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.PathAndQuery">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.DateLastOccurred">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.ExceptionE.Frequency">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Weed.EmailQueueM">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailPriority">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailBodyFormat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailTo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailCC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailBcc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailFrom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailSubject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.EmailBody">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.NextTryTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.NumberOfTries">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.EmailQueueM.SendStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Weed.DbConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Weed.UserMessageReaderM">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessageReaderM.UserMessageReadID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessageReaderM.UserMessageID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessageReaderM.SenderID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessageReaderM.ReceiverID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessageReaderM.DateReceived">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessageReaderM.DateSended">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.UserMessageReaderM.MessageStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Weed.ExceptionM">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.ExceptionID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.ExceptionHash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.ExceptionCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.Exception">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.ExceptionMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.IPAddress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.UserAgent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.HttpReferrer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.HttpVerb">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.PathAndQuery">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.DateCreated">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.DateLastOccurred">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.ExceptionM.Frequency">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Weed.EventLog">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:Weed Studio
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.EventLogID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.EventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.Category">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.EventType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.EventDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.MachineName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.OperatorID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Message.Weed.EventLog.UserID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Weed.AsynchronizeEventQueueM">
+            <summary>
+            生成:2010/07/02 11:24:51
+            作者:自动生成
+            
+            备注:请确保与[数据表].[字段]的对应关系正确!!!
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.AsynEventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.SettingsID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.EventID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.EventTitle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.EventType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.ExecuteType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.NextExecuteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.LastExecuteTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.CountOfRetries">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.ExecuteParameters">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Message.Weed.AsynchronizeEventQueueM.UserEventAdded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Message.Services.EventLogMessageProvider">
+            <summary>
+            消息数据处理器－－将消息写入到Windows日志中
+            </summary>
+        </member>
+        <member name="M:Message.Services.EventLogMessageProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Message.Services.EventLogMessageProvider.Send(Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="T:Message.Mails.MessageSender">
+            <summary>
+            邮件发送
+            如果使用此类，需要在系统中配置，此类仅用于服务端
+            </summary>
+        </member>
+        <member name="M:Message.Mails.MessageSender.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            通过配置文件来初始化一些属性
+            </summary>
+            <param name="name"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Message.Mails.MessageSender.GetSmtpClient(System.String,System.String,System.String)">
+            <summary>
+            返回发送邮件协议对象
+            </summary>
+            <param name="senderName"></param>
+            <param name="senderPassword"></param>
+            <param name="smtpHost"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.MessageSender.CreateEmail(Message.Mails.EmailMessage)">
+            <summary>
+            创建一封邮件
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.MessageSender.Send(Framework.Message.MessageEntity,System.String,System.String)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="msg"></param>
+            <param name="guid"></param>
+            <param name="ipAddress"></param>
+            <returns>1成功，-1失败</returns>
+        </member>
+        <member name="T:Message.Mails.EmailMessageTemplateProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.FormatMessage(Framework.Message.MessageEntity,Framework.Components.UserInfo)">
+            <summary>
+            格式化消息
+            </summary>
+            <param name="me"></param>
+            <param name="userSendTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.FormatMessage(Framework.Message.MessageTemplate,Framework.Components.UserInfo)">
+            <summary>
+            根据模板格式化消息
+            </summary>
+            <param name="mt"></param>
+            <param name="userSendTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.FormatMessage(Framework.Message.MessageEntity,Framework.Components.UserInfo,System.String)">
+            <summary>
+            格式化带附件的消息
+            </summary>
+            <param name="me"></param>
+            <param name="userSendTo"></param>
+            <param name="attachementFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.FormatMessage(Framework.Message.MessageTemplate,Framework.Components.UserInfo,System.String)">
+            <summary>
+            根据模板格式化带附件的消息
+            </summary>
+            <param name="mt"></param>
+            <param name="userSendTo"></param>
+            <param name="attachementFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.FormatMessageContent(System.String,System.Object)">
+            <summary>
+            根据指定对像格式化数据
+            </summary>
+            <param name="message"></param>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.FormatBody(System.String,Framework.Components.UserInfo)">
+            <summary>
+            格式化消息内容
+            </summary>
+            <param name="body"></param>
+            <param name="userSendTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.FormatTitle(System.String,Framework.Components.UserInfo)">
+            <summary>
+            格式化标题
+            </summary>
+            <param name="title"></param>
+            <param name="userSendTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Message.Mails.EmailMessageTemplateProvider.SaveTemplate(Framework.Message.MessageCategory,Framework.Message.MessageTemplateType,System.String,System.String,System.String)">
+            <summary>
+            保存格式
+            </summary>
+            <param name="mc"></param>
+            <param name="mt"></param>
+            <param name="title"></param>
+            <param name="from"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
